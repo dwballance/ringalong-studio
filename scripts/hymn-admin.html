@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hymn Mapping Editor</title>
+<style>
+  :root { color-scheme: light dark; --accent: #176c53; --line: #8884; font: 15px/1.4 system-ui, sans-serif; }
+  body { max-width: 52rem; margin: 0 auto; padding: 1rem; }
+  header { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; position: sticky; top: 0; padding: .5rem 0; background: Canvas; }
+  h1 { font-size: 1.2rem; margin: 0 auto 0 0; }
+  input, select, button { font: inherit; padding: .35rem .6rem; border: 1px solid var(--line); border-radius: 6px; background: Field; color: FieldText; }
+  button { cursor: pointer; } button:disabled { opacity: .5; cursor: wait; }
+  button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  #filter { flex: 1 1 100%; }
+  ul { list-style: none; padding: 0; margin: .5rem 0; }
+  li { border-bottom: 1px solid var(--line); padding: .4rem 0; }
+  .row { display: flex; gap: .5rem; align-items: center; }
+  .row .title { flex: 1; } .row small { opacity: .65; }
+  .edit { border: 0; background: none; font-size: 1.1rem; }
+  form { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .5rem; padding: .6rem 0 .4rem 1.6rem; }
+  form label { display: grid; gap: .15rem; font-size: .8rem; }
+  form .wide { grid-column: 1 / -1; } form .actions { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
+  #status { min-height: 1.4em; } .error { color: #c0392b; }
+  pre { max-height: 14rem; overflow: auto; background: #8881; padding: .6rem; border-radius: 6px; white-space: pre-wrap; }
+  pre:empty { display: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Unmapped hymns <small id="count"></small></h1>
+  <button id="rescan" title="Scan Open Hymnal for new public-domain candidates">Rescan for hymns</button>
+  <button id="update" class="primary" title="Regenerate the catalog from mapped hymns">Update catalog</button>
+  <input id="filter" type="search" placeholder="Filter by title, tune or reference…" autofocus>
+</header>
+<div id="status" role="status"></div>
+<pre id="log"></pre>
+<ul id="list"></ul>
+<script>
+const api = 'api/';
+const $ = id => document.getElementById(id);
+let hymns = [];
+let open = null;
+
+const status = (text, error = false) => { $('status').textContent = text; $('status').className = error ? 'error' : ''; };
+async function call(path, body) {
+  const response = await fetch(api + path, body === undefined ? {} : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || response.statusText);
+  return data;
+}
+const el = (tag, props = {}, ...children) => { const node = Object.assign(document.createElement(tag), props); node.append(...children); return node; };
+const hymnaryURL = hymn => `https://hymnary.org/search?qu=${encodeURIComponent(hymn.title)}`;
+
+function field(label, name, value, extra = {}) {
+  const { wide, ...props } = extra;
+  return el('label', { className: wide ? 'wide' : '' }, label, el('input', { name, value, ...props }));
+}
+
+function editor(hymn) {
+  const form = el('form');
+  const hymnal = el('select', { name: 'hymnal' }, ...[['unmapped', 'Unmapped'], ['UMH1989', 'UMH 1989'], ['TFWS2000', 'The Faith We Sing 2000']]
+    .map(([value, text]) => el('option', { value, textContent: text })));
+  hymnal.value = hymn.hymnal || 'unmapped';
+  const link = el('a', { href: hymnaryURL(hymn), target: '_blank', rel: 'noopener noreferrer', textContent: 'Find on hymnary.org ↗' });
+  const note = el('span');
+  form.append(
+    field('Title', 'title', hymn.title, { wide: true, required: true }),
+    el('label', {}, 'Hymnal', hymnal),
+    field('Number', 'number', hymn.number, { inputMode: 'numeric', pattern: '\\d{1,4}', placeholder: 'e.g. 378' }),
+    field('Tune', 'tune', hymn.tune, { placeholder: 'e.g. NEW BRITAIN' }),
+    el('div', { className: 'actions wide' }, el('button', { type: 'submit', className: 'primary', textContent: 'Save' }),
+      el('button', { type: 'button', textContent: 'Cancel', onclick: () => { open = null; render(); } }), link, note,
+      el('small', { textContent: `Open Hymnal X:${hymn.reference}` })));
+  form.onsubmit = async event => {
+    event.preventDefault();
+    const values = Object.fromEntries(new FormData(form));
+    try {
+      const { saved } = await call('save', { ...values, reference: hymn.reference });
+      Object.assign(hymn, saved);
+      if (saved.hymnal !== 'unmapped') {
+        hymns = hymns.filter(item => item !== hymn);
+        status(`Saved ${hymn.title} as ${saved.hymnal} ${saved.number}. Run "Update catalog" to publish it.`);
+      } else status(`Saved ${hymn.title}.`);
+      open = null; render();
+    } catch (error) { note.textContent = error.message; note.className = 'error'; }
+  };
+  return form;
+}
+
+function render() {
+  const query = $('filter').value.trim().toLowerCase();
+  const shown = hymns.filter(h => `${h.title} ${h.tune} ${h.reference}`.toLowerCase().includes(query));
+  $('count').textContent = `(${shown.length} of ${hymns.length})`;
+  $('list').replaceChildren(...shown.map(hymn => el('li', {},
+    el('div', { className: 'row' },
+      el('button', { className: 'edit', title: 'Edit', ariaLabel: `Edit ${hymn.title}`, textContent: '✎',
+        onclick: () => { open = open === hymn.reference ? null : hymn.reference; render(); } }),
+      el('span', { className: 'title', textContent: hymn.title }), el('small', { textContent: hymn.tune || `X:${hymn.reference}` })),
+    ...(open === hymn.reference ? [editor(hymn)] : []))));
+}
+
+async function load() {
+  hymns = (await call('unmapped')).hymns.map(h => ({ ...h, hymnal: 'unmapped' }));
+  if (open && !hymns.some(h => h.reference === open)) open = null;
+  render();
+}
+
+async function task(name, label) {
+  const buttons = [$('rescan'), $('update')];
+  buttons.forEach(b => b.disabled = true);
+  status(`${label}… this may take a minute.`); $('log').textContent = '';
+  try {
+    const result = await call(name, {});
+    $('log').textContent = result.output;
+    status(result.ok ? `${label} finished.` : `${label} failed.`, !result.ok);
+    await load();
+  } catch (error) { status(error.message, true); }
+  buttons.forEach(b => b.disabled = false);
+}
+
+$('filter').oninput = render;
+$('rescan').onclick = () => task('rescan', 'Rescan');
+$('update').onclick = () => task('update-catalog', 'Update catalog');
+load().catch(error => status(error.message, true));
+</script>
+</body>
+</html>

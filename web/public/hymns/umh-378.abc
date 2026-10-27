@@ -1,0 +1,65 @@
+X: 192
+T: Amazing Grace
+%%combinevoices 1
+C: Words: John Newton, 1779.  last verse author unknown, before 1829.
+C: Music: 'New Britain' James P. Carrell and David L. Clayton, 1831.  Setting: Edwin Othello Excell, 1900.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: "Joy to the World", 1915, Hymn 209 Ed. E. O. Excell  explicit about arrangement.  Christian Classics Ethereal Library (ccel.org) Hymnary  Think setting from "Make His praise glorious", 1900.  Ed. Edwin Othello Excell.
+M: 3/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1]  [Q:1/4=100]  D | G2 B/G/ | B2 A | G2 E | D2 D |
+w: 1.~A- maz- ing * grace! How sweet the sound That 
+w: 2.~'Twas grace that * taught my heart to fear, And 
+w: 3.~Through ma- ny * dan- gers, toils and snares, I 
+w: 4.~The Lord has * pro- mised good to me, His 
+w: 5.~Yea, when this * flesh and heart shall fail, And 
+[V: S1V2]  B, | B,2 D | D2 C | B,2 C | B,2 B, |
+[V: S2V1]  G, | D,2 G, | G,2 F, | G,2 G, | G,2 G, |
+[V: S2V2]  G,, | G,,2 G,,/B,,/ | D,2 D, | E,2 C, | G,,2 G,, |
+% 5
+[V: S1V1]  G2 B/G/ | B2 A | d3- | d2 B | (d3/2 B/) d/B/ | G2 D |
+w: saved a * wretch like me! * I once * was * lost, but
+w: grace my * fears re- lieved; * How pre- * cious * did that 
+w: have al- * rea- dy come; * 'Tis grace * hath * brought me 
+w: Word my * hope se- cures;  * He will * my * Shield and 
+w: mor- tal * life shall cease, * I shall * pos- * sess, with- 
+[V: S1V2]  B,2 D | D2 D | D3- | D2 D | D2 D | D2 D |
+[V: S2V1]  D,2 G, | G,2 F, | G,3- | G,2 G, | (B,3/2 G,/) B,/G,/ | G,2 G, |
+[V: S2V2]  G,,2 G,,/B,,/ | D,2 C, | B,,3- | B,,2 G,, | G,2 G, | B,,2 B,, |
+% 9
+[V: S1V1]  (E3/2 G/) G/E/ | D2 !sintro!D | G2 B/G/ | B2 A | G3- | G2 !eintro!|]
+w:   now * am * found; Was blind, but * now I see. * 
+w:   grace * ap- * pear The hour I * first be- lieved. * 
+w:  safe * thus * far, And grace will * lead me home. * 
+w: Por- * tion * be, As long as * life en- dures. * 
+w:  in * the * veil, A life of * joy and peace. * 
+[V: S1V2]  C3/2 D/ C | B,2 D | B,2 D | G2 F | D3- | D2 |]
+[V: S2V1]  G,2 E,/G,/ | G,2 G, | G,2 G,/B,/ | D2 C | B,3- | B,2 |]
+[V: S2V2]  (C,3/2 B,,/) C, | G,,2 B,, | E,2 D, | D,2 D, | G,3- | G,2 |]
+% 18
+W: 6.The earth shall soon dissolve like snow,
+W: The sun forbear to shine;
+W: But God, Who called me here below,
+W: Shall be forever mine.
+W: 
+W: 7.When we've been there ten thousand years,
+W: Bright shining as the sun,
+W: We've no less days to sing God's praise
+W: Than when we'd first begun.

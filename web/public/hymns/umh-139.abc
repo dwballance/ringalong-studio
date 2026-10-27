@@ -1,0 +1,88 @@
+X: 261
+T: Praise To The Lord, The Almighty
+%%combinevoices 1
+C: Words: Joachim Neander, 1680. Translated by Catherine Winkworth, 1863. 
+C: Music: 'Lobe den Herren' from Ander Theil des Erneuerten Gesangbuch, 1665.
+C: Setting: William Sterndale Bennett, 1863, alt. 
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: "The Chorale Book for England", 1863 Hymn 9.  Ed. Winkworth (words) and Bennett (music)., slightly alt. per "Evangelical Lutheran Hymn-Book", 1931.
+M: 3/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+%%staffsep 1.2cm
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1]  [Q:1/4=120] G G d | B3/2 A/ G | F E D | E F G | A3 | G3 |
+w: 1.~Praise to the Lord, the Al- might- y, the King of cre- a- tion! 
+w: 2.~Praise to the Lord, Who o'er all things so won- drous- ly reign- eth, 
+w: 3.~Praise to the Lord, Who hath fear- ful- ly, won- drous- ly, made thee; 
+w: 4.~Praise to the Lord, Who doth pros- per thy work and de- fend thee; 
+w: 5.~Praise to the Lord, Who, when tem- pests their war- fare are wa- ging, 
+[V: S1V2]  D E D | G3/2 F/ E | D C B, | B, D D | D3 | D3 |
+[V: S2V1]  B, B, A, | D3/2 C/ B, | B, G, G, | G, F, G, | (G, F,/E,/ F,) | B,3 |
+[V: S2V2]  G, E, F, | G,3/2 D,/ E, | B,, C, G,, | E, D, G,, | D,3 | G,,3 |
+% 5
+[V: S1V1]  G G d | B3/2 A/ G | F E D | E F G | A3 | G3 |
+w: O my soul, praise Him, for He is thy health and sal- va- tion! 
+w: Shel- ters thee un- der His wings, yea, so gent- ly sus- tain- eth! 
+w: Health hath vouch- safed and, when heed- less- ly fall- ing, hath stayed thee. 
+w: Sure- ly His good- ness and mer- cy here dai- ly at- tend thee. 
+w: Who, when the e- le- ments mad- ly a- round thee are ra- ging, 
+[V: S1V2]  D E D | G3/2 F/ E | D C B, | B, D D | D3 | D3 |
+[V: S2V1]  B, B, A, | D3/2 C/ B, | B, G, G, | G, F, G, | (G, F,/E,/ F,) | B,3 |
+[V: S2V2]  G, E, F, | G,3/2 D,/ E, | B,, C, G,, | E, D, G,, | D,3 | G,,3 |
+% 13
+[V: S1V1]  d d d | e3 | B3/2 c/ d | d3/2 c/ B | A3 |
+w: All ye who hear, now to His tem- ple draw near; 
+w: Hast thou not seen how thy de- si- res have been 
+w: What need or grief ev- er hath failed of re- lief? 
+w: Pon- der a- new what the Al- might- y can do, 
+w: Bid- deth them cease, turn- eth their fu- ry to peace, 
+[V: S1V2]  G D G | G3 | G3/2 G/ F | G3/2 E/ G | F3 |
+[V: S2V1]  B, A, B, | C3 | D3/2 C/ A, | B,3/2 C/ D | D3 |
+[V: S2V2]  G, F, G, | C,3 | G,3/2 E,/ D, | G,,3/2 A,,/ B,, | D,3 |
+% 17
+[V: S1V1]  !sintro!D E F | G A B | A3 | G3 !eintro!|]
+w: Praise Him in glad a- dor- a- tion. 
+w: Grant- ed in what He or- dain- eth 
+w: Wings of His mer- cy did shade thee. 
+w: If with His love He be- friend thee. 
+w: Whirl- winds and wa- ters as- suag- ing. 
+[V: S1V2]  A, C C | D D D | (E2 D/C/) | B,3 |]
+[V: S2V1]  F, G, A, | G, F, G, | (G, F,/E,/ F,) | G,3 |]
+[V: S2V2]  D, C, A,, | B,, D, G, | (C,2 D,) | G,,3 |]
+% 23
+%%multicol start
+%%rightmargin 12cm
+%%textfont Times-Roman 12.0
+%%begintext obeylines justify
+%% 6.\tPraise to the Lord, Who, when darkness of sin is abounding,
+%% \t\t\t\tWho, when the godless do triumph, all virtue confounding,
+%% \t\t\t\tSheddeth His light, chaseth the horrors of night,
+%% \t\t\t\tSaints with His mercy surrounding.
+%%endtext
+%%multicol new
+%%leftmargin 10.6cm
+%%rightmargin 2cm
+%%textfont Times-Roman 12.0
+%%begintext obeylines justify
+%% 7.\tPraise to the Lord, O let all that is in me adore Him!
+%% \t\t\t\tAll that hath life and breath, come now with praises before Him.
+%% \t\t\t\tLet the Amen sound from His people again,
+%% \t\t\t\tGladly for aye we adore Him.
+%%endtext
+%%multicol end

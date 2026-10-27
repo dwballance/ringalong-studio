@@ -1,0 +1,47 @@
+{
+  "title": "Song Title",
+  "key_signature": "Bb major",
+  "credit": "",
+  "lyrics": [
+    {"type": "verse", "lines": ["Replace these words"]},
+    {"type": "chorus", "lines": ["Replace chorus words"]},
+    {"type": "bridge", "lines": ["Replace bridge words"]}
+  ],
+  "time_signature": [3, 4],
+  "pickup_beats": 0,
+  "strong_beats": [1, 3],
+  "chord_tones_instructions": [
+    "Custom chords can be added in the form 'chord_name': ['note1', 'note2', ...]"
+  ],
+  "chord_tones": {},
+  "verse_instructions": [
+    "Each array of lines corresponds to one line of lyrics",
+    "Each lyric object's type may be any string and must exactly match a top-level note pattern name",
+    "Each named pattern must have as many line arrays as its lyric block has lines",
+    "Add the 'breath_after' boolean to any line to indicate a full pause",
+    "Add 'exclude_notes': ['A4', 'C5'] to a note to omit those available bells, including melody; sounding excluded bells are damped"
+  ],
+  "verse": [
+    [
+      {"melody": "B", "chord": "B", "beats": 1, "word": true},
+      {"melody": "D", "chord": "A", "beats": 1, "word": true},
+      {"melody": "F", "chord": "C", "beats": 1, "word": true}
+    ]
+  ],
+  "chorus": [
+    [
+      {"melody": "F", "chord": "F", "beats": 1, "word": true, "exclude_notes": ["A4"]},
+      {"melody": "A", "chord": "F", "beats": 1, "word": true},
+      {"melody": "C", "chord": "F", "beats": 1, "word": true}
+    ]
+  ],
+  "bridge": [
+    [
+      {"melody": "G", "chord": "C", "beats": 1, "word": true},
+      {"melody": "C", "chord": "C", "beats": 1, "word": true},
+      {"melody": "E", "chord": "C", "beats": 1, "word": true}
+    ]
+  ],
+  "recommended_bells": ["E4", "F4", "G4", "A4", "B4", "C5", "D5"],
+  "bell_range": ["E4", "F4", "G4", "A4", "B4", "C5", "D5"]
+}

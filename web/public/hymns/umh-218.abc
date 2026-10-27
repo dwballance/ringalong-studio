@@ -1,0 +1,68 @@
+X: 60
+T: It Came Upon A Midnight Clear
+%%combinevoices 1
+C: Words: Edmund H. Sears, 1849.  Music: 'Carol' Richard S. Willis, 1861.  
+C: Setting: "Order of worship for the Reformed Church in the United States", 1866.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2005 Revision.
+S: Music source: "Order of worship for the Reformed Church in the United States", 1866 Hymn 63.
+S: supposed to be found in "Church Corals and Choir Studies" 1850 by Willis, but I don't see it in that book. 
+S: some sources say 1850, some 1859, some 1861.  Willis was editor for "The Musical World" magazine.  Probably first appeared there.
+M: 6/8 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Bb % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=60] F/ | d A/ c/B/ G/ | F G/ F F/ | G/A/ B/ B/c/ d/ | c3/2- c
+w: 1.~It came up- on * the mid- night clear, That glor- * ious song * of old,  * 
+w: 2.~Still through the clo- * ven skies they come With peace- * ful wings * un- furled,  * 
+w: 3.~Yet with the woes * of sin and strife The world * has suf- * fered long;  * 
+w: 4.~And ye, be- neath * life's crush- ing load, Whose forms * are bend- * ing low,  * 
+w: 5.~For lo! the days * are has- t'ning on, By pro- * phet\- bards * fore- told,  * 
+[V: S1V2]  D/ | D D/ E E/ | D E/ D D/ | E E/ =E =E/ | F3/2- F
+[V: S2V1]  F,/ | F, ^F,/ G, A,/ | B, F,/ F, B,/ | B, B,/ B, B,/ | A,3/2- A,
+[V: S2V2]  B,,/ | B,, B,,/ B,, B,,/ | B,, A,,/ B,, B,,/ | E,/F,/ G,/ G, C,/ | F,3/2- F,
+% 5
+[V: S1V1]  F/ | d A/ c/B/ G/ | F G/ F F/ | G G/ A/G/ F/ | B3/2- B
+w: From an- gels bend- * ing near the earth, To touch their harps * of gold;  * 
+w: And still their hea- ven- ly mu- sic floats O'er all the wea- * ry world;  * 
+w: Be- neath the an- * gel strain have rolled Two thou- sand years * of wrong;  * 
+w: Who toil a- long * the climb- ing way With pain- ful steps * and slow,  * 
+w: When with the ev- * er circ- ling years Comes round the age * of gold;  * 
+[V: S1V2]  F/ | D D/ E E/ | D E/ D F/ | E E/ E E/ | D3/2- D
+[V: S2V1]  F,/ | F, ^F,/ G, A,/ | B, F,/ F, B,/ | B, C/ C/B,/ A,/ | B,3/2- B,
+[V: S2V2]  F,/ | B,, B,,/ B,, B,,/ | B,, A,,/ B,, B,,/ | E, C,/ F, F,/ | B,,3/2- B,,
+% 9
+[V: S1V1]  d/ | d D/ D/=E/ ^F/ | G A/ B d/ | c/B/ A/ G/A/ G/ | F3/2- F
+w: "Peace on the earth, * good will to men, From Heav- en's all gra- * cious King."  * 
+w: A- bove its sad * and low- ly plains, They bend * on hov- * 'ring wing,  * 
+w: And man, at war * with man, hears not The love\- * song which * they bring;  * 
+w: Look now! for glad * and gold- en hours Come swift- * ly on * the wing.  * 
+w: When peace shall ov- * er all the earth Its an- * cient splen- * dors fling,  * 
+[V: S1V2]  D/ | D D/ D D/ | D D/ D D/ | F F/ =E =E/ | F3/2- F
+[V: S2V1]  D,/ | D, ^F,/ ^F,/G,/ A,/ | G, ^F,/ G, G,/ | A,/D/ C/ B,/C/ B,/ | A,3/2- A,
+[V: S2V2]  D,/ | D, D,/ D, C,/ | B,, D,/ G, B,,/ | C, C,/ C, C,/ | F,3/2- F,
+% 13
+[V: S1V1]  F/ | d A/ c/B/ G/ | F G/ F !sintro!F/ | G G/ A/G/ F/ | B3/2- B !eintro!|]
+w: The world in so- * lemn still- ness lay, To hear the an- * gels sing.  * 
+w: And ev- er ov- er its Ba- bel sounds The bless- èd an- * gels sing.  * 
+w: O hush the noise, * ye men of strife And hear the an- * gels sing.  * 
+w: O rest be- side * the wear- y road, And hear the an- * gels sing!  * 
+w: And the whole world * send back the song Which now the an- * gels sing.  * 
+[V: S1V2]  _E/ | D D/ E E/ | D E/ D F/ | E E/ E E/ | D3/2- D |]
+[V: S2V1]  A,/ | B, ^F,/ G, A,/ | B, =F,/ =F, B,/ | B, C/ C/B,/ A,/ | B,3/2- B, |]
+[V: S2V2]  F,/ | B,, B,,/ B,, B,,/ | B,, A,,/ B,, D,/ | E, C,/ =F, =F,/ | B,,3/2- B,, |]
+% 19
