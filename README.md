@@ -2,6 +2,9 @@
 
 A browser-based handbell arrangement editor.
 Song content is processed on the user's device, not uploaded to a server.
+Access on the web at: https://dwballance.github.io/ringalong-studio/
+
+Yes, this is a fully vibe-coded utility. However, the final output works (bells can be rung and music made), and that is what matters most.
 
 ## Run
 
