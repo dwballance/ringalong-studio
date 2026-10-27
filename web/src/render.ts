@@ -32,7 +32,17 @@ function combinedVariants(values: { value: string; number: number }[]): string {
 }
 
 function conductorLine(song: Song, group: Performance[], line: number): string {
-  const rows = group.map(performance => performance.events.filter(event => event.line === line));
+  // A note (a slot, or one subdivision of it) that carries no word in any verse is left out of the conductor.
+  const keyed = group.map(performance => {
+    const seen = new Map<string, number>();
+    return performance.events.filter(event => event.line === line).map(event => {
+      const child = seen.get(event.slot.id) ?? 0;
+      seen.set(event.slot.id, child + 1);
+      return { event, key: `${event.slot.id}:${child}` };
+    });
+  });
+  const sung = new Set(keyed.flat().filter(({ event }) => event.lyric).map(({ key }) => key));
+  const rows = keyed.map(list => list.filter(({ key }) => sung.has(key)).map(({ event }) => event));
   const points = new Map<string, Fraction>();
   for (const events of rows) for (const event of events) {
     points.set(event.start.toFraction(), event.start);
@@ -43,10 +53,12 @@ function conductorLine(song: Song, group: Performance[], line: number): string {
   }
   const boundaries = [...points.values()].sort((left, right) => left.compare(right));
   if (boundaries.length < 2) return '';
-  const intervals = boundaries.slice(0, -1).map((start, index) => ({ start, end: boundaries[index + 1] }));
+  const active = (events: Event[], at: Fraction) => events.find(event => event.start.compare(at) <= 0 && eventEnd(event).compare(at) > 0);
+  const intervals = boundaries.slice(0, -1).map((start, index) => ({ start, end: boundaries[index + 1] }))
+    .filter(({ start }) => rows.some(events => active(events, start)));
+  if (!intervals.length) return '';
   const widths = intervals.map(({ start, end }) => Math.max(72, Math.min(150, 40 + end.sub(start).valueOf() * 25)));
   const totalWidth = widths.reduce((sum, width) => sum + width, 0);
-  const active = (events: Event[], at: Fraction) => events.find(event => event.start.compare(at) <= 0 && eventEnd(event).compare(at) > 0);
   const verseNumber = (section: Section) => section.number || song.sections.filter(item => item.type === section.type).indexOf(section) + 1;
   const verseLabel = (section: Section) => {
     const number = verseNumber(section);
@@ -57,7 +69,11 @@ function conductorLine(song: Song, group: Performance[], line: number): string {
     return /^\d+(?:[.-]\d+)*[a-z]?\.?$/i.test(suffix) ? suffix : title;
   };
   const labelWidth = line === 0 ? Math.max(28, Math.min(180, Math.max(...group.map(({ section }) => verseLabel(section).length)) * 6 + 10)) : 28;
-  const measureEnd = (end: Fraction) => end.mod(song.time[0]).equals(0) ? ' measure-end' : '';
+  // A column ends a measure when a barline falls between its end and the next column shown (skipped notes may lie between).
+  const measureEnd = (end: Fraction) => {
+    const next = intervals.find(interval => interval.start.compare(end) >= 0)?.start ?? boundaries[boundaries.length - 1];
+    return end.div(song.time[0]).ceil().mul(song.time[0]).compare(next) <= 0 ? ' measure-end' : '';
+  };
   const chordRow = intervals.map(({ start, end }) => `<td class="score-chord${measureEnd(end)}">${combinedVariants(group.map((performance, index) => ({
     value: escape(active(rows[index], start)?.chord || '\u2014'), number: verseNumber(performance.section),
   })))}</td>`).join('');

@@ -90,7 +90,7 @@ export function newSection(song: Song, type: string): Section {
 export function newSong(): Song {
   return { format: 'ringalong', version: 1, title: '', hymnNumber: '', key: '', time: [4, 4], pickup: 0,
     musicAuthor: '', wordsAuthor: '', credit: 'Words: \nMusic: ', bells: [...DEFAULT_BELLS], recommended: [...DEFAULT_BELLS],
-    strong: [1, 3], ringMelody: true, chords: {}, combined: [], patterns: [], sections: [], extensions: {} };
+    strong: [1, 3], ringMelody: false, chords: {}, combined: [], patterns: [], sections: [], extensions: {} };
 }
 
 export function newNote(song: Song): Note {
@@ -245,7 +245,7 @@ export function importDocument(input: unknown): Song {
     credit: source.credit || song.credit, time: source.time_signature, pickup: source.pickup_beats, strong: source.strong_beats,
     bells: source.bell_range || source.available_bells || DEFAULT_BELLS,
     recommended: source.bell_range || source.available_bells || DEFAULT_BELLS,
-    chords: source.chord_tones || {}, extensions: source });
+    chords: source.chord_tones || {}, ringMelody: true, extensions: source });
   for (const [type, value] of Object.entries(source)) {
     if (Array.isArray(value) && value.length && Array.isArray(value[0])) {
       const lines = z.array(z.array(legacyNote).min(1)).min(1).parse(value);

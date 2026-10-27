@@ -14,6 +14,7 @@ test.beforeEach(async ({ page }) => {
 
 async function newArrangement(page: Page) {
   await page.goto('/');
+  await page.getByRole('radio', { name: 'Chords + melody', exact: true }).check();
   await page.getByRole('textbox', { name: 'Title', exact: true }).fill('Morning bells');
   await page.getByLabel('Key signature').selectOption('Bb major');
   await page.getByRole('button', { name: 'Add verse', exact: true }).click();
@@ -630,8 +631,8 @@ test('section names remain stable after deletion and reordering and allow custom
   await page.getByRole('button', { name: 'Done', exact: true }).click();
   await page.getByRole('button', { name: 'Preview', exact: true }).click();
   await expect(page.getByRole('tabpanel', { name: 'Conductor', exact: true }).locator('.score-verse-number')).toHaveText(['1.', '4.', '3.', 'Final blessing']);
-  await page.getByRole('tab', { name: 'Eb4', exact: true }).click();
-  await expect(page.getByRole('tabpanel', { name: 'Eb4', exact: true }).locator('.score-section h4')).toHaveText(['Verse 1', 'Verse 4', 'Verse 3', 'Final blessing']);
+  await page.getByRole('tab', { name: 'Eb', exact: true }).click();
+  await expect(page.getByRole('tabpanel', { name: 'Eb', exact: true }).locator('.score-section h4')).toHaveText(['Verse 1', 'Verse 4', 'Verse 3', 'Final blessing']);
   expect(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth)).toBe(false);
   await page.locator('.workspace').screenshot({ path: testInfo.outputPath('section-navigation.png') });
 });
@@ -788,22 +789,22 @@ test('combined notes are chosen from dropdown pairs that can be added and remove
   const add = page.getByRole('button', { name: 'Add pair', exact: true });
   await add.click();
   const first = page.getByRole('combobox', { name: 'Pair 1, first note' }), second = page.getByRole('combobox', { name: 'Pair 1, second note' });
-  await expect(first.locator('option')).toHaveText(['Select note', 'Eb4', 'F4', 'G4', 'A4', 'Bb4', 'C5', 'D5']);
+  await expect(first.locator('option')).toHaveText(['–', 'Eb', 'F', 'G', 'A', 'Bb', 'C', 'D']);
   expect((await add.boundingBox())!.y).toBeGreaterThan((await first.boundingBox())!.y);
-  await first.selectOption('F4'); await second.selectOption('F4');
+  await first.selectOption('F'); await second.selectOption('F');
   await expect(page.locator('#notice')).toContainText('choose two different bells');
-  await second.selectOption('A4');
+  await second.selectOption('A');
   await expect(page.locator('#notice')).toBeHidden();
-  await expect(first).toHaveValue('F4'); await expect(second).toHaveValue('A4');
+  await expect(first).toHaveValue('F'); await expect(second).toHaveValue('A');
   await add.click();
-  await page.getByRole('combobox', { name: 'Pair 2, first note' }).selectOption('A4');
-  await page.getByRole('combobox', { name: 'Pair 2, second note' }).selectOption('F4');
+  await page.getByRole('combobox', { name: 'Pair 2, first note' }).selectOption('A');
+  await page.getByRole('combobox', { name: 'Pair 2, second note' }).selectOption('F');
   await expect(page.locator('#notice')).toContainText('already listed');
-  await page.getByRole('combobox', { name: 'Pair 2, second note' }).selectOption('G4');
+  await page.getByRole('combobox', { name: 'Pair 2, second note' }).selectOption('G');
   await page.getByRole('button', { name: 'Remove pair 1', exact: true }).click();
   await expect(page.getByRole('combobox', { name: /^Pair 2/ })).toHaveCount(0);
-  await expect(page.getByRole('combobox', { name: 'Pair 1, first note' })).toHaveValue('A4');
-  await expect(page.getByRole('combobox', { name: 'Pair 1, second note' })).toHaveValue('G4');
+  await expect(page.getByRole('combobox', { name: 'Pair 1, first note' })).toHaveValue('A');
+  await expect(page.getByRole('combobox', { name: 'Pair 1, second note' })).toHaveValue('G');
   await page.getByRole('button', { name: 'Remove pair 1', exact: true }).click();
   await expect(page.getByRole('combobox', { name: /^Pair 1/ })).toHaveCount(0);
 });

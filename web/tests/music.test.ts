@@ -4,7 +4,7 @@ import Fraction from 'fraction.js';
 import { bellLabel, chordTones, durationLabel, eventsFor, playableBells, perform, problems } from '../src/music';
 
 function fixture() {
-  const song = newSong(); song.title = 'Synthetic song'; song.key = 'Bb major'; song.time = [3, 4]; song.pickup = 1;
+  const song = newSong(); song.ringMelody = true; song.title = 'Synthetic song'; song.key = 'Bb major'; song.time = [3, 4]; song.pickup = 1;
   const section: Section = { id: id(), type: 'verse', stage: 'lyrics', raw: '', lines: [], bindings: {} };
   song.sections.push(section); alignSection(song, section, 'one two three four'); section.stage = 'done';
   const slots = song.patterns[0].lines[0].slots;
@@ -13,7 +13,7 @@ function fixture() {
 }
 describe('bell modes and custom chords', () => {
   it('keeps octave-specific bells in melody mode and collapses octave duplicates in chord mode', () => {
-    const song = newSong(); song.bells = ['D4', 'G4', 'D5'];
+    const song = newSong(); song.ringMelody = true; song.bells = ['D4', 'G4', 'D5'];
     expect(playableBells(song)).toEqual(['D4', 'G4', 'D5']);
     expect(bellLabel(song, 'D5')).toBe('D5');
     song.ringMelody = false;
@@ -21,6 +21,9 @@ describe('bell modes and custom chords', () => {
     expect(bellLabel(song, 'D5')).toBe('D');
     song.bells = ['C', 'F', 'G'];
     expect(playableBells(song)).toEqual(['C', 'F', 'G']);
+  });
+  it('starts new arrangements in chord mode', () => {
+    expect(newSong().ringMelody).toBe(false);
   });
   it('accepts custom chord strings and arrays with or without octave numbers', () => {
     const song = newSong();

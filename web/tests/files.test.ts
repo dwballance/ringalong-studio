@@ -5,7 +5,7 @@ import { bindScore, scoreMarkup } from '../src/render';
 import { combinedPairs, perform, problems, resolveBell } from '../src/music';
 
 function fixture() {
-  const song = newSong(); song.title = 'Round trip'; song.key = 'C major';
+  const song = newSong(); song.title = 'Round trip'; song.key = 'C major'; song.ringMelody = true;
   const section: Section = { id: id(), type: 'verse', stage: 'lyrics', raw: '', lines: [], bindings: {} };
   song.sections.push(section); alignSection(song, section, 'Test words here now'); section.stage = 'done';
   return song;
@@ -123,6 +123,16 @@ describe('standalone files', () => {
     song.combined = [['F4', 'B4']];
     expect(problems(song).join(' ')).toContain('B4 is not an available bell');
     expect(readDocument(exportHTML({ ...song, combined: [['F4', 'A4']] })).combined).toEqual([['F4', 'A4']]);
+  });
+  it('leaves notes that have no word in any verse out of the conductor', () => {
+    const song = fixture(); song.strong = [1];
+    const slots = song.patterns[0].lines[0].slots;
+    song.sections[0].bindings[slots[1].id][0] = { id: id(), kind: 'continue' };
+    const columns = () => new DOMParser().parseFromString(scoreMarkup(song), 'text/html').querySelectorAll('[data-score-panel="0"] .score-bell-row td.score-bell-cell').length;
+    expect(columns()).toBe(3);
+    const second: Section = { id: id(), type: 'verse', stage: 'lyrics', raw: '', lines: [], bindings: {} };
+    song.sections.push(second); alignSection(song, second, 'one two three four'); second.stage = 'done';
+    expect(columns()).toBe(4);
   });
   it('keeps the chosen bell order on a combined sheet, even when the first bell is higher', () => {
     const song = fixture(); song.strong = [1]; song.combined = [['A4', 'F4']];

@@ -96,7 +96,7 @@ export function importABC(text: string, source: HymnSource, bells?: string[]): S
   if (!meter.num || !meter.den) throw new Error('This source has no supported time signature.');
   const key = tune.getKeySignature();
   if (!['', 'm'].includes(key.mode) || !/^[A-G]$/.test(key.root)) throw new Error('This source needs a supported major or minor key.');
-  const song = newSong();
+  const song = newSong(); song.ringMelody = true;
   song.title = source.title; song.hymnNumber = source.number;
   song.time = [Number(meter.num), Number(meter.den)]; song.key = `${key.root}${key.acc} ${key.mode === 'm' ? 'minor' : 'major'}`;
   song.pickup = new Fraction(tune.getPickupLength()).mul(song.time[1]).valueOf();

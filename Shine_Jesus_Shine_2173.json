@@ -1,0 +1,166 @@
+{
+  "title": "Shine, Jesus, Shine 2173",
+  "key_signature": "A major",
+  "credit": "Words and music by Graham Kendrick",
+  "lyrics": [
+    {
+      "type": "verse",
+      "lines": [
+        "Lord, the light of your love is shin- ing",
+        "In the midst of the dark- ness shin- ing;",
+        "Je- sus, Light of the world, shine up- on us,",
+        "Set us free by the truth how now bring us.",
+        "Shine on me, shine on me."
+      ]
+    },
+    {
+      "type": "chorus",
+      "lines": [
+        "Shine, Je- sus, shine, fill this land with the Fa- ther's glo- ry",
+        "Blaze, Spir- it, blaze, set our hearts on fire;",
+        "Flow, riv- er, flow, flood the na- tions with grace and mer- cy",
+        "Send forth your Word, Lord, and let there be light."
+      ]
+    },
+    {
+      "type": "verse",
+      "lines": [
+        "Lord, I come to Your awe- some pres- ence,",
+        "From the shad- ows in- to Your radi- ance;",
+        "By Your love I may en- ter Your bright- ness",
+        "Search me, try me, consume all my broken- ness",
+        "Shine on me, shine on me."
+      ],
+       "word_overrides": [
+        {"line": 4, "note": 9, "word": false, "comment": "Broken-ness instead of up-on us"}
+      ]
+    }
+  ],
+  "time_signature": [4, 4],
+  "pickup_beats": 0,
+  "strong_beats": [1, 3],
+  "chord_tones_instructions": [
+    "Custom chords can be added in the form 'chord_name': ['note1', 'note2', ...]"
+  ],
+  "chord_tones": { "E7sus": ["E", "A", "B", "D"]},
+  "verse_instructions": [
+    "Each array of lines corresponds to one line of lyrics",
+    "Lyric objects select the verse pattern (verse) or the chorus pattern (chorus)",
+    "There should be as many verse[] blocks as there are lines of lyrics in one verse",
+    "Add 'breath_after': true to a note to indicate a full pause",
+    "The verse and chorus note arrays are placeholders; fill in both patterns to match the lyric blocks"
+  ],
+  "verse": [
+    [
+      {"melody": "E", "chord": "A", "beats": 1, "word": true},
+      {"melody": "E", "chord": "A", "beats": 1, "word": true},
+      {"melody": "F#", "chord": "D", "beats": 1, "word": true},
+      {"melody": "E", "chord": "D", "beats": 0.5, "word": true},
+      {"melody": "D", "chord": "D", "beats": 0.5, "word": true},
+      {"melody": "E", "chord": "A", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "A", "beats": 1, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1, "word": true},
+      {"melody": "E", "chord": "E", "beats": 1, "word": true}
+    ],
+    [
+      {"melody": "E", "chord": "A", "beats": 1, "word": true},
+      {"melody": "E", "chord": "A", "beats": 1, "word": true},
+      {"melody": "F#", "chord": "D", "beats": 1, "word": true},
+      {"melody": "E", "chord": "D", "beats": 0.5, "word": true},
+      {"melody": "D", "chord": "D", "beats": 0.5, "word": true},
+      {"melody": "E", "chord": "A", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "A", "beats": 1, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1, "word": true},
+      {"melody": "E", "chord": "E", "beats": 1, "word": true}
+    ],
+    [
+      {"melody": "F#", "chord": "D", "beats": 1, "word": true},
+      {"melody": "F#", "chord": "D", "beats": 1, "word": true},
+      {"melody": "G#", "chord": "E", "beats": 1, "word": true},
+      {"melody": "F#", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "G#", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "G#", "chord": "C#m7", "beats": 1, "word": true},
+      {"melody": "E", "chord": "C#m7", "beats": 0.5, "word": true},
+      {"melody": "C#", "chord": "C#m7", "beats": 0.5, "word": true},
+      {"melody": "C#", "chord": "F#m", "beats": 1, "word": true},
+      {"melody": "F#", "chord": "F#m", "beats": 1, "word": true}
+    ],
+    [
+      {"melody": "F#", "chord": "D", "beats": 1, "word": true},
+      {"melody": "F#", "chord": "D", "beats": 1, "word": true},
+      {"melody": "G#", "chord": "E", "beats": 1, "word": true},
+      {"melody": "F#", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "G#", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "G#", "chord": "C#m7", "beats": 1, "word": true},
+      {"melody": "E", "chord": "C#m7", "beats": 0.5, "word": true},
+      {"melody": "C#", "chord": "C#m7", "beats": 0.5, "word": true},
+      {"melody": "C#", "chord": "F#m", "beats": 1, "word": true},
+      {"melody": "F#", "chord": "F#m", "beats": 1, "word": true}
+    ],
+    [      
+      {"melody": "D", "chord": "G", "beats": 2, "word": true},
+      {"melody": "C#", "chord": "G", "beats": 2, "word": true},
+      {"melody": "B", "chord": "E7sus", "beats": 4, "word": true},
+      {"melody": "D", "chord": "G", "beats": 2, "word": true},
+      {"melody": "C#", "chord": "G", "beats": 2, "word": true},
+      {"melody": "E", "chord": "E", "beats": 4, "word": true}
+    ]
+  ],
+  "chorus": [
+    [
+      {"melody": "C#", "chord": "A", "beats": 2, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "A", "chord": "E", "beats": 2.5, "word": true},
+      {"melody": "D", "chord": "Bm", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "A", "beats": 1, "word": true},
+      {"melody": "B", "chord": "Bm", "beats": 2, "word": true},
+      {"melody": "F#", "chord": "B7", "beats": 1.5, "word": true},
+      {"melody": "A", "chord": "B7", "beats": 0.5, "word": true},
+      {"melody": "A", "chord": "E7", "beats": 1, "word": true},
+      {"melody": "G#", "chord": "E7", "beats": 1, "word": true},
+      {"melody": "A", "chord": "D", "beats": 1, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1, "word": true}
+    ],
+    [
+      {"melody": "C#", "chord": "A", "beats": 2, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "A", "chord": "E", "beats": 2.5, "word": true},
+      {"melody": "D", "chord": "Bm", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "A", "beats": 1, "word": true},
+      {"melody": "B", "chord": "Bm", "beats": 2, "word": true},
+      {"melody": "B", "chord": "Bm7", "beats": 2, "word": true},
+      {"melody": "B", "chord": "G", "beats": 4, "word": true}
+    ],
+     [
+      {"melody": "C#", "chord": "A", "beats": 2, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "A", "chord": "E", "beats": 2.5, "word": true},
+      {"melody": "D", "chord": "Bm", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "A", "beats": 1, "word": true},
+      {"melody": "B", "chord": "Bm", "beats": 2, "word": true},
+      {"melody": "F#", "chord": "B7", "beats": 1.5, "word": true},
+      {"melody": "A", "chord": "B7", "beats": 0.5, "word": true},
+      {"melody": "A", "chord": "E7", "beats": 1, "word": true},
+      {"melody": "G#", "chord": "E7", "beats": 1, "word": true},
+      {"melody": "A", "chord": "D", "beats": 1, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1, "word": true}
+    ],
+    [
+      {"melody": "C#", "chord": "A", "beats": 2, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "A", "chord": "E", "beats": 2.5, "word": true},
+      {"melody": "D", "chord": "Bm", "beats": 1, "word": true},
+      {"melody": "C#", "chord": "A", "beats": 1, "word": true},
+      {"melody": "B", "chord": "Bm", "beats": 2, "word": true},
+      {"melody": "B", "chord": "E", "beats": 1.5, "word": true},
+      {"melody": "A", "chord": "E", "beats": 0.5, "word": true},
+      {"melody": "A", "chord": "A", "beats": 4, "word": true}
+    ]
+  ],
+  "recommended_bells": ["C#4", "D4", "E4", "F#4", "G4", "G#4", "A4", "B4", "C#5", "D5"],
+  "bell_range": ["C#4", "D4", "E4", "F#4", "G4", "G#4", "A4", "B4"]
+}
