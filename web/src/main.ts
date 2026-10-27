@@ -106,7 +106,7 @@ function metadata() {
 function combinedNotes() {
   const bells = playableBells(song);
   const rows = [...song.combined.map(pair => pair.map(note => resolveBell(song, note) ?? '')), ...draftPairs];
-  const select = (row: string[], index: number, side: number) => `<select data-pair="${index}" data-side="${side}" aria-label="Pair ${index + 1}, ${side ? 'second' : 'first'} note"><option value="" ${row[side] ? '' : 'selected'} disabled>Select note</option>${bells.map(bell => `<option value="${esc(bell)}" ${row[side] === bell ? 'selected' : ''}>${esc(bellLabel(song, bell))}</option>`).join('')}</select>`;
+  const select = (row: string[], index: number, side: number) => `<select data-pair="${index}" data-side="${side}" aria-label="Pair ${index + 1}, ${side ? 'second' : 'first'} note"><option value="" ${row[side] ? '' : 'selected'} disabled>&ndash;</option>${bells.map(bell => `<option value="${esc(bell)}" ${row[side] === bell ? 'selected' : ''}>${esc(bellLabel(song, bell))}</option>`).join('')}</select>`;
   return `<fieldset class="field combined-notes"><legend>Combined notes</legend><small class="field-help">Choose two bells to share one player sheet</small>
     ${rows.map((row, index) => `<div class="pair-row">${select(row, index, 0)}${select(row, index, 1)}${tool('remove-pair', `Remove pair ${index + 1}`, 'trash-2', `data-pair="${index}"`)}</div>`).join('')}
     <div>${command('add-pair', 'Add pair', 'plus', 'secondary')}</div></fieldset>`;
