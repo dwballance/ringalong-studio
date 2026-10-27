@@ -18,6 +18,8 @@
   .row { display: flex; gap: .5rem; align-items: center; }
   .row .title { flex: 1; } .row small { opacity: .65; }
   .edit { border: 0; background: none; font-size: 1.1rem; }
+  li.hidden .title { opacity: .55; font-style: italic; }
+  form .check { display: flex; align-items: center; gap: .4rem; }
   form { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: .5rem; padding: .6rem 0 .4rem 1.6rem; }
   form label { display: grid; gap: .15rem; font-size: .8rem; }
   form .wide { grid-column: 1 / -1; } form .actions { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
@@ -31,6 +33,7 @@
   <h1>Unmapped hymns <small id="count"></small></h1>
   <button id="rescan" title="Scan Open Hymnal for new public-domain candidates">Rescan for hymns</button>
   <button id="update" class="primary" title="Regenerate the catalog from mapped hymns">Update catalog</button>
+  <label><input id="show-hidden" type="checkbox"> Show hidden</label>
   <input id="filter" type="search" placeholder="Filter by title, tune or reference…" autofocus>
 </header>
 <div id="status" role="status"></div>
@@ -52,6 +55,14 @@ async function call(path, body) {
 const el = (tag, props = {}, ...children) => { const node = Object.assign(document.createElement(tag), props); node.append(...children); return node; };
 const hymnaryURL = hymn => `https://hymnary.org/search?qu=${encodeURIComponent(hymn.title)}`;
 
+// Pasted text often arrives with leading spaces or newlines; drop them from the field.
+function stripPastedLeadingSpace(event) {
+  if (event.inputType !== 'insertFromPaste') return;
+  const input = event.target;
+  const trimmed = input.value.trimStart();
+  if (trimmed !== input.value) input.value = trimmed;
+}
+
 function field(label, name, value, extra = {}) {
   const { wide, ...props } = extra;
   return el('label', { className: wide ? 'wide' : '' }, label, el('input', { name, value, ...props }));
@@ -68,7 +79,8 @@ function editor(hymn) {
     field('Title', 'title', hymn.title, { wide: true, required: true }),
     el('label', {}, 'Hymnal', hymnal),
     field('Number', 'number', hymn.number, { inputMode: 'numeric', pattern: '\\d{1,4}', placeholder: 'e.g. 378' }),
-    field('Tune', 'tune', hymn.tune, { placeholder: 'e.g. NEW BRITAIN' }),
+    field('Tune', 'tune', hymn.tune, { placeholder: 'e.g. NEW BRITAIN', oninput: stripPastedLeadingSpace }),
+    el('label', { className: 'wide check' }, el('input', { type: 'checkbox', name: 'hidden', checked: hymn.hidden }), 'Hidden (excluded from the list unless "Show hidden" is on)'),
     el('div', { className: 'actions wide' }, el('button', { type: 'submit', className: 'primary', textContent: 'Save' }),
       el('button', { type: 'button', textContent: 'Cancel', onclick: () => { open = null; render(); } }), link, note,
       el('small', { textContent: `Open Hymnal X:${hymn.reference}` })));
@@ -76,7 +88,7 @@ function editor(hymn) {
     event.preventDefault();
     const values = Object.fromEntries(new FormData(form));
     try {
-      const { saved } = await call('save', { ...values, reference: hymn.reference });
+      const { saved } = await call('save', { ...values, hidden: form.elements.hidden.checked, reference: hymn.reference });
       Object.assign(hymn, saved);
       if (saved.hymnal !== 'unmapped') {
         hymns = hymns.filter(item => item !== hymn);
@@ -90,9 +102,11 @@ function editor(hymn) {
 
 function render() {
   const query = $('filter').value.trim().toLowerCase();
-  const shown = hymns.filter(h => `${h.title} ${h.tune} ${h.reference}`.toLowerCase().includes(query));
-  $('count').textContent = `(${shown.length} of ${hymns.length})`;
-  $('list').replaceChildren(...shown.map(hymn => el('li', {},
+  const showHidden = $('show-hidden').checked;
+  const hiddenCount = hymns.filter(h => h.hidden).length;
+  const shown = hymns.filter(h => (showHidden || !h.hidden) && `${h.title} ${h.tune} ${h.reference}`.toLowerCase().includes(query));
+  $('count').textContent = `(${shown.length} of ${hymns.length}${hiddenCount && !showHidden ? `, ${hiddenCount} hidden` : ''})`;
+  $('list').replaceChildren(...shown.map(hymn => el('li', { className: hymn.hidden ? 'hidden' : '' },
     el('div', { className: 'row' },
       el('button', { className: 'edit', title: 'Edit', ariaLabel: `Edit ${hymn.title}`, textContent: '✎',
         onclick: () => { open = open === hymn.reference ? null : hymn.reference; render(); } }),
@@ -120,6 +134,7 @@ async function task(name, label) {
 }
 
 $('filter').oninput = render;
+$('show-hidden').onchange = render;
 $('rescan').onclick = () => task('rescan', 'Rescan');
 $('update').onclick = () => task('update-catalog', 'Update catalog');
 load().catch(error => status(error.message, true));

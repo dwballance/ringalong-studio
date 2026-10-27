@@ -808,3 +808,18 @@ test('combined notes are chosen from dropdown pairs that can be added and remove
   await page.getByRole('button', { name: 'Remove pair 1', exact: true }).click();
   await expect(page.getByRole('combobox', { name: /^Pair 1/ })).toHaveCount(0);
 });
+
+test('choosing a key offers to replace the bells with the key scale from C4', async ({ page }) => {
+  const messages: string[] = [];
+  let accept = true;
+  page.on('dialog', dialog => { messages.push(dialog.message()); void (accept ? dialog.accept() : dialog.dismiss()); });
+  await page.goto('/');
+  await page.getByLabel('Key signature').selectOption('D major');
+  expect(messages).toEqual(['Replace the current bells with C#4 D4 E4 F#4 G4 A4 B4 for D major?']);
+  await expect(page.getByLabel('Bells', { exact: true })).toHaveValue('C# D E F# G A B');
+  accept = false;
+  await page.getByLabel('Key signature').selectOption('Eb major');
+  expect(messages).toHaveLength(2);
+  await expect(page.getByLabel('Key signature')).toHaveValue('Eb major');
+  await expect(page.getByLabel('Bells', { exact: true })).toHaveValue('C# D E F# G A B');
+});

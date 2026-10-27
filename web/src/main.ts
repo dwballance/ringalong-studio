@@ -7,11 +7,11 @@ import './theme.css';
 import './styles.css';
 import './score.css';
 import { createIcons, BellRing, Plus, Download, Upload, Undo2, Redo2, Music2, Eye, Pencil, Check,
-  X, ChevronUp, ChevronDown, Trash2, ArrowRight, FilePlus2, Settings2, Scissors, Link2, RotateCcw, ShieldCheck, Moon, Sun, Globe, CornerDownLeft } from 'lucide';
+  X, ChevronUp, ChevronDown, Trash2, ArrowRight, FilePlus2, Settings2, Scissors, Link2, RotateCcw, ShieldCheck, Moon, Sun, Globe, CornerDownLeft, Copy } from 'lucide';
 import { hyphenateSync } from 'hyphen/en-us';
 import Fraction from 'fraction.js';
 import { alignSection, breakLineHere, chordDefinitionsSchema, ensureSectionNames, id, newNote, newSection, newSong, normalizeAttribution, removeUntextedNote, restoreHymnDefaults, sectionTitle, type Song, type Section, type Note, type Binding } from './document';
-import { COLORS, DURATIONS, bellLabel, bellPitch, chordTones, durationLabel, eventsFor, midi, noteName, pc, playableBells, perform, problems, resolveBell, type Event } from './music';
+import { COLORS, DURATIONS, bellLabel, bellPitch, chordTones, durationLabel, eventsFor, keyBells, midi, noteName, pc, playableBells, perform, problems, resolveBell, type Event } from './music';
 import { bindScore, escape as esc, scoreMarkup } from './render';
 import { downloadSong, MAX_FILE_SIZE, readDocument } from './files';
 import { Recovery } from './recovery';
@@ -39,7 +39,7 @@ const past: string[] = [];
 const future: string[] = [];
 const icon = (name: string) => `<i data-lucide="${name}" aria-hidden="true"></i>`;
 const icons = { BellRing, Plus, Download, Upload, Undo2, Redo2, Music2, Eye, Pencil, Check, X,
-  ChevronUp, ChevronDown, Trash2, ArrowRight, FilePlus2, Settings2, Scissors, Link2, RotateCcw, ShieldCheck, Moon, Sun, Globe, CornerDownLeft };
+  ChevronUp, ChevronDown, Trash2, ArrowRight, FilePlus2, Settings2, Scissors, Link2, RotateCcw, ShieldCheck, Moon, Sun, Globe, CornerDownLeft, Copy };
 function themeButton() {
   const dark = currentTheme() === 'dark';
   return `<button type="button" class="icon-button" data-action="toggle-theme" aria-label="Toggle dark mode" aria-pressed="${dark}" title="Switch to ${dark ? 'light' : 'dark'} mode">${icon(dark ? 'sun' : 'moon')}</button>`;
@@ -82,8 +82,8 @@ function metadata() {
   const keys = ['major', 'minor'].flatMap(mode => roots.map(root => `${root} ${mode}`));
   return `<section class="song-details" aria-labelledby="details-title"><div class="band-heading"><h2 id="details-title">Song details</h2>${song.extensions.hymnDefaults || song.extensions.webSource ? command('reset-hymn', 'Reset hymn', 'rotate-ccw', 'secondary', loadingHymn ? 'disabled' : '') : ''}</div>
     <div class="metadata-grid">
-      <div class="field hymn-lookup"><label for="hymn-number">Hymn number <span class="optional">optional</span></label><div class="hymn-lookup-controls"><input id="hymn-number" name="hymnNumber" aria-label="Hymn number" value="${esc(song.hymnNumber)}" placeholder="378" inputmode="numeric" maxlength="50">${command('load-hymn', loadingHymn ? 'Loading…' : 'Look up', 'globe', 'secondary', `aria-busy="${loadingHymn}" ${loadingHymn || !song.hymnNumber.trim() ? 'disabled' : ''}`)}</div></div>
-      ${field('Title', 'title', song.title, 'placeholder="Untitled ringalong" required maxlength="250"')}
+      <div class="field hymn-lookup"><label for="hymn-number">Hymn number <span class="optional">optional</span></label><div class="hymn-lookup-controls"><input id="hymn-number" name="hymnNumber" aria-label="Hymn number" value="${esc(song.hymnNumber)}" placeholder="eg. 378" inputmode="numeric" maxlength="50">${command('load-hymn', loadingHymn ? 'Loading…' : 'Look up', 'globe', 'secondary', `aria-busy="${loadingHymn}" ${loadingHymn || !song.hymnNumber.trim() ? 'disabled' : ''}`)}</div></div>
+      ${field('Title *', 'title', song.title, 'placeholder="Enter title here" required maxlength="250"')}
       <label class="field"><span>Key signature</span><select name="key" required><option value="">Select key</option>${keys.map(key => `<option ${key === song.key ? 'selected' : ''}>${key}</option>`).join('')}</select></label>
       <div class="meter-pickup"><fieldset class="field meter"><legend>Time signature</legend><div><input name="timeTop" type="number" min="1" max="32" value="${song.time[0]}" aria-label="Beats per measure"><span>/</span><select name="timeBottom" aria-label="Beat unit">${[1, 2, 4, 8, 16, 32].map(unit => `<option ${song.time[1] === unit ? 'selected' : ''}>${unit}</option>`).join('')}</select></div></fieldset>
       ${field('Pickup beats', 'pickup', song.pickup, `min="0" max="${song.time[0] - 0.001}" step="any"`, 'number')}</div>
@@ -125,6 +125,12 @@ function paletteEvent(): Event | undefined {
   try { return eventsFor(song, selectedSection()!).find(event => event.slot.id === palette!.slotId && event.binding.id === palette!.bindingId); }
   catch { return; }
 }
+function chordNeighbor(event: Event, offset: number): Event | undefined {
+  try {
+    const events = eventsFor(song, selectedSection()!);
+    return events[events.findIndex(item => item.binding.id === event.binding.id) + offset];
+  } catch { return; }
+}
 function paletteMarkup() {
   const event = paletteEvent();
   if (!palette || !event) return '';
@@ -137,8 +143,10 @@ function paletteMarkup() {
     const match = /^([A-G][#b]?)(.*)$/.exec(event.chord);
     const root = match?.[1] || 'C', quality = match?.[2] || '';
     const roots = song.key.includes('b') || song.key.startsWith('F ') ? ['C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B'] : ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-    contents = `<div class="palette-options compact" role="toolbar" aria-label="Chord roots">${roots.map(pitch => option(pitch + quality, esc(pitch), root === pitch, 'data-stay="true"')).join('')}</div>
-      <div class="palette-options compact" role="toolbar" aria-label="Chord qualities">${[['', 'Major'], ['m', 'Minor'], ['7', '7'], ['m7', 'm7'], ['maj7', 'maj7'], ['dim', 'dim'], ['sus2', 'sus2'], ['sus4', 'sus4']].map(([suffix, label]) => option(root + suffix, label, quality === suffix)).join('')}${Object.keys(song.chords).filter(name => !/^([A-G][#b]?)(maj7|m7|m|7)?$/.test(name)).map(name => option(name, esc(name), name === event.chord)).join('')}</div>`;
+    contents = `<div class="chord-palette"><div class="chord-rows"><div class="palette-options compact" role="toolbar" aria-label="Chord roots">${roots.map(pitch => option(pitch + quality, esc(pitch), root === pitch, 'data-stay="true"')).join('')}</div>
+      <div class="palette-options compact" role="toolbar" aria-label="Chord qualities">${[['', 'Major'], ['m', 'minor'], ['7', '7'], ['maj7', 'maj7'], ['m7', 'm7'], ['dim', 'dim'], ['sus2', 'sus2'], ['sus4', 'sus4']].map(([suffix, label]) => option(root + suffix, label, quality === suffix)).join('')}${Object.keys(song.chords).filter(name => !/^([A-G][#b]?)(maj7|m7|m|7)?$/.test(name)).map(name => option(name, esc(name), name === event.chord)).join('')}</div>
+</div>
+      <div class="chord-nav" role="toolbar" aria-label="Chord navigation">${command('chord-same', 'Same as previous', 'copy', 'secondary', chordNeighbor(event, -1) ? '' : 'disabled')}${command('chord-next', 'Next note', 'arrow-right', 'secondary', chordNeighbor(event, 1) ? '' : 'disabled')}</div></div>`;
   }
   if (palette.field === 'ring') contents = `<div class="palette-options compact" role="toolbar" aria-label="Ringing override">${[['auto', 'Auto'], ['chord', 'Full chord'], ...(song.ringMelody ? [['melody', 'Melody only']] : []), ['hold', 'Hold'], ['rest', 'Rest']].map(([value, name]) => option(value, name, event.slot.policy === value, 'data-stay="true"')).join('')}</div>
     <div class="ring-extras">${song.ringMelody ? `<label>Melody <select data-slot-melody><option value="inherit" ${event.slot.ringMelody === null ? 'selected' : ''}>Song setting</option><option value="yes" ${event.slot.ringMelody === true ? 'selected' : ''}>Ring</option><option value="no" ${event.slot.ringMelody === false ? 'selected' : ''}>Do not ring</option></select></label>` : ''}
@@ -217,7 +225,7 @@ function lyricEditor(section: Section) {
   const suggestions = section.stage === 'suggestions';
   const text = suggestions ? section.suggestion ?? suggestedLyrics(section.raw) : section.raw;
   return `<div class="lyric-editor"><label for="lyrics-input">${suggestions ? 'Review syllable breaks' : 'Lyrics'}</label>
-    <p class="lyric-instructions">Type the lyrics. Separate each line with a carriage return. Words are separated by spaces. If you split a word with a dash or use punctuation, do not put a space between the word and its punctuation.</p>
+    <p class="lyric-instructions">Type the lyrics. Separate each line with a carriage return. Words are separated by spaces. Enter words as normal, the next step will automatically split up syllables for your review.</p>
     <textarea id="lyrics-input" name="lyrics" rows="8" placeholder="Enter lyrics…" spellcheck="true">${esc(text)}</textarea>
     <div class="lyric-footer">${suggestions ? `<span class="quiet">Suggestions may need correction for singing.</span><div>${command('use-original', 'Keep original', 'rotate-ccw')}${command('confirm-lyrics', 'Use these words', 'check', 'primary')}</div>` : `<label class="check-field"><input id="suggest-syllables" type="checkbox" checked> Suggest syllable breaks</label>${command('next', 'Next', 'arrow-right', 'primary')}`}</div></div>`;
 }
@@ -230,7 +238,7 @@ function render() {
   const focusedValue = focused?.dataset.value;
   const scrolls = [...document.querySelectorAll<HTMLElement>('.word-track')].map(element => element.scrollLeft);
   const advancedOpen = document.querySelector<HTMLDetailsElement>('.advanced')?.open;
-  app.innerHTML = `<header class="app-header"><a class="brand" href="./" aria-label="Ringalong Studio"><span class="brand-mark">${icon('bell-ring')}</span><span>Ringalong<span class="brand-studio">STUDIO</span></span></a><nav aria-label="File actions">${themeButton()}${tool('new', 'New ringalong', 'file-plus-2')}${tool('undo', 'Undo', 'undo-2', past.length ? '' : 'disabled')}${tool('redo', 'Redo', 'redo-2', future.length ? '' : 'disabled')}<span class="toolbar-divider"></span>${command('import', 'Import', 'upload', 'secondary')}${command('export', 'Save / Export', 'download', 'primary')}</nav></header>
+  app.innerHTML = `<header class="app-header"><a class="brand" href="./" aria-label="Ringalong Studio"><span class="brand-mark">${icon('bell-ring')}</span><span>Ringalong<span class="brand-studio">STUDIO</span></span></a><nav aria-label="File actions">${tool('new', 'New ringalong', 'file-plus-2')}${tool('undo', 'Undo', 'undo-2', past.length ? '' : 'disabled')}${tool('redo', 'Redo', 'redo-2', future.length ? '' : 'disabled')}<span class="toolbar-divider"></span>${command('import', 'Import', 'upload', 'secondary')}${command('export', 'Save / Export', 'download', 'primary')}${themeButton()}</nav></header>
     <main>
     <div id="notice" class="notice ${messageIsError ? 'error' : ''}" role="status" aria-live="polite" ${message ? '' : 'hidden'}>${esc(message)}</div>
     ${metadata()}<div class="workspace">${sidebar()}<div class="editor-column">${editor()}</div></div>
@@ -263,8 +271,19 @@ function assignValue(value: string, stay = false) {
   edit(() => {
     if (field === 'duration') {
       const beats = Number(value); if (!Number.isFinite(beats) || beats <= 0) throw new Error('Duration must be a positive number.');
+      const siblings = selectedSection()!.bindings[event.slot.id] || [];
       if (verseOnly) event.binding.beats = beats;
-      else {
+      else if (siblings.length > 1) {
+        // A subdivided note: each syllable keeps its own length and the shared note becomes their total.
+        const previous = new Fraction(String(event.slot.beats));
+        siblings.forEach(binding => { binding.beats ??= previous.toFraction(); });
+        event.binding.beats = beats;
+        const total = siblings.reduce((sum, binding) => sum.add(String(binding.beats)), new Fraction(0));
+        const ratio = total.div(previous);
+        event.slot.beats = total.valueOf();
+        song.sections.filter(item => item.type === selectedSection()!.type && item !== selectedSection()).forEach(item =>
+          (item.bindings[event.slot.id] || []).forEach(binding => { if (binding.beats !== undefined) binding.beats = new Fraction(String(binding.beats)).mul(ratio).toFraction(); }));
+      } else {
         const ratio = new Fraction(String(beats)).div(String(event.slot.beats));
         event.slot.beats = beats;
         song.sections.filter(section => section.type === selectedSection()!.type).forEach(section =>
@@ -439,6 +458,12 @@ async function handleAction(button: HTMLElement) {
     else if (action === 'open-palette') {
       palette = { slotId: button.dataset.slot!, bindingId: button.dataset.binding!, field: button.dataset.field as NonNullable<typeof palette>['field'] }; render();
     } else if (action === 'palette-value') assignValue(button.dataset.value!, button.dataset.stay === 'true');
+    else if (action === 'chord-same' || action === 'chord-next') {
+      const event = paletteEvent(), target = event && chordNeighbor(event, action === 'chord-same' ? -1 : 1);
+      if (!event || !target) return;
+      if (action === 'chord-same') assignValue(chordNeighbor(event, -1)!.chord);
+      else { palette = { ...palette!, slotId: target.slot.id, bindingId: target.binding.id }; render(); }
+    }
     else if (action === 'rename-section') {
       const name = window.prompt('Section name', sectionLabel(section))?.trim();
       if (!name) return;
@@ -574,7 +599,13 @@ app.addEventListener('change', async event => {
       if (!bells.length || new Set(bells.map(bellPitch)).size !== bells.length) throw new Error('Enter unique bell pitches.');
       if (song.ringMelody && bells.some(bell => !/\d$/.test(bell))) throw new Error('Melody mode requires an octave for each bell, for example C4 or C5.');
     }
+    if (name === 'key') {
+      const suggested = keyBells(input.value);
+      if (suggested && suggested.join(' ') !== playableBells(song).join(' ')
+        && confirmation(`Replace the current bells with ${suggested.join(' ')} for ${input.value}?`)) bells = suggested;
+    }
     edit(() => {
+      if (bells && name === 'key') { song.bells = bells; song.recommended = [...bells]; }
       if (name === 'timeTop') { song.time[0] = Number(input.value); song.strong = song.strong.filter(beat => beat <= song.time[0]); }
       else if (name === 'timeBottom') song.time[1] = Number(input.value);
       else if (name === 'pickup') song.pickup = Number(input.value);

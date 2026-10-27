@@ -25,7 +25,8 @@ const readMappings = async () => JSON.parse(await readFile(mappingsPath, 'utf8')
 
 export async function listUnmapped() {
   return (await readMappings()).filter(row => row.hymnal === 'unmapped')
-    .map(({ reference, title, tune, number }) => ({ reference, title, tune: tune ?? '', number: number ?? '' }));
+    .map(({ reference, title, tune, number, hidden }) => ({ reference, title, tune: tune ?? '', number: number ?? '', hidden: hidden === true }))
+    .sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base', numeric: true }));
 }
 
 export function saveMapping(input) {
@@ -44,10 +45,12 @@ export function saveMapping(input) {
         throw new HttpError(409, `${hymnal} ${number} is already mapped.`);
     } else if (number) throw new HttpError(400, 'Choose UMH1989 or TFWS2000 to save a hymn number.');
     Object.assign(row, { hymnal, number, tune, title });
+    // Stored only when set, so untouched rows keep their existing shape.
+    if (input?.hidden === true) row.hidden = true; else delete row.hidden;
     const temporary = `${mappingsPath}.tmp`;
     await writeFile(temporary, JSON.stringify(mappings, null, 2) + '\n', 'utf8');
     await rename(temporary, mappingsPath);
-    return { saved: row };
+    return { saved: { ...row, hidden: row.hidden === true } };
   });
 }
 

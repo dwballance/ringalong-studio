@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { alignSection, chordDefinitionsSchema, id, newSong, type Section } from '../src/document';
 import Fraction from 'fraction.js';
-import { bellLabel, chordTones, durationLabel, eventsFor, playableBells, perform, problems } from '../src/music';
+import { bellLabel, chordTones, durationLabel, eventsFor, keyBells, playableBells, perform, problems } from '../src/music';
 
 function fixture() {
   const song = newSong(); song.ringMelody = true; song.title = 'Synthetic song'; song.key = 'Bb major'; song.time = [3, 4]; song.pickup = 1;
@@ -162,5 +162,15 @@ describe('musical engine', () => {
     const events = eventsFor(song, section);
     expect(events.at(-1)!.boundaries).toEqual([1 / 3]);
     expect(problems(song)).toEqual([]);
+  });
+});
+describe('keyBells', () => {
+  it('starts at the first scale note on or above C4 and spans seven notes', () => {
+    expect(keyBells('C major')).toEqual(['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4']);
+    expect(keyBells('D major')).toEqual(['C#4', 'D4', 'E4', 'F#4', 'G4', 'A4', 'B4']);
+    expect(keyBells('Eb major')).toEqual(['C4', 'D4', 'Eb4', 'F4', 'G4', 'Ab4', 'Bb4']);
+    expect(keyBells('A minor')).toEqual(['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4']);
+    expect(keyBells('F# major')).toEqual(['C#4', 'D#4', 'E#4', 'F#4', 'G#4', 'A#4', 'B4']);
+    expect(keyBells('')).toBeUndefined();
   });
 });

@@ -44,6 +44,26 @@ export function midi(name: string): number {
   if (!match) throw new Error(`Invalid pitch: ${name}`);
   return (Number(match[3]) + 1) * 12 + NATURAL[match[1]] + (match[2] === '#' ? 1 : match[2] === 'b' ? -1 : 0);
 }
+// Seven bells of a key's scale, starting at the first scale note on or above C4 (C4 or C#4 for the
+// common keys). Returns undefined for keys that cannot be spelled without double accidentals.
+export function keyBells(key: string): string[] | undefined {
+  const match = /^([A-G])([#b]?) (major|minor)$/.exec(key);
+  if (!match) return undefined;
+  const letters = 'CDEFGAB';
+  const start = letters.indexOf(match[1]);
+  const steps = match[3] === 'major' ? [0, 2, 4, 5, 7, 9, 11] : [0, 2, 3, 5, 7, 8, 10];
+  const root = 48 + NATURAL[match[1]] + (match[2] === '#' ? 1 : match[2] === 'b' ? -1 : 0);
+  const bells: string[] = [];
+  for (let index = 0; bells.length < 7; index++) {
+    const letter = start + index;
+    const octave = 3 + Math.floor(letter / 7);
+    const pitch = root + steps[index % 7] + 12 * Math.floor(index / 7);
+    const accidental = pitch - (12 * (octave + 1) + NATURAL[letters[letter % 7]]);
+    if (Math.abs(accidental) > 1) return undefined;
+    if (pitch >= 60) bells.push(`${letters[letter % 7]}${accidental === 1 ? '#' : accidental === -1 ? 'b' : ''}${octave}`);
+  }
+  return bells;
+}
 export function pc(name: string): number {
   return bellPitch(name) % 12;
 }

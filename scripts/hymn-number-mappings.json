@@ -79,18 +79,19 @@
     "tune": ""
   },
   {
-    "hymnal": "unmapped",
-    "number": "",
+    "hymnal": "UMH1989",
+    "number": "131",
     "reference": "26",
     "title": "We Gather Together",
-    "tune": ""
+    "tune": "KREMSER"
   },
   {
     "hymnal": "unmapped",
     "number": "",
     "reference": "27",
     "title": "Abide, O Dearest Jesus",
-    "tune": ""
+    "tune": "",
+    "hidden": true
   },
   {
     "hymnal": "unmapped",
@@ -216,21 +217,24 @@
     "number": "",
     "reference": "46",
     "title": "A Great and Mighty Wonder",
-    "tune": ""
+    "tune": "",
+    "hidden": true
   },
   {
     "hymnal": "unmapped",
     "number": "",
     "reference": "47",
     "title": "All My Heart This Night Rejoices",
-    "tune": ""
+    "tune": "",
+    "hidden": true
   },
   {
     "hymnal": "unmapped",
     "number": "",
     "reference": "48",
     "title": "All Praise to Jesus' Hallowed Name",
-    "tune": ""
+    "tune": "",
+    "hidden": true
   },
   {
     "hymnal": "unmapped",
@@ -475,7 +479,8 @@
     "number": "",
     "reference": "85",
     "title": "A Lamb Goes Uncomplaining Forth",
-    "tune": ""
+    "tune": "",
+    "hidden": true
   },
   {
     "hymnal": "unmapped",
@@ -499,11 +504,11 @@
     "tune": ""
   },
   {
-    "hymnal": "unmapped",
-    "number": "",
+    "hymnal": "UMH1989",
+    "number": "280",
     "reference": "93",
     "title": "All Glory, Laud, and Honor",
-    "tune": ""
+    "tune": "ST. THEODULPH"
   },
   {
     "hymnal": "unmapped",
@@ -723,18 +728,19 @@
     "tune": ""
   },
   {
-    "hymnal": "unmapped",
-    "number": "",
+    "hymnal": "UMH1989",
+    "number": "110",
     "reference": "127",
     "title": "A Mighty Fortress Is Our God",
-    "tune": ""
+    "tune": "EIN' FESTE BURG"
   },
   {
     "hymnal": "unmapped",
     "number": "",
     "reference": "128",
     "title": "A Mighty Fortress Is Our God",
-    "tune": ""
+    "tune": "",
+    "hidden": true
   },
   {
     "hymnal": "unmapped",
@@ -940,11 +946,11 @@
     "tune": ""
   },
   {
-    "hymnal": "unmapped",
-    "number": "",
+    "hymnal": "UMH1989",
+    "number": "154",
     "reference": "161",
     "title": "All Hail The Power Of Jesus' Name",
-    "tune": ""
+    "tune": "CORONATION"
   },
   {
     "hymnal": "unmapped",
@@ -1115,11 +1121,11 @@
     "tune": ""
   },
   {
-    "hymnal": "unmapped",
-    "number": "",
+    "hymnal": "UMH1989",
+    "number": "700",
     "reference": "191",
     "title": "Abide With Me",
-    "tune": ""
+    "tune": "EVENTIDE"
   },
   {
     "hymnal": "unmapped",
@@ -1486,11 +1492,11 @@
     "tune": ""
   },
   {
-    "hymnal": "unmapped",
-    "number": "",
+    "hymnal": "UMH1989",
+    "number": "62",
     "reference": "250",
     "title": "All Creatures of Our God and King",
-    "tune": ""
+    "tune": "LASST UNS ERFREUEN"
   },
   {
     "hymnal": "unmapped",
@@ -1609,7 +1615,8 @@
     "number": "",
     "reference": "272",
     "title": "All Depends On Our Possessing",
-    "tune": ""
+    "tune": "",
+    "hidden": true
   },
   {
     "hymnal": "unmapped",
@@ -1850,11 +1857,11 @@
     "tune": ""
   },
   {
-    "hymnal": "unmapped",
-    "number": "",
+    "hymnal": "UMH1989",
+    "number": "682",
     "reference": "309",
     "title": "All Praise To Thee, My God, This Night",
-    "tune": ""
+    "tune": "TALLIS' CANON"
   },
   {
     "hymnal": "unmapped",
