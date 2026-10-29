@@ -1,0 +1,39 @@
+X: 258
+T: Praise God From Whom All Blessings Flow 
+%%combinevoices 1
+T: (Doxology; see also 'Awake, My Soul, And With The Sun')
+C: Words: Thomas Ken, 1674.  Music: 'Old 100th' Genevan Psalter, attr. Louis Bourgeois, c. 1551.  
+C: Setting: Sternhold and Hopkins' Psalter, 1561.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source:ccel from Sternhold and Hopkins' Psalter 1561.
+M: none
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] G2 G F E D | G2 A2 B3 | B2 B B A G | c2 B2 A3 |
+w: 1.~Praise God, from Whom all bles- sings flow; Praise Him, all crea- tures here be- low;
+[V: S1V2]  D2 D D B, B, | B,2 D2 D3 | D2 D G F G | G2 G2 F3 |
+[V: S2V1]  B,2 B, A, G, F, | G,2 F,2 G,3 | G,2 B, D C B, | E2 D2 D3 |
+[V: S2V2]  G,2 G, D, E, B,, | E,2 D,2 G,,3 | G,2 G, G, D, E, | C,2 G,,2 D,3 |
+% 5
+[V: S1V1]  G2 A B A G | E2 F2 G3 | d2 B G A c | B2 A2 G3 |]
+w: Praise Him a- bove, ye heav'n- ly host; Praise Fa- ther, Son, and Ho- ly Ghost.
+[V: S1V2]  G2 F G F D | E2 D2 D3 | D2 D G F E/F/ | G2 F2 D3 |]
+[V: S2V1]  B,2 D D D D | (C B,) A,2 B,3 | B,2 G, B, D E | D2 (D C) B,3 |]
+[V: S2V2]  E,2 D, G, D, B,, | C,2 D,2 G,,3 | G,2 G, E, D, A,, | (B,, C,) D,2 G,,3 |]
+% 10

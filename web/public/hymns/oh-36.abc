@@ -1,0 +1,67 @@
+X: 36
+T: Lift Up Your Heads, Ye Mighty Gates
+%%combinevoices 1
+C: Words: Georg Weissel, 1642. Translated by Catherine Winkworth, 1855.
+C: Music: 'Milwaukee' or 'Macht hoch die Tür (Lemke)' August Lemke, 1849. 
+C: Setting: "Concordia Kinderchöre", 1908. 
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2013 Revision.
+S: Music source: "Concordia Kinderchöre", 1908 Hymn 6 page 10.
+S: Lyrics source: The Chorale Book for England, 1865, Hymn 25.  noted Arr. v. S.F.G.
+M: 3/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: A % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=140] E | c2 A | (A G) A | B2 G | E2 E | (E F) G | A2 F | E2 D |
+w: 1.~Lift up your heads, * ye might- y gates! Be- hold, * the King of glo- ry 
+w: 2.~The Lord is just, * a Help- er tried, Mer- cy * is ev- er at His 
+w: 3.~O blest the land, * the ci- ty blest, Where Christ * the Ru- ler is con- 
+w: 4.~Fling wide the por- * tals of your heart; Make it * a tem- ple, set a- 
+w: 5.~Re- deem- er, come! * I o- pen wide My heart * to Thee; here, Lord, a- 
+[V: S1V2] E | E2 E | E2 E | E2 E | E2 B, | B,2 E | E2 D | C2 B, |
+[V: S2V1] G, | A,2 C | (A, B,) C | B,2 B, | G,2 G, | (G, A,) B, | A,2 A, | A,2 G, |
+[V: S2V2] E, | A,,2 A,, | (C, B,,) A,, | G,,2 B,, | E,2 E, | (E, ^D,) =D, | C,2 D, | E,2 E, |
+% 9
+[V: S1V1] C2 C | (E A) c | (B G) E | (A F) ^D | E2 E | A2 B | c2 A | G2
+w: waits; The King * of kings * is draw- * ing near, The Sa- vior of the world 
+w: side, His king- * ly crown * is ho- * li- ness, His scep- ter, pi- ty in 
+w: fessed! O hap- * py hearts * and hap- * py homes To whom this King in tri- 
+w: part From earth- * ly use * for heav'ns * em- ploy, A- dorned with prayer and love 
+w: bide! Let me * Thy in- * ner pres- * ence feel, Thy grace and love in me 
+[V: S1V2] A,2 A, | (C E) E | E2 B, | C2 B, | B,2 C | C2 E | E2 F | E2
+[V: S2V1] E,2 E, | A,2 A, | B,2 G, | (F, A,) F, | G,2 G, | F,2 G, | A,2 C | B,2
+[V: S2V2] A,,2 A,, | ( A,, C,) A,, | G,,2 G,, | A,,2 B,, | E,2 C, | F,,2 E,, | A,,2 F,, | B,,2
+% 16
+[V: S1V1] F | E2 A | G2 B | A2 c | B2 d | c2 E | (d c) B | (A G) F |
+w: is here; Life and sal- va- tion doth He bring, Where- fore * re- joice * and 
+w: dis- tress, The end of all our woe He brings; Where- fore * the earth * is 
+w: umph comes! The cloud- less Sun of joy He is, Who bring- * eth pure * de- 
+w: and joy; So shall your Sov- ereign en- ter in, and new * and no- * bler 
+w: re- veal. Thy Ho- ly Spi- rit guide us on, Un- til * our glo- * rious 
+[V: S1V2] ^D | B,2 E | E2 E | E2 E | E2 E | E2 E | E2 E | E2 D |
+[V: S2V1] B,/A,/ | G,2 C | B,2 G, | A,2 A, | B,2 B, | A,2 G, | (B, A,) G, | A,2 A, |
+[V: S2V2] B,, | E,2 A,, | E,2 D, | C,2 A,, | G,,2 G,, | A,,2 E, | (G,, A,,) B,, | C,2 D, |
+% 24
+[V: S1V1] E2 E | E2 !sintro!e | e2 c | d2 e | c2 E | (F d) B | A2 G | A2 !eintro!|]
+w: glad- ly sing: We praise Thee, Fa- ther, now! Cre- a- * tor, wise art Thou! 
+w: glad and sings: We praise Thee, Sa- vior, now! Migh- ty * in deed art Thou! 
+w: light and bliss. O Com- fort- er di- vine, What bound- * less grace is Thine! 
+w: life be- gin; To Thee, O God, be praise, For Word, * and deed, and grace! 
+w: goal be won! E- ter- nal praise and fame We of- * fer to Thy Name. 
+[V: S1V2] C2 B, | C2 E | E2 E | F2 E | E2 C | (D F) F | E2 E/D/ | C2 |]
+[V: S2V1] A,2 G, | A,2 C | B,2 A, | A,2 B, | A,2 A, | (A, B,) B, | C2 B, | A,2 |]
+[V: S2V2] E,2 E, | A,,2 A, | G,2 A, | F,2 G, | A,2 A,, | (D, B,,) D, | E,2 E, | A,,2 |]

@@ -1,0 +1,57 @@
+X: 160
+T: Wilt Thou, O Man, Live Happily
+%%combinevoices 1
+T: (also known as Man, Wouldst Thou Live All Blissfully)
+C: Words: Martin Luther, 1524.  Translated by Richard Massie, 1854, alt. 
+C: Music: 'Mensch, Willt du Leben Seligich' attr. Martin Luther. Found in Walter's Geistliche Gesangbüchlein, 1524. 
+C: Setting: Johann Hermann Schein, 1627.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] E2 G G | A B c B | A2 B2 | c G A
+w: 1.~Wilt thou, O man, live hap- pi- ly, And dwell with God 
+w: 2.~I am the Lord and God! take heed No o- ther god 
+w: 3.~Ho- nor My Name in word and deed, And call on Me 
+w: 4.~O- be- dient al- ways, next to Me, To fa- ther and 
+w: 5.~Steal not, nor do thy neigh- bor wrong By bear- ing wit- 
+[V: S1V2]  B,2 E D | E G E3/2 D/ | C2 E2 | E D C
+[V: S2V1]  G,2 C D | C B, A, ^G, | A,2 ^G,2 | A, B, E,
+[V: S2V2]  E,2 C, B,, | A,, E, A, E, | A,,2 E,2 | C, B,, A,, 
+% 5
+[V: S1V1]  E | (G2 E C | G) F E2 | B2 c d | c A ^G A | B2
+w: e- ter- * * * nal- ly, The ten com- mand- ments keep, for thus 
+w: doth thee * * * mis- lead; Thy heart shall trust a- lone in Me, 
+w: in time * * * of need: Hal- low the Sab- bath, that I may 
+w: to mo- * * * ther be; Kill no man: e- ven an- ger dread; 
+w: ness with * * * false tongue; Thy neigh- bor's wife de- sire thou not, 
+[V: S1V2]  C | (D2 C C | D) D ^C2 | D2 E G | E D B, C | E2 
+[V: S2V1]  A, | (B, G,2 E, | B,) A, A,2 | B,2 G, G, | G, F, E,3/2 ^F,/ | ^G,2
+[V: S2V2]  A,, | (G,, B,, C,2 | G,,) D, A,,2 | G,,2 C, B,, | C, D, E, A,, | E,2
+% 15
+[V: S1V1]  !sintro!E2 | B c (B G) | A F (E C) | G3/2 F/ E2 | E4 !eintro!|]
+w: Our God Him- self * bid- deth us. * Kyr' e- lei- son! 
+w: My king- dom then * thou shalt be. * * * * * 
+w: Work in thy heart * on that day. * * * * * 
+w: Keep sa- cred thy * mar- riage bed. * * * * * 
+w: Nor grudge him aught * he hath got. * * * * * 
+[V: S1V2]  B,2 | D E (D E) | E D (C A,) | D3/2 D/ C2 | B,4 |]
+[V: S2V1]  =G,2 | F, G, (G, B,) | A, A, (A, E,) | B,3/2 A,/ A,2 | ^G,4 |]
+[V: S2V2]  E,2 | D, C, (G, E,) | C, D, A,,2 | G,,3/2 D,/ A,,2 | E,4 |]
+% 15

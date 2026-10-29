@@ -4,7 +4,7 @@ import { problems } from './music';
 
 const sourceSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/), hymnal: z.string().min(1), hymnalName: z.string().min(1),
-  number: z.string().regex(/^\d{1,4}$/), title: z.string().min(1), tune: z.string().min(1),
+  number: z.string().regex(/^(?:\d{1,4})?$/), title: z.string().min(1), tune: z.string().default(''), firstLine: z.string().default(''),
   file: z.string().regex(/^[a-z0-9-]+\.abc$/), source: z.url().refine(value => /^https?:\/\//.test(value)),
   rights: z.literal('Public domain (United States)'), sourceEdition: z.string().min(1), reference: z.string().min(1),
 });
@@ -29,6 +29,22 @@ export function hymnNumber(value: string): string {
 export function matchingHymns(catalog: HymnSource[], value: string): HymnSource[] {
   const reference = hymnReference(value);
   return catalog.filter(entry => entry.number === reference.number && (!reference.explicit || entry.hymnal === reference.hymnal));
+}
+
+// Number searches ("378", "UMH 218", "TFWS 2062") only find hymns already mapped to that number;
+// anything else is a keyword search over the title, tune and first line.
+export function searchHymns(catalog: HymnSource[], query: string): HymnSource[] {
+  const text = query.trim().toLowerCase();
+  const byTitle = (a: HymnSource, b: HymnSource) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base', numeric: true });
+  if (!text) return [...catalog].sort(byTitle);
+  if (/^(?:(?:umh|tfws|fws)\s*)?\d{1,4}$/.test(text)) {
+    try { return matchingHymns(catalog, text).sort(byTitle); } catch { return []; }
+  }
+  const words = text.split(/\s+/);
+  return catalog.filter(hymn => {
+    const haystack = `${hymn.title} ${hymn.tune} ${hymn.firstLine}`.toLowerCase();
+    return words.every(word => haystack.includes(word));
+  }).sort(byTitle);
 }
 
 async function fetchText(url: URL, signal?: AbortSignal): Promise<string> {

@@ -1,0 +1,51 @@
+X: 302
+T: Oh, Blest the House
+%%combinevoices 1
+C: Words: Christoph C. L. von Pfeil, 1735. Translated by Catherine Winkworth, 1863, alt. 
+C: Music: 'Wo Gott Zum Haus' from Klug's Geistliche Lieder, 1533. 
+C: Setting: "Evangelical Lutheran Hymn-Book", 1931.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: 'Evangelical Lutheran Hymn-Book' 1931 Edition Hymn 445.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Eb % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] E2 B B | G F G =A | B3/2 B/ G B | A B G F | E3/2
+w: 1.~Oh blest the house, what- e'er be- fall, Where Je- sus Christ is All in All; 
+w: 2.~Oh blest that house where faith ye find, And all with- in have set their mind 
+w: 3.~Blest, where their prayers shall dai- ly rise As frag- rant in- cense to the skies, 
+w: 4.~Blest, where the bu- sy hands ful- fil Their pro- per task with rea- dy skill, 
+w: 5.~Blest such a house, it pros- pers well, In peace and joy the par- ents dwell, 
+[V: S1V2]  B,2 E F | E D B, C | D3/2 E/ E F | F F E D | E3/2
+[V: S2V1]  G,2 G, F, | B, B, G, E, | F,3/2 G,/ B, D | C B, B, B, | G,3/2
+[V: S2V2]  E,2 E, D, | E, B,, E, C, | B,,3/2 E,/ E, B,, | F, D, E, B,, | E,3/2
+% 5
+[V: S1V1]  B/ c c | G B A A | G3/2 !sintro!_e/ d c | B c A/G/ F | E4 !eintro!|]
+w: Yea, if He were not dwell- ing there, How poor and dark and void * it were! 
+w: To trust their God and serve Him still, And do in all His ho- * ly will. 
+w: While in their lives the world is taught That forms with- out the heart * are naught. 
+w: While through their diff- erent works ye see One spi- rit run of u- * ni- ty. 
+w: And in their child- ren's lot is shown How rich- ly God can bless * His own. 
+[V: S1V2]  E/ E E | E F F F | =E3/2 _E/ G E | E E C D | E4 |]
+[V: S2V1]  G,/ A, A, | B, D C C | C3/2 G,/ B, A, | G, G, A, B, | G,4 |]
+[V: S2V2]  E,/ A,, C, | E, B,, F, F,, | C,3/2 C,/ G,, A,, | E, C, F, B,, | E,4 |]
+% 11
+W: 6.Then here will I and mine to-day
+W: A solemn covenant make, and say,--
+W: Though all the world forsake Thy Word,
+W: I and my house will serve the Lord.

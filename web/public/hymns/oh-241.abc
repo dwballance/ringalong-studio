@@ -1,0 +1,42 @@
+X: 241
+T: Jesus Wants All Of His Children
+%%combinevoices 1
+C: Words: verses 1-5 Mrs. James W. Wood, 1909. verses 6-7 Brian J. Dumont, 2008.
+C: Music and Setting: 'Blessed Are They' Mrs. James W. Wood, from "Service in Song", Standard Pub. Co., 1909.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision. 
+C: verses 6-7 released into the public domain by the author on 17 Dec 2008.
+S: Music source: "Children's Hymnal and Service Book", 1929 Hymn 116.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves S1 | S2 
+V: S1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S2 clef=bass 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%
+% 1
+[V: S1] [Q:1/4=100] [DF] [DF] [CF] [CE] | D [DF] .(,.([DB] [DA])) & D x3 | [Fd] [Fd] [FA] [DF] | [C3E3] 
+w: 1.~Je- sus wants all of His child- ren to be good and true; 
+w: 2.~Je- sus was so meek and low- ly, As a lit- tle child. 
+w: 3.~Je- sus wants us to be lov- ing, help- ing when we may. 
+w: 4.~"Bless- ed are the pure in heart,"_ thus the Sav- ior taught. 
+w: 5.~When we find our friends are an- gry, we will to them say, 
+[V: S2]  A, A, [G,A,] [G,A,] & A, A, x2 | [F,A,] [F,A,] .(,.(G, [F,A,])) & x2 G, x | [A,D] [A,D] A, A, & x2 A, A, | [G,3A,3]
+% 5
+[V: S1]  z | [CE] [DF] [CG] [DA] | [DB] [Ec] [Fd] [DF] | !sintro![B,E] [B,G] [DF] [CE] | [A,3D3] z !eintro!|]
+w: He will help if we but ask Him, help us glad- ly too. 
+w: We will try to be like Je- sus, gen- tle, pa- tient, mild.  
+w: We will try to be kind- heart- ed, mer- ci- ful each day. 
+w: Clean in mind, in soul, in bo- dy, pure in ev- ery thought. 
+w: "Je- sus wants you to be lov- ing, each and ev- ery day." 
+[V: S2]  z | [G,A,] [F,A,] [E,A,] [F,A,] | G, E, [F,D] B, & G, E, x B, | G, E, A, [A,,G,] & G, E, A, x | [D,3F,3] z |]
+% 10
+W: 6.When I know that I have done wrong, to Jesus I flee.
+W: He has paid for all transgressions, He has paid for me!
+W:
+W: 7.Jesus knew that we would fail Him so He came to be
+W: Life to all the poor and lost ones, life eternally!

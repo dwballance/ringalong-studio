@@ -1,0 +1,68 @@
+X: 140
+T: Jesus Sinners Doth Receive
+%%combinevoices 1
+C: Words: Erdmann Neumeister, 1718.  Translated by Henry Mills, 1845 (et al).
+C: Music: 'Meinen Jesum Lass` Ich Nicht (Darmstadt)' from Neu-verfertigtes Darmstädtiches Gesang-Buch, 1699. 
+C: Setting: "Mehrstimmiges ChoralBuch", 1906.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2013 Revision.
+S: Music source:  "Mehrstimmiges ChoralBuch", 1906 Hymn #124 Ed. Karl Brauer.
+S: Text source: The Lutheran Hymnary, 1913.
+M: none % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] G G F G | E F G2 | B B A d | c B A2 G2 |
+w: 1.~Je- sus sin- ners doth re- ceive; Well may we this say- ing pon- der 
+w: 2.~We de- serve but grief and shame,\- Yet His words, rich grace re- veal- ing, 
+w: 3.~As the shep- herd seeks to find His lost sheep that from Him stray- eth, 
+w: 4.~Come, then, all by guilt op- pressed, Je- sus calls, and He would make you 
+w: 5.~Sa- vior, now I come to Thee: Great my sins, a wear- y bur- den! 
+[V: S1V2] D ^C D D | C C D2 | D G A G | E/F/ G2 F G2 |
+[V: S2V1] B, G, A, B, | G, A, B,2 | G, D D B, | C D D2 B,2 |
+[V: S2V2] G, E, D, B,, | C, A,, G,,2 | G, G, F, G, | A, G, D,2 G,,2 |
+% 5
+[V: S1V1] G G F G | E F G2 | B B A d | c B A2 G2 |
+w: Who in sin's de- lu- sions live, And from God and Hea- ven wan- der: 
+w: Par- don, peace, and life pro- claim; Here their ills have per- fect heal- ing 
+w: So hath Christ each soul in mind, And for its sal- va- tion pray- eth; 
+w: God's own child- ren, pure and blest, And to glo- ry He would take you; 
+w: Wilt Thou mer- cy show to me? Can I hope to find a par- don? 
+[V: S1V2] D ^C D D | C C D2 | D G A G | E/F/ G2 F G2 |
+[V: S2V1] B, G, A, B, | G, A, B,2 | G, D D B, | C D D2 B,2 |
+[V: S2V2] G, E, D, B,, | C, A,, G,,2 | G, G, F, G, | A, G, D,2 G,,2 |
+% 9
+[V: S1V1] B A G A | B B A2 | !sintro!B d c B | A A G2 !eintro!|]
+w: Here is hope for all who grieve\- Je- sus sin- ners doth re- ceive. 
+w: Who with hum- ble hearts be- lieve\- Je- sus sin- ners doth re- ceive. 
+w: Fain He'd have each wan- d'rer live: Je- sus sin- ners doth re- ceive. 
+w: Think on this, and well be- lieve Je- sus sin- ners doth re- ceive. 
+w: I will trust: my soul re- lieve! Me, a sin- ner, Lord, re- ceive! 
+[V: S1V2] D D E D | D D D2 | G G E/F/ G | G F G2 |]
+[V: S2V1] G, A, B, A, | G, G, F,2 | D B, C D | E D B,2 |]
+[V: S2V2] G, F, E, F, | G, B,,/C,/ D,2 | G, G,, A,, B,, | C, D, G,,2 |]
+W: 6.Rich Thy mercy\- strangely good!  O how oft have I offended!
+W: But through Thy redeeming blood All my fear of wrath is ended:
+W: Yes I now can witness give: Jesus sinners doth receive!
+W:
+W: 7.Now my conscience is at peace; From the Law I stand acquitted;
+W: Christ hath purchased my release, And my every sin remitted.
+W: Naught remains my soul to grieve: Jesus sinners doth receive.
+W: 
+W: 8.Jesus sinners doth receive! Happy in His ceaseless favor,
+W: Here for Heaven I will live, There shall live with Him forever,
+W: "Joy in death these tidings give; Jesus sinners doth receive!"

@@ -1,0 +1,65 @@
+X: 267
+T: For The Beauty Of The Earth
+%%combinevoices 1
+C: Words: Folliot S. Pierpoint, 1864.  Music: 'Dix' Conrad Kocher, 1838.  Setting: "The English Hymnal", 1906.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2008 Revision.
+S: Music source: The English Hymnal, 1906 Hymn 39.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] G F/G/ A G | c c B2 | E F G E | D D D2 |
+w: 1.~For the * beau- ty of the earth For the glo- ry of the skies, 
+w: 2.~For the * beau- ty of each hour, Of the day and of the night, 
+w: 3.~For the * joy of ear and eye, For the heart and mind's de- light, 
+w: 4.~For the * joy of hu- man love, Bro- ther, sis- ter, pa- rent, child, 
+w: 5.~For Thy * Church, that ev- er- more Lift- eth ho- ly hands a- bove, 
+[V: S1V2]  D D D D | C D D2 | E D D C | B, A, B,2 |
+[V: S2V1]  B, C/B,/ A, B, | G, A, G,2 | G, A, G, G, | G, F, G,2 |
+[V: S2V2]  G, A,/G,/ F, G, | E, F, G,2 | C, C, B,, C, | D, D, G,,2 |
+% 5
+[V: S1V1]  G F/G/ A G | c c B2 | E F G E | D D D2 |
+w: For the * love which from our birth O- ver and a- round us lies. 
+w: Hill and * vale, and tree and flow'r, Sun and moon, and stars of light. 
+w: For the * mys- tic har- mo- ny Link- ing sense to sound and sight. 
+w: Friends on * earth and friends a- bove, For all gen- tle thoughts and mild. 
+w: Off'r- ing * up on ev- ery shore Her pure sac- ri- fice of love. 
+[V: S1V2]  D D D D | C D D2 | E D D C | B, A, B,2 |
+[V: S2V1]  B, C/B,/ A, B, | G, A, G,2 | G, A, G, G, | G, F, G,2 |
+[V: S2V2]  G, A,/G,/ F, G, | E, F, G,2 | C, C, B,, C, | D, D, G,,2 |
+% 9
+[V: S1V1]  B A G B | d3/2 c/ B2 | !sintro!E F G c | B A G2 !eintro!|]
+w: Lord of all, to Thee we raise, This our hymn of grate- ful praise. 
+[V: S1V2]  D D D D | D D D2 | E D D C | D3/2 C/ B,2 |]
+[V: S2V1]  G, D/C/ B, G, | A, F, G,2 | G, A, G, G, | G, F, G,2 |]
+[V: S2V2]  G, F, G, G, | F, D, G,2 | C, C, B,, E, | D, D, G,,2 |]
+% 13
+W:6. For the martyrs' crown of light,
+W:For Thy prophets' eagle eye,
+W:For Thy bold confessors' might,
+W:For the lips of infancy.
+W:
+W:7. For Thy virgins' robes of snow,
+W:For Thy maiden mother mild,
+W:For Thyself, with hearts aglow,
+W:Jesu, Victim undefiled.
+W:
+W:8. For each perfect gift of Thine,
+W:To our race so freely given,
+W:Graces human and divine,
+W:Flowers of earth and buds of Heaven.

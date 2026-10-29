@@ -1,0 +1,73 @@
+X: 57
+T: Hark! The Herald Angels Sing
+%%combinevoices 1
+C: Words: Charles Wesley, 1739, alt. 
+C: Music: 'Mendelssohn' from 'Festgesang' Felix Mendelssohn, 1840.  Setting: William H. Cummings, 1857.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2005 Revision.
+S: Music source: 'Lutheran Worship' Hymnal, 1982 Hymn 49.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+%%staffsep 0.62cm
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] C F F3/2 E/ | F A (A G) | c c c3/2 B/ | A G A2 |
+w: 1.~Hark! The her- ald an- gels sing, * "Glo- ry to the new- born King; 
+w: 2.~Christ, by high- est Heav'n a- dored; * Christ the ev- er- last- ing Lord; 
+w: 3.~Hail the heav'n- ly Prince of Peace! * Hail the Sun of Right- eous- ness! 
+w: 4.~Come, De- sire of na- tions, come, * Fix in us Thy hum- ble home; 
+w: 5.~Ad- am's like- ness, Lord, ef- face, * Stamp Thine im- age in its place: 
+[V: S1V2]  C C C3/2 C/ | C F (F E) | F E D G | F E F2 | C C C3/2 C/ |
+[V: S2V1]  A, A, A,3/2 G,/ | F, C C2 | C C D D | C C C2 | A, A, A,3/2 G,/ |
+[V: S2V2]  F, F, F, C, | A,, F,, C,2 | A,, A,, B,, B,, | C, C, F,2 | F, F, F, C, |
+% 5
+[V: S1V1]  C F F3/2 E/ | F A (A G) | c G G3/2 E/ | E D C2 |
+w: Peace on earth, and mer- cy mild, * God and sin- ners re- con- ciled!" 
+w: Late in time, be- hold Him come, * Off- spring of a vir- gin's womb. 
+w: Light and life to all He brings, * Ris'n with heal- ing in His wings. 
+w: Rise, the wo- man's con- qu'ring Seed, * Bruise in us the ser- pent's head.  
+w: Se- cond Ad- am from a- bove, * Re- in- state us in Thy love. 
+[V: S1V2]  A, F F2 | E D E3/2 C/ | C =B, C2 |
+[V: S2V1]  F, C D2 | C D C3/2 G,/ | A, F, E,2 |
+[V: S2V2]  D, C, (=B,,3/2 G,,/) | A,, =B,, C, E, | F, G,, C,2 |
+% 9
+[V: S1V1]  c c c F | B A (A G) | c c c F | B A (A G) |
+w: Joy- ful, all ye na- tions rise, * Join the tri- umph of the skies; * 
+w: Veiled in flesh the God- head see; * Hail th'in- car- nate De- i- ty, * 
+w: Mild He lays His glo- ry by, * Born that man no more may die. * 
+w: Now dis- play Thy sav- ing po- wer, Ruin- ed na- ture now re- store; * 
+w: Let us Thee, though lost, re- gain, * Thee, the Life, the in- ner man: * 
+[V: S1V2]  C C C F | G F (F E) | C C C F | G F (F E) |
+[V: S2V1]  C C C C | C C C2 | C C C C | C C C2 |
+[V: S2V2]  C C C A, | E, F, C,2 | C C C A, | E, F, C,2 |
+% 9
+[V: S1V1]  d d d c | B A B2 | G A/B/ c3/2 F/ | F G A2 |
+w: With th'an- gel- ic host pro- claim, "Christ is * born in Beth- le- hem!" 
+w: Pleased with us in flesh to dwell, Je- sus * our Em- man- u- el. 
+w: Born to raise the sons of earth, Born to * give them se- cond birth. 
+w: Now in my- stic un- ion join Thine to * ours, and ours to Thine. 
+w: O, to all Thy- self im- part, Formed in * each be- liev- ing heart. 
+[V: S1V2]  B B B A | G ^F G2 | E E F3/2 C/ | C E F2 |
+[V: S2V1]  D D D D | D D D2 | C C C3/2 A,/ | A, C C2 |
+[V: S2V2]  B,, B,, B,, B,, | B,, D, G,2 | B, B, A, F, | C, C, F,2 |
+% 17
+[V: S1V1]  d3/2 d/ d c | B A B2 | !sintro!G A/B/ c3/2 F/ | F G F2 !eintro!|]
+w: Hark! the her- ald an- gels sing, "Glo- ry * to the new- born King!" 
+[V: S1V2]  B B B A | G ^F G2 | C E F3/2 F/ | C C C2 |]
+[V: S2V1]  D D D C | B, A, B,2 | C C C3/2 A,/ | A, B, A,2 |]
+[V: S2V2]  B, B, B, A, | G, ^F, (G, =F,) | E, B, A, F, | C, C, F,2 |]
+% 22

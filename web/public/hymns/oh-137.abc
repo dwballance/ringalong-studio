@@ -1,0 +1,69 @@
+X: 137
+T: I Bind Unto Myself Today
+%%combinevoices 1
+C: Words: attributed to St. Patrick of Ireland (circa 387-466). Paraphrased by Cecil F. Alexander, 1889. 
+C: Music: 'St. Patricks Breastplate' Charles V. Stanford, 1902.  Setting: "The English Hymnal", 1906.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: 'The English Hymnal', 1906 Hymn 212.
+M: 3/4 % time signature
+L: 1/4 % default length
+%%staves S1 | {(S2V1 S2V2) | (S3V1 S3V3)}
+V: S1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+V: S3V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S3V2 
+%%MIDI beat 127 125 110 1
+V: S3V3 
+%%MIDI beat 127 125 110 1
+K: Bb % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%%MIDI program 5 0 % Piano 1
+%%MIDI program 6 0 % Piano 1
+%
+% 1
+[V: S1] [Q:1/4=120] D | G2 G | .(F D) F | .(B d) c/B/ | .(B A) A | .(c A) F | (F A) c |
+w: 1.~I bind un- to * my- self * to- * day * The strong * Name of * the 
+w: 2.~I bind this day * to me * for- * ev- er By pow- er of faith, * Christ's 
+w: 3.~I bind un- to * my- self * the * pow- er Of the * great love * of 
+w: 4.~I bind un- to * my- self * to- * day * The vir- * tues of * the 
+w: 5.~I bind un- to * my- self * to- * day * The pow- er of God * to 
+[V: S2V1]  D | G2 G | F D F | (B d) c/B/ | (B A) A | (c A) F | (F A) c |
+[V: S2V2]  D | [B,3D3-] | [A,3D3] | [D2F2] [EG] | [C2F2] [CF] | [C3F3] | [C2F2] [CE] |
+[V: S3V1]  D, | [D,3-G,3] | [D,3F,3] | F,2 E, | F,3 | [F,3A,3] | [F,2A,2] [C,G,] |
+[V: S3V3]  D, | G,, B,, G,, | D,,2 D, | B,,2 E, | F,3 | F,,3 | x3 |
+% 9
+%%staves S1 | {(S2V1 S2V2) | (S3V1 S3V2 S3V3)}
+[V: S1]  B2 B | A.- A d | (G3/2 A/) B/G/ | (F D) B, | B2 F |
+w: Tri- ni- ty, * By in- * vo- * ca- * tion of the 
+w: in- car- na- tion; His bap- * tism * in * the Jor- dan 
+w: cher- u- bim; * The sweet * "Well * done" * in judg- ment 
+w: star lit heav- en, The glor- * ious * sun's * life giv- ing 
+w: hold and lead, * His eye * to * watch, * His might to 
+[V: S2V1]  B2 B | A2 d | (G3/2 A/ B/G/) | (F D) B, | B2 F |
+[V: S2V2]  F2 E/D/ | [C2F2] [DF] | [E2G2] [B,E] | [B,2D2] B, | [B,2D2] [B,F] |
+[V: S3V1]  [D,2F,2] [E,B,] | F,2 [F,B,] | B,2 G, | F,2 F, | G,2 F, |
+% [V: S3V2]  x | x3 | x3 | x3 | x3 | x3 | x3 | G,3- | G,2 :| G,2 
+[V: S3V3]  x3 | F,2 B,, | E,3 & (E, E,,) G,, | B,,2 [B,,D,] | [G,,2D,2] D, |
+% 9
+%%staves S1 | {(S2V1 S2V2) | (S3V1 S3V2 S3V3)}
+[V: S1]  G A B/c/ | d2 c/d/ | (B G) A | G2 G |["1" G2 :|["2-9" G.- G
+w: same * The * Three in * One * and One in Three.  *  *
+w: riv- er, His * death on * Cross * for my sal- * va- tion; 
+w: ho- ur, The * ser- vice * of * the ser- a- * phim, * 
+w: ray, * The * white- ness * of * the moon at * ev- en, 
+w: stay, * His * ear to * hear- * ken to my * need. * 
+[V: S2V1]  G A B/c/ | d2 c/d/ | (B G) A | G3- | G2 :| G2
+[V: S2V2]  B, [DF] D/F/ | [D2F2] F | F E F | D2 E | D2 :| D2
+[V: S3V1]  E, F, G,/A,/ | B,2 [F,A,] | [F,B,] [G,B,] [A,D] | B,2 C | B,2 :| B,2
+% [V: S3V2]  x | x3 | x3 | x3 | x3 | x3 | x3 | G,3- | G,2 :| G,2 
+[V: S3V3]  E, D, G,/F,/ | [B,,2F,2] F,, | D,, E,, D,, | G,,2 C, & G,3- | [G,2G,,2] :| [G,2G,,2]
+% 17

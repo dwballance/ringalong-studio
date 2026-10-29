@@ -1,0 +1,51 @@
+X: 71
+T: To Shepherds As They Watched By Night
+%%combinevoices 1
+C: Words: Martin Luther, 1543. translated by Richard Massie, 1854. 
+C: Music: 'Vom Himmel Hoch' traditional German from Schumann's Geistliche Lieder, Leipzig, 1539. 
+C: Setting: "Common Service Book" (ULCA), 1917.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+S: Music source: 'Common Service Book with Hymnal', ULCA 1918 Hymn 19.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] d/ | c B c A | B c d z/ d/ | d A A F | A G F z/
+w: 1.~To shep- herds as they watched by night Ap- peared a host of an- gels bright; 
+w: 2.~At Beth- le- hem, in Da- vid's town, As Mi- cah did of old make known; 
+w: 3.~Oh, then re- joice that through His Son God is with sin- ners now at one; 
+w: 4.~What harm can sin and death then do? The true God now a- bides with you. 
+w: 5.~Not one He will or can for- sake Who Him his con- fi- dence doth make. 
+[V: S1V2]  F/ | E E E F | D G F x/ F/ | F F E D | D B, D x/
+[V: S2V1]  A,/ | A, ^G, A, A, | G, G, A, z/ A,/ | B, C A, A, | F, G, A, z/
+[V: S2V2]  D,/ | A,, E, A,, D, | G, E, D, x/ D,/ | B,, F, C, D, | D, E, B,, x/
+% 5
+[V: S1V1]  F/ | B B A c | d B A z/ !sintro!d/ | c B A A | G/F/ E !fermata!D z/ !eintro!|]
+w: Be- hold the ten- der Babe, they said, In yon- der low- ly man- * ger laid. 
+w: 'Tis Je- sus Christ, your Lord and King, Who doth to all sal- va- * tion bring. 
+w: Made like your- selves of flesh and blood, Your Bro- ther is th'e- ter- * nal God. 
+w: Let hell and Sa- tan rage and chafe, Christ is your Bro- ther ye * are safe. 
+w: Let all his wiles the Temp- ter try, You may his ut- most pow'rs * de- fy. 
+[V: S1V2]  D/ | F G E E | D E C x/ D/ | A G F E | D3/2 C/ D x/ |]
+[V: S2V1]  B,/ | D D C A, | F, ^G, A, z/ F,/ | A, D D A, | B,/A,/ A, !invertedfermata!F, z/ |]
+[V: S2V2]  B,,/ | B,, G,, A,, A,, | B,, E, A,, x/ B,,/ | F, G, D, C, | B,,/D,/ A,, D, x/ |]
+% 11
+W:  6.Ye shall and must at last prevail;
+W:  God's own ye are, ye cannot fail.
+W:  To God forever sing your praise
+W:  With joy and patience all your days.

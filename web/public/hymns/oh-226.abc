@@ -1,0 +1,56 @@
+X: 226
+T: He Leadeth Me
+%%combinevoices 1
+C: Words: Joseph H. Gilmore, 1862.
+C: Music and Setting: 'He Leadeth Me' William B. Bradbury, 1864.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2007 Revision.
+S: Music source: "The Golden Censer", 1864 Hymn 105.  Ed. William B. Bradbury
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] A | F3/2 E/ D A | B G G B | A3/2 F/ F E/D/ | F F E
+w: 1.~He lead- eth me, O bless- èd thought! O words with heav'n- ly * com- fort fraught! 
+w: 2.~Some- times mid scenes of deep- est gloom, Some- times where E- den's * bow- ers bloom, 
+w: 3.~Lord, I would place my hand in Thine, Nor e- ver mur- mur * nor re- pine; 
+w: 4.~And when my task on earth is done, When by Thy grace the * vic- t'ry's won, 
+[V: S1V2]  F | D3/2 A,/ A, D | D D D G | F3/2 D/ D D | D D C
+[V: S2V1]  A, | A,3/2 G,/ F, F, | G, B, B, D | D3/2 A,/ A, G,/F,/ | A, A, A,
+[V: S2V2]  D, | D,3/2 D,/ D, D, | G, G, G, G, | D,3/2 D,/ D, D, | A,, A,, A,,
+% 5
+[V: S1V1]  A | F3/2 E/ D A | B G d c/B/ | A F F/E/ D/E/ | F3/2 E/ !fermata!D
+w: What- e'er I do, wher- e'er I be Still * 'tis God's hand * that * lead- eth me. 
+w: By wa- ters still, ov'r troub- led sea, Still * 'tis His hand * that * lead- eth me. 
+w: Con- tent, what- e- ver lot I see, Since * 'tis my God * that * lead- eth me. 
+w: E'en death's cold wave I will not flee, Since * God through Jor- * dan * lead- eth me. 
+[V: S1V2]  C | D3/2 A,/ A, D | D G G G | F D D/C/ B,/C/ | D3/2 C/ D
+[V: S2V1]  A, | A,3/2 G,/ F, F, | G, B, B, D | D A, B, F, | A,3/2 G,/ !invertedfermata!F,
+[V: S2V2]  A,, | D,3/2 D,/ D, D, | G, G, G, G, | D, D, B,, B,, | A,,3/2 A,,/ D,
+% 9
+[V: S1V1]  A | A d c d | d c/B/ A B | A F F/E/ D/E/ | F F E
+w: He lead- eth me, He lead- eth * me, By His own hand * He * lead- eth me; 
+[V: S1V2]  F | F F E A | A G F G | F D D/C/ B,/C/ | D D C
+[V: S2V1]  A, | D A, A, C | D D D D | D A, B, F, | A, A, A,
+[V: S2V2]  D, | D, F, A, G, | F, G, D, D, | D, D, B,, B,, | A,, A,, A,,
+% 13
+[V: S1V1]  A | A d c e | d c/B/ A !sintro!B | A F F/E/ D/E/ | F3/2 E/ !fermata!D !eintro!|]
+w: His faith- ful fol- low'r I would * be, For by His hand * He * lead- eth me. 
+[V: S1V2]  C | D D E A | A G F G | F D D/C/ B,/C/ | D3/2 C/ D |]
+[V: S2V1]  G, | F, A, A, C | D D D D | D A, B, F, | A,3/2 G,/ !invertedfermata!F, |]
+[V: S2V2]  A,, | D, F, A, G, | F, G, D, D, | D, D, B,, B,, | A,,3/2 A,,/ D, |]
+% 19

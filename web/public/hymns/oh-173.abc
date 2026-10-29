@@ -1,0 +1,49 @@
+X: 173
+T: None Other Lamb
+%%combinevoices 1
+C: Words: Christina Rossetti, 1892. Music: 'Rossetti' William Jeater, 1907. 
+C: Setting: "The Hymnal" (Presbyterian), 1911.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2014 Revision.
+S: Music source: "The Hymnal" (Presbyterian), 1911 Hymn 478.  Words: same source
+M: 3/2 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=110] A G G | F3 A G G | F3 F F A |
+w: 1.~None oth- er Lamb, none oth- er name, None oth- er 
+w: 2.~My faith burns low, my hope burns low; On- ly my 
+w: 3.~Lord, Thou art life, though I be dead; Love's fire Thou 
+[V: S1V2] D D E | (E2 D) D D E | (E2 D) D D E |
+[V: S2V1] A, B, C | A,3 A, B, C | A,3 A, A, A, |
+[V: S2V2] F, E, A,, | D,3 F, E, A,, | D,3 D, D, C, |
+% 2
+[V: S1V1] d3/2 c/ B A F ^G | A3 c B A | B3/2 A/
+w: hope in Heav'n or earth or sea, None oth- er hi- ding 
+w: heart's de- sire cries out in me By the deep thun- der 
+w: art, how- ev- er cold I be: Nor Heav'n have I, nor 
+[V: S1V2] F3/2 E/ D C D E | E3 E C C | D3/2 D/
+[V: S2V1] A,3/2 A,/ ^G, A, B, D | (D2 C) A, A, A, | A,3/2 A,/
+[V: S2V2] B,,3/2 B,,/ E, E, E, E, | A,,3 A, G, G, | F,3/2 F,/
+% 2
+[V: S1V1] A B A G | F6 | !sintro!E2 F2 G2 | F3 !eintro!|]
+w: place from guilt and shame, None be- side Thee! 
+w: of its want and woe, Cries out to Thee. 
+w: place to lay my head, Nor home, but Thee. 
+[V: S1V2] D G F E | (E2 D4) | D2 D2 C2 | D3 |]
+[V: S2V1] A, D C C | (C2 B,4) | B,2 A,2 A,2 | A,3 |]
+[V: S2V2] F, G, A, A, | (^A,2 B,2 =A,2) | G,2 A,2 A,,2 | D,3 |]

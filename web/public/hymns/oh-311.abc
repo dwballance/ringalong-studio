@@ -1,0 +1,41 @@
+X: 311
+T: Jesus, Tender Shepherd, Hear Me
+%%combinevoices 1
+C: Words: Mary L. Duncan, 1839.  Music and Setting: 'Evening Prayer' John Stainer, 1898.  
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: "The Church Hymnary" (Scotland), 1902 Hymn 601. Ed. John Stainer.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=110] c c c B | A A A G | F G A A | c/B/ A G2 |
+w: 1.~Je- sus, ten- der Shep- herd, hear me; Bless Thy lit- tle la- mb to- night; 
+w: 2.~All this day thy hand has led me, And I thank Thee fo- r Thy care; 
+w: 3.~Let my sins be all for- giv- en; Bless the friends I lo- ve so well; 
+[V: S1V2]  A A A G | F F F E | F E F F | G F E2 |
+[V: S2V1]  C2 C2 | C4 | C4- | C3 B, |
+[V: S2V2]  F,2 E,2 | F, A, C B, | A, G, F, F, | E, F, C B, |
+% 5
+[V: S1V1]  c c c B | A A A G | !sintro!F G A A | B E F2 !eintro!|]
+w: Through the dark- ness be Thou near me; Watch my sleep till morn- ing light. 
+w: Thou hast clothed me, warmed and fed me, Lis- ten to my eve- ning prayer. 
+w: Take me, when I die, to hea- ven, Hap- py there with Thee to dwell. 
+[V: S1V2]  F2 G E | F3 E | F4 | E C C2 |]
+[V: S2V1]  C A, G,2 | A,2 A,2 | A, =B, C F, | G, B, A,2 |]
+[V: S2V2]  A, F, E, C, | F, D, ^C, A,, | D,2 C,2 | C,2 F,2 |]
+% 10

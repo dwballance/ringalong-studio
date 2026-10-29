@@ -15,7 +15,7 @@ test.beforeEach(async ({ page }) => {
 async function newArrangement(page: Page) {
   await page.goto('/');
   await page.getByRole('radio', { name: 'Chords + melody', exact: true }).check();
-  await page.getByRole('textbox', { name: 'Title', exact: true }).fill('Morning bells');
+  await page.getByRole('textbox', { name: /^Title/ }).fill('Morning bells');
   await page.getByLabel('Key signature').selectOption('Bb major');
   await page.getByRole('button', { name: 'Add verse', exact: true }).click();
   await page.getByRole('textbox', { name: 'Lyrics', exact: true }).fill('Ring the bells today\nShare a song with friends');
@@ -39,16 +39,9 @@ test('compact hymn lookup is inline and the decorative badge is absent', async (
   expect(await page.getByLabel('Beats per measure').evaluate(input => input.getBoundingClientRect().width)).toBeLessThan(60);
   expect(await page.getByLabel('Beat unit').evaluate(input => input.getBoundingClientRect().width)).toBeLessThan(60);
   const number = page.getByLabel('Hymn number', { exact: true });
-  const lookup = page.getByRole('button', { name: 'Look up', exact: true });
-  await expect(number).toHaveAttribute('placeholder', '378');
-  await expect(lookup).toBeDisabled();
-  await number.fill('378');
-  await expect(lookup).toBeEnabled();
-  const inputBox = await number.boundingBox(), buttonBox = await lookup.boundingBox();
-  expect(inputBox!.width).toBeLessThanOrEqual(90);
-  expect(buttonBox!.width).toBeLessThanOrEqual(100);
-  expect(Math.abs(inputBox!.y - buttonBox!.y)).toBeLessThanOrEqual(1);
-  expect(inputBox!.x + inputBox!.width).toBeLessThanOrEqual(buttonBox!.x);
+  await expect(page.getByRole('button', { name: 'Look up', exact: true })).toHaveCount(0);
+  await expect(number).not.toHaveAttribute('placeholder', /.+/);
+  expect((await number.boundingBox())!.width).toBeLessThanOrEqual(90);
   const previewTitle = page.getByRole('heading', { name: 'Score preview', exact: true });
   const previewButton = page.getByRole('button', { name: 'Preview', exact: true });
   expect(await previewTitle.evaluate(element => element.nextElementSibling?.getAttribute('data-action'))).toBe('preview');
@@ -212,7 +205,7 @@ test('import legacy JSON and recover local work', async ({ page }, testInfo) => 
   await page.goto('/');
   await page.locator('#import-file').setInputFiles(join(process.cwd(), 'together_we_serve_2175.json'));
   await expect(page.locator('#notice')).toContainText('Imported');
-  await expect(page.getByLabel('Title', { exact: true })).toHaveValue('Together We Serve 2175');
+  await expect(page.getByLabel(/^Title/)).toHaveValue('Together We Serve 2175');
   await expect(page.getByRole('tab', { name: 'Conductor', exact: true })).toHaveAttribute('aria-selected', 'true');
   await page.getByRole('button', { name: 'Edit', exact: true }).click();
   await page.getByRole('button', { name: 'This verse only', exact: true }).click();
@@ -231,7 +224,7 @@ test('import legacy JSON and recover local work', async ({ page }, testInfo) => 
 test('syllable review preserves punctuation and supports split/join and extra notes', async ({ page }) => {
   page.on('dialog', dialog => dialog.accept());
   await page.goto('/');
-  await page.getByLabel('Title', { exact: true }).fill('Synthetic syllables');
+  await page.getByLabel(/^Title/).fill('Synthetic syllables');
   await page.getByLabel('Key signature').selectOption('C major');
   await page.getByRole('button', { name: 'Add verse', exact: true }).click();
   await page.getByRole('textbox', { name: 'Lyrics', exact: true }).fill('Beautiful music, ringing!');
@@ -346,18 +339,18 @@ test('reset an imported hymn from saved defaults without fetching a source and u
   await page.goto('/');
   await page.locator('#import-file').setInputFiles({ name: 'synthetic-hymn.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(original)) });
   await expect(page.getByRole('button', { name: 'Reset hymn', exact: true })).toBeVisible();
-  await page.getByLabel('Title', { exact: true }).fill('Edited hymn');
+  await page.getByLabel(/^Title/).fill('Edited hymn');
   await page.getByRole('button', { name: 'Duration for one', exact: true }).click();
   await page.getByRole('button', { name: 'Half', exact: true }).click();
   await page.getByRole('button', { name: 'Reset hymn', exact: true }).click();
-  await expect(page.getByLabel('Title', { exact: true })).toHaveValue('Edited hymn');
+  await expect(page.getByLabel(/^Title/)).toHaveValue('Edited hymn');
   accept = true;
   await page.getByRole('button', { name: 'Reset hymn', exact: true }).click();
-  await expect(page.getByLabel('Title', { exact: true })).toHaveValue('Original hymn');
+  await expect(page.getByLabel(/^Title/)).toHaveValue('Original hymn');
   await expect(page.getByRole('button', { name: 'Duration for one', exact: true })).toContainText('\ud834\udd5f');
   await expect(page.locator('#notice')).toContainText('Original hymn restored');
   await page.getByRole('button', { name: 'Undo', exact: true }).click();
-  await expect(page.getByLabel('Title', { exact: true })).toHaveValue('Edited hymn');
+  await expect(page.getByLabel(/^Title/)).toHaveValue('Edited hymn');
   await expect(page.getByRole('button', { name: 'Duration for one', exact: true })).toContainText('\ud834\udd5e');
   expect(requests).toEqual([]);
 });
@@ -598,7 +591,7 @@ test('one bell set and melody mode control octave labels, pages and custom chord
 test('section names remain stable after deletion and reordering and allow custom labels', async ({ page }, testInfo) => {
   page.on('dialog', dialog => dialog.accept(dialog.message() === 'Section name' ? 'Final blessing' : undefined));
   await page.goto('/');
-  await page.getByLabel('Title', { exact: true }).fill('Stable verses');
+  await page.getByLabel(/^Title/).fill('Stable verses');
   await page.getByLabel('Key signature').selectOption('C major');
   for (let verse = 1; verse <= 4; verse++) {
     await page.getByRole('button', { name: verse === 1 ? 'Add verse' : 'Verse', exact: true }).click();
@@ -743,7 +736,7 @@ test('theme toggle preserves editing, remembers a cookie, and prints in light mo
   await expect(toggle).toHaveAttribute('aria-pressed', 'true');
   await expect(toggle).toHaveAttribute('title', 'Switch to light mode');
   await expect(page.locator('.palette')).toBeVisible();
-  await expect(page.getByLabel('Title', { exact: true })).toHaveValue('Morning bells');
+  await expect(page.getByLabel(/^Title/)).toHaveValue('Morning bells');
   await expect(page.locator('.editor-column')).toHaveCSS('background-color', 'rgb(29, 37, 33)');
   const cookie = (await context.cookies()).find(cookie => cookie.name === 'ringalong-theme');
   expect(cookie?.value).toBe('dark');
@@ -822,4 +815,37 @@ test('choosing a key offers to replace the bells with the key scale from C4', as
   expect(messages).toHaveLength(2);
   await expect(page.getByLabel('Key signature')).toHaveValue('Eb major');
   await expect(page.getByLabel('Bells', { exact: true })).toHaveValue('C# D E F# G A B');
+});
+
+test('split a verse at a note into a chorus or another section type', async ({ page }) => {
+  page.on('dialog', dialog => dialog.accept());
+  await newArrangement(page);
+  await page.getByRole('button', { name: 'Lyric mapping for Ring', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Split verse', exact: true })).toBeDisabled();
+  await page.getByRole('button', { name: 'Lyric mapping for Share', exact: true }).click();
+  await page.getByRole('button', { name: 'Split verse', exact: true }).click();
+  const dialog = page.getByRole('dialog', { name: 'Split verse' });
+  await expect(dialog).toContainText('This note and all following will be moved into a new section of the type specified below.');
+  await expect(dialog.getByRole('radio', { name: 'Chorus' })).toBeChecked();
+  await expect(dialog.locator('.split-choice')).toHaveText(['Chorus', 'Bridge', '']);
+  const name = dialog.getByRole('textbox', { name: 'Other section name' });
+  await expect(name).toHaveAttribute('placeholder', 'Other');
+  await expect(name).toHaveValue('');
+  const split = dialog.getByRole('button', { name: 'Split', exact: true });
+  await dialog.getByRole('radio', { name: 'Other section type' }).check();
+  await expect(name).toBeFocused();
+  await expect(split).toBeDisabled();
+  await expect(split).toHaveAttribute('title', 'Enter a name for the new song section to continue');
+  await name.fill('Outro');
+  await expect(split).toBeEnabled();
+  await expect(split).not.toHaveAttribute('title');
+  await name.fill('');
+  await expect(split).toBeDisabled();
+  await dialog.getByRole('radio', { name: 'Chorus' }).check();
+  await expect(split).toBeEnabled();
+  await split.click();
+  await expect(page.locator('#notice')).toContainText('Moved the rest of Verse 1 into Chorus 1');
+  await expect(page.getByRole('button', { name: /Chorus 1/ }).first()).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Lyric mapping for Share', exact: true })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Lyric mapping for Ring', exact: true })).toHaveCount(0);
 });

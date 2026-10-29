@@ -1,0 +1,57 @@
+X: 243
+T: Where He Leads Me
+%%combinevoices 1
+T: (also known as I Can Hear My Savior Calling or Follow All The Way)
+C: Words: Edward (or Ernest) William Blandy, 1890. 
+C: Music: 'Blandy' or 'Norris' attr. John Samuel Norris (1844-1907) or Philip Paul Bliss (1838-1876).
+C: Setting: "Best Endeavor Hymns", 1907.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2012 Revision.
+S: Music source: Best Endeavor Hymns, 1907 Hymn 148
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] C3/4 F/4 | A3/2 A/ B3/2 A/ | A/ G2 z/ C3/4 E/4 | G3/2 F/ A3/2 G/ | G/ F2 z/
+w: 1.~I can hear my Sa- vior call- ing, I can hear my Sa- vior call- ing, 
+w: 2.~I'll go with Him through the gar- den, I'll go with Him through the gar- den, 
+w: 3.~I'll go with Him through the judg- ment, I'll go with Him through the judg- ment, 
+w: 4.~He will give me grace and glo- ry, He will give me grace and glo- ry, 
+[V: S1V2] C3/4 C/4 | F3/2 F/ F3/2 F/ | F/ E2 x/ C3/4 C/4 | E3/2 F/ F3/2 E/ | C/ C2 x/
+[V: S2V1] A,3/4 A,/4 | C3/2 C/ D3/2 C/ | C/ C2 z/ B,3/4 B,/4 | B,3/2 A,/ C3/2 B,/ | B,/ A,2 z/
+[V: S2V2] F,3/4 F,/4 | F,3/2 F,/ F,3/2 F,/ | C,/ C,2 x/ C,3/4 C,/4 | C,3/2 C,/ C,3/2 C,/ | F,/ F,2 x/
+% 5
+[V: S1V1] F3/4 A/4 | c3/2 c/ d3/2 c/ | c/ B2 z/ F/ G/ | A/4 !fermata!C3/4 A/4 !fermata!C3/4 G3/2 F/ | F3 
+w: I can hear my Sa- vior call- ing, "Take thy cross and fol- low, fol- low Me." 
+w: I'll go with Him through the gar- den, I'll go with Him, with Him all the way. 
+w: I'll go with Him through the judg- ment, I'll go with Him, with Him all the way. 
+w: He will give me grace and glo- ry, And go with me, with me all the way. 
+[V: S1V2] F3/4 F/4 | F3/2 F/ F3/2 _E/ | D/ D2 x/ D/ _D/ | C/4 C3/4 C/4 C3/4 C3/2 C/ | C3 
+[V: S2V1] A,3/4 C/4 | A,3/2 A,/ B,3/2 A,/ | B,/ F,2 z/ F,/ F,/ | F,/4 !invertedfermata!A,3/4 F,/4 !invertedfermata!A,3/4 B,3/2 A,/ | A,3 
+[V: S2V2] F,3/4 F,/4 | F,3/2 F,/ F,3/2 F,/ | B,,/ B,,2 x/ B,,/ B,,/ | C,/4 C,3/4 C,/4 C,3/4 C,3/2 F,/ | F,3 
+% 9 
+[V: S1V1] C3/4 F/4 | A3/2 A/ B3/2 A/ | A/ G2 z/ C3/4 E/4 | G3/2 F/ A3/2 G/ | G/ F2 z/
+w: Where He leads me I will fol- low, Where He leads me I will fol- low, 
+[V: S1V2] C3/4 C/4 | F3/2 F/ F3/2 F/ | F/ E2 x/ C3/4 C/4 | E3/2 F/ F3/2 E/ | C/ C2 x/
+[V: S2V1] A,3/4 A,/4 | C3/2 C/ D3/2 C/ | C/ C2 z/ B,3/4 B,/4 | B,3/2 A,/ C3/2 B,/ | B,/ A,2 z/
+[V: S2V2] F,3/4 F,/4 | F,3/2 F,/ F,3/2 F,/ | C,/ C,2 x/ C,3/4 C,/4 | C,3/2 C,/ C,3/2 C,/ | F,/ F,2 x/
+% 13
+[V: S1V1] F3/4 A/4 | c3/2 c/ d3/2 c/ | c/ B2 z/ F/ G/ | A/4 !fermata!C3/4 A/4 !fermata!C3/4 G3/2 F/ | F3 |]
+w: Where He leads me I will fol- low; I'll go with Him, with Him, all the way. 
+[V: S1V2] F3/4 F/4 | F3/2 F/ F3/2 _E/ | D/ D2 x/ D/ _D/ | C/4 C3/4 C/4 C3/4 C3/2 C/ | C3 |]
+[V: S2V1] A,3/4 C/4 | A,3/2 A,/ B,3/2 A,/ | B,/ F,2 z/ F,/ F,/ | F,/4 !invertedfermata!A,3/4 F,/4 !invertedfermata!A,3/4 B,3/2 A,/ | A,3 |]
+[V: S2V2] F,3/4 F,/4 | F,3/2 F,/ F,3/2 F,/ | B,,/ B,,2 x/ B,,/ B,,/ | C,/4 C,3/4 C,/4 C,3/4 C,3/2 F,/ | F,3 |]

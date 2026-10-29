@@ -1,0 +1,68 @@
+X: 284
+T: Souls of Men! Why Will Ye Scatter
+%%combinevoices 1
+T: (also known as There's a Wideness in God's Mercy)
+C: Words: Frederick William Faber, 1862, alt. 
+C: Music: 'In Babilone' traditional Dutch found in "Oude en Nieuwe Hollantse Boerenlities en Contradansen", 1710. 
+C: Setting: Julius Röntgen, 1906.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music source: the English Hymnal, 1906 hymn 145
+S: Lyrics from "Faber's Hymns", 1894 page 117.  BJD altered verse 1b (slightly), 3a, 3b, 5a, 5b
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] G F/E/ D G | A G/A/ B G | c B/A/ B A/G/ | F/G/ A/F/ G2 |
+w: 1.~Souls of * men! why will ye * scat- ter Like a * crowd of * fright- * ened * sheep? 
+w: 2.~It is * God: His love looks * might- y, But is * might- i'r * than * it * seems; 
+w: 3.~There is * no place where earth's * sor- rows Are more * felt than * up * in * Heav'n; 
+w: 4.~There is * grace e- nough for * thou- sands Of new * worlds as * great * as * this;
+w: 5.~There is * plen- ti- ful re- * demp- tion In Christ's * blood that * has * been * shed; 
+[V: S1V2] D C B, B, | E E/F/ G D | E D D E | C/D/ E/D/ D2 |
+[V: S2V1] B, A,/F,/ G, G, | G, D D G, | G, F, G, B, | C/B,/ A,/C/ B,2 |
+[V: S2V2] G,, A,, B,, E, | C, D, G,, B,, | A,, D, B,, E, | A,,/B,,/ C,/D,/ G,,2 |
+% 5
+[V: S1V1] G F/E/ D G | A G/A/ B G | c B/A/ B A/G/ | F/G/ A/F/ G2 |
+w: Fool- ish * hearts! why will ye * wan- der From a * love so * true * and * deep? 
+w: 'Tis our * Fa- ther: and His * fond- ness Goes far * out be- * yond * our * dreams. 
+w: There is * no place where earth's * fail- ings Have such * won- drous * judg- * ment * giv'n.   
+w: There is * room for fresh cre- * a- tions In that * up- per * home * of * bliss.
+w: There is * joy for all the * mem- bers In the * sor- rows * of * the * Head. 
+[V: S1V2] D C B, B, | E E/F/ G D | E D D E | C/D/ E/D/ D2 |
+[V: S2V1] B, A,/F,/ G, G, | G, D D G, | G, F, G, B, | C/B,/ A,/C/ B,2 |
+[V: S2V2] G,, A,, B,, E, | C, D, G,, B,, | A,, D, B,, E, | A,,/B,,/ C,/D,/ G,,2 |
+% 9
+[V: S1V1] G A/B/ c B | A ^G A A | A B/c/ d G | A G/F/ (E D) |
+w: Was there * ev- er kind- er shep- herd Half so * gen- tle, half so * sweet, *
+w: There's a * wide- ness in God's mer- cy, Like the * wide- ness of the * sea; *
+w: There is * wel- come for the sin- ner, Grace poured * out as in a * flood *
+w: For the * love of God is broad- er Than the * mea- sure of man's * mind; *
+w: Not just * all we owe to Je- sus; It is * some- thing more than * all; * 
+[V: S1V2] B, =F E =F | E E E E | ^F D D E | D D (^C C) |
+[V: S2V1] G, =F, G, D | C B, C C | D F, G, B, | A, B, (G, F,) |
+[V: S2V2] E, D, C, D, | E, E, A,, A,, | D, C, B, E, | F,, G,, (A,, D,) |
+% 13
+[V: S1V1] G F/E/ D G | A G/A/ B G | !sintro!c B/A/ B A/G/ | F/G/ A/F/ G2 !eintro!|]
+w: As the * Sa- vior who would * have us Come and * ga- ther * round * His * feet? 
+w: There's a * kind- ness in His * just- ice, Which is * more than * lib- * er- * ty. 
+w: There is * mer- cy with the * Sa- vior; There is * heal- ing * in * His * blood.
+w: And the * heart of the E- * ter- nal Is most * won- der- * ful- * ly * kind.
+w: Great- er * good be- cause of * e- vil, Lar- ger * mer- cy * through * the * fall. 
+[V: S1V2] D C B, B, | E E/F/ G D | E D D E | C/D/ E/D/ D2 |]
+[V: S2V1] B, A,/F,/ G, G, | G, D D G, | G, F, G, B, | C/B,/ A,/C/ B,2 |]
+[V: S2V2] G,, A,, B,, E, | C, D, G,, B,, | A,, D, B,, E, | A,,/B,,/ C,/D,/ G,,2 |]

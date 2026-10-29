@@ -1,0 +1,50 @@
+X: 62
+T: Let Our Gladness Have No End
+%%combinevoices 1
+C: Words: From the Kancional, by Tobias Zavorka, 1602.  Translator unknown. 
+C: Music: 'Narodil se Kristus Pán' or 'Salvator Natus' 15th Century Bohemian. 
+C: Setting: "Carols Old And Carols New", 1916.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2007 Revision.
+S: Music source: Carols Old And Carols New, Boston: Parish Choir, Charles L. Hutchins, 1916 Hymn 577.
+S: Translation is public domain per LSB 2006 Hymn 381
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=160]  G A B c | d d d2 | c d e2 | d3 z |
+w: 1.~Let our glad- ness have no end, Hal- le- lu- jah! 
+w: 2.~See, the love- liest bloom- ing rose, Hal- le- lu- jah! 
+w: 3.~In- to flesh is made the Word. Hal- le- lu- jah! 
+[V: S1V2]  G D D G | F G F2 | E G (G F) | G3 x |
+[V: S2V1]   D A, G, G, | A, B, A,2 | A, B, C2 | B,3 z |
+[V: S2V2]  B, F, G, E, | D, G, D,2 | A, G, C,2 | G,3 x |
+% 5
+[V: S1V1]  d d c c | B B A2 | B c A2 | G3 z | B A B c |
+w: For to earth did Christ de- scend. Hal- le- lu- jah! On this day God 
+w: From the branch of Je- sse grows. Hal- le- lu- jah! * * * *
+w: He, our re- fuge and our Lord. Hal- le- lu- jah!  * * * *
+[V: S1V2]  G G E E | F F A2 | G G (G F) | G3 x | D D G G |
+[V: S2V1]  G D E A, | D D E2 | D E (D A,) | B,3 z | G, A, G, E, |
+[V: S2V2]  B, B,, C, C, | D, B, C2 | G, C, D,2 | G,,3 x | G, F, E, C, |
+% 9
+[V: S1V1]  (d3 c) | B2 z2 | B A B c | (d3 c) | B2 z2 | z4 | !sintro!G2 e2 | d B A2 | G4 !eintro!|]
+w: gave * us Christ, His Son, to save * us; Christ, His Son, to save us. 
+[V: S1V2]  (D2 E F) | G2 z2 | G A F A | (B2 A2) | G2 z2 | D2 G2 | G2 G2 | F G (A F) | D4 |]
+[V: S2V1]  (F,2 A, D) | D2 z2 | E E ^D E | (G2 E2) | E2 z2 | B,2 E2 | D2 C2 | A, G, (E D/C/) | B,4 |]
+[V: S2V2]  (B,,2 A,,2) | G,,2 z2 | E, C B, A, | (G,2 A,2) | E,2 z2 | G,2 C,2 | B,,2 C,2 | D, E, (C, D,) | G,,4 |]
+% 20

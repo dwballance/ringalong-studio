@@ -10,14 +10,15 @@ import { createIcons, BellRing, Plus, Download, Upload, Undo2, Redo2, Music2, Ey
   X, ChevronUp, ChevronDown, Trash2, ArrowRight, FilePlus2, Settings2, Scissors, Link2, RotateCcw, ShieldCheck, Moon, Sun, Globe, CornerDownLeft, Copy } from 'lucide';
 import { hyphenateSync } from 'hyphen/en-us';
 import Fraction from 'fraction.js';
-import { alignSection, breakLineHere, chordDefinitionsSchema, ensureSectionNames, id, newNote, newSection, newSong, normalizeAttribution, removeUntextedNote, restoreHymnDefaults, sectionTitle, type Song, type Section, type Note, type Binding } from './document';
+import { alignSection, breakLineHere, chordDefinitionsSchema, ensureSectionNames, id, newNote, newSection, newSong, normalizeAttribution, removeUntextedNote, restoreHymnDefaults, sectionTitle, splitSection, type Song, type Section, type Note, type Binding } from './document';
 import { COLORS, DURATIONS, bellLabel, bellPitch, chordTones, durationLabel, eventsFor, keyBells, midi, noteName, pc, playableBells, perform, problems, resolveBell, type Event } from './music';
 import { bindScore, escape as esc, scoreMarkup } from './render';
 import { downloadSong, MAX_FILE_SIZE, readDocument } from './files';
 import { Recovery } from './recovery';
 import { applyTheme, currentTheme, initializeTheme } from './theme';
-import { hymnReference, loadHymn, loadHymnCatalog, matchingHymns, type HymnSource } from './hymns';
+import { loadHymn, loadHymnCatalog, type HymnSource } from './hymns';
 import { chooseHymn } from './hymn-dialog';
+import { chooseSplitTarget } from './split-dialog';
 
 initializeTheme();
 const app = document.querySelector<HTMLElement>('#app')!;
@@ -48,6 +49,11 @@ const command = (action: string, label: string, name: string, style = '', extra 
   `<button type="button" class="${style}" data-action="${action}" aria-label="${esc(label)}" title="${esc(label)}" ${extra}>${icon(name)}<span>${esc(label)}</span></button>`;
 const tool = (action: string, label: string, name: string, extra = '') =>
   `<button type="button" class="icon-button" data-action="${action}" title="${esc(label)}" aria-label="${esc(label)}" ${extra}>${icon(name)}</button>`;
+let importMenuOpen = false;
+function importMenu() {
+  return `<div class="import-menu"><button type="button" class="secondary" data-action="import-menu" aria-haspopup="menu" aria-expanded="${importMenuOpen}" aria-label="Import" title="Import">${icon('upload')}<span>Import</span>${icon('chevron-down')}</button>
+    <div class="import-menu-list" role="menu" aria-label="Import" ${importMenuOpen ? '' : 'hidden'}><button type="button" role="menuitem" data-action="import">${icon('upload')}Load from file</button><button type="button" role="menuitem" data-action="find-hymn">${icon('globe')}Find a public domain hymn</button></div></div>`;
+}
 const selectedSection = () => song.sections.find(section => section.id === selected);
 const selectedPattern = () => song.patterns.find(pattern => pattern.type === selectedSection()?.type);
 const meaningful = () => Boolean(song.title.trim() || song.sections.length);
@@ -82,7 +88,7 @@ function metadata() {
   const keys = ['major', 'minor'].flatMap(mode => roots.map(root => `${root} ${mode}`));
   return `<section class="song-details" aria-labelledby="details-title"><div class="band-heading"><h2 id="details-title">Song details</h2>${song.extensions.hymnDefaults || song.extensions.webSource ? command('reset-hymn', 'Reset hymn', 'rotate-ccw', 'secondary', loadingHymn ? 'disabled' : '') : ''}</div>
     <div class="metadata-grid">
-      <div class="field hymn-lookup"><label for="hymn-number">Hymn number <span class="optional">optional</span></label><div class="hymn-lookup-controls"><input id="hymn-number" name="hymnNumber" aria-label="Hymn number" value="${esc(song.hymnNumber)}" placeholder="eg. 378" inputmode="numeric" maxlength="50">${command('load-hymn', loadingHymn ? 'Loading…' : 'Look up', 'globe', 'secondary', `aria-busy="${loadingHymn}" ${loadingHymn || !song.hymnNumber.trim() ? 'disabled' : ''}`)}</div></div>
+      <div class="field hymn-lookup"><label for="hymn-number">Hymn number</label><div class="hymn-lookup-controls"><input id="hymn-number" name="hymnNumber" aria-label="Hymn number" value="${esc(song.hymnNumber)}" inputmode="numeric" maxlength="50"></div></div>
       ${field('Title *', 'title', song.title, 'placeholder="Enter title here" required maxlength="250"')}
       <label class="field"><span>Key signature</span><select name="key" required><option value="">Select key</option>${keys.map(key => `<option ${key === song.key ? 'selected' : ''}>${key}</option>`).join('')}</select></label>
       <div class="meter-pickup"><fieldset class="field meter"><legend>Time signature</legend><div><input name="timeTop" type="number" min="1" max="32" value="${song.time[0]}" aria-label="Beats per measure"><span>/</span><select name="timeBottom" aria-label="Beat unit">${[1, 2, 4, 8, 16, 32].map(unit => `<option ${song.time[1] === unit ? 'selected' : ''}>${unit}</option>`).join('')}</select></div></fieldset>
@@ -156,18 +162,20 @@ function paletteMarkup() {
     const canRemoveExtra = selectedSection()!.bindings[event.slot.id].length > 1 &&
       (Boolean(event.binding.tokenId) || selectedSection()!.bindings[event.slot.id].indexOf(event.binding) > 0);
     contents = `<div class="palette-options compact" role="toolbar" aria-label="Lyric mapping">${tokens.map(token => option(`token:${token.id}`, esc(token.text), token.id === event.binding.tokenId, 'data-stay="true"')).join('')}
-      ${option('kind:continue', 'Continue syllable', event.binding.kind === 'continue', 'data-stay="true"')}${option('kind:unused', 'Not used in this verse', event.binding.kind === 'unused', 'data-stay="true"')}${option('kind:rest', 'Rest', event.binding.kind === 'rest', 'data-stay="true"')}</div>
+      ${option('kind:continue', 'Continue syllable', event.binding.kind === 'continue', 'data-stay="true"')}${option('kind:unused', 'Not used in this verse', event.binding.kind === 'unused', 'data-stay="true"')}</div>
       <div class="token-tools">${command('edit-token', 'Edit word', 'pencil', '', event.binding.tokenId ? '' : 'disabled')}${command('split-token', 'Split syllable', 'scissors', '', event.binding.tokenId ? '' : 'disabled')}${command('join-token', 'Join next', 'link-2', '', event.binding.tokenId ? '' : 'disabled')}${command('subdivide', 'Split note', 'scissors')}${command('remove-child', event.binding.tokenId ? 'Reset extra note' : 'Remove extra note', event.binding.tokenId ? 'rotate-ccw' : 'trash-2', '', canRemoveExtra ? '' : 'disabled')}</div>`;
   }
   const labels = { duration: 'Note length', melody: 'Melody', chord: 'Chord', ring: 'Ringing', lyric: 'Lyric & alignment' };
   const section = selectedSection()!;
   const atNoteStart = section.bindings[event.slot.id]?.[0]?.id === event.binding.id;
   const canBreak = atNoteStart && selectedPattern()!.lines[event.line].slots[0]?.id !== event.slot.id;
+  const canSplit = atNoteStart && !(event.line === 0 && selectedPattern()!.lines[0].slots[0]?.id === event.slot.id);
   const hasLyrics = noteHasLyrics(event.slot.id, section.type);
   return `<div class="palette" aria-label="${labels[palette.field]} palette"><div class="palette-heading"><strong>${labels[palette.field]} <span> / ${esc(event.lyric || 'Untexted note')}</span></strong>${tool('close-palette', 'Close palette', 'x')}</div>
     <div class="palette-layout"><div class="palette-content">${contents}</div><div class="palette-actions" role="group" aria-label="Note actions">
       ${command('add-note', 'Add note here', 'plus', 'secondary')}
       <span title="${!atNoteStart ? 'Select the first subdivision of this shared note to break the line.' : canBreak ? 'Move this note and all notes to its right to the next line in every linked verse.' : 'This note already starts a line.'}">${command('break-line', 'Break line here', 'corner-down-left', 'secondary', canBreak ? '' : 'disabled')}</span>
+      <span title="${!atNoteStart ? 'Select the first subdivision of this shared note to split here.' : canSplit ? 'Move this note and all following into a new section (chorus, bridge, or another type).' : 'The first note cannot be split off; nothing would be left.'}">${command('split-section', `Split ${section.type}`, 'scissors', 'secondary', canSplit ? '' : 'disabled')}</span>
       ${command('remove-slot', hasLyrics ? 'Reset note' : 'Remove note', hasLyrics ? 'rotate-ccw' : 'trash-2', 'danger-quiet')}
     </div></div></div>`;
 }
@@ -186,14 +194,21 @@ function musicEditor(section: Section) {
     ${editable && selectedNote?.line === lineIndex ? paletteMarkup() : ''}
     <div class="word-track">${line.slots.map(slot => `<div class="slot-group">${events.filter(event => event.slot.id === slot.id).map(event => {
       const active = palette?.bindingId === event.binding.id;
+      const hints: Record<string, string> = {
+        lyric: 'Lyric: the word or syllable sung on this note. Click to split or modify the word.',
+        duration: 'Duration: click to change note length.',
+        melody: 'Melody: click to specify the melody pitch to ring with the chord.',
+        chord: 'Chord: click to pick a root and quality.',
+        ring: 'Ringing: click to specify if ringing, holding or damping.',
+      };
       const cellButton = (field: string, label: string, value: string, cls = '') => editable ?
-        `<button type="button" class="cell-value ${cls} ${active && palette?.field === field ? 'selected-value' : ''}" data-action="open-palette" data-slot="${slot.id}" data-binding="${event.binding.id}" data-field="${field}" aria-label="${label} for ${esc(event.lyric || 'untexted note')}">${value}</button>` : `<span class="read-value ${cls}">${value}</span>`;
+        `<button type="button" class="cell-value ${cls} ${active && palette?.field === field ? 'selected-value' : ''}" data-action="open-palette" data-slot="${slot.id}" data-binding="${event.binding.id}" data-field="${field}" aria-label="${label} for ${esc(event.lyric || 'untexted note')}" title="${hints[field]}">${value}</button>` : `<span class="read-value ${cls}" title="${hints[field]}">${value}</span>`;
       return `<div class="word-cell ${event.boundaries.length ? 'bar-end' : ''} ${active ? 'active-cell' : ''} ${event.binding.kind === 'unused' ? 'unused-cell' : ''}">
         ${cellButton('lyric', 'Lyric mapping', esc(event.lyric || (event.binding.kind === 'continue' ? '\u203f' : event.binding.kind === 'rest' ? 'Rest' : '\u2014')), 'lyric-value')}
         ${cellButton('duration', 'Duration', esc(durationLabel(event.beats, song.time[1], song.time[0], event.start)), 'duration-value')}
-        ${cellButton('melody', 'Melody', `<i class="bell-dot" style="background:${COLORS[pc(event.binding.melody || slot.melody)]}"></i>${esc(bellLabel(song, event.binding.melody || slot.melody))}`, 'melody-value')}
+        ${song.ringMelody ? cellButton('melody', 'Melody', `<i class="bell-dot" style="background:${COLORS[pc(event.binding.melody || slot.melody)]}"></i>${esc(bellLabel(song, event.binding.melody || slot.melody))}`, 'melody-value') : ''}
         ${cellButton('chord', 'Chord', esc(event.chord), 'chord-value')}
-        ${editable ? cellButton('ring', 'Ringing', `${icon('bell-ring')}<small>${esc(slot.policy === 'auto' ? 'Auto' : slot.policy)}</small>`, 'ring-value') : `<span class="ring-read">${esc(slot.policy === 'auto' ? '' : slot.policy)}</span>`}
+        ${editable ? cellButton('ring', 'Ringing', `${icon('bell-ring')}<small>${esc(slot.policy === 'auto' ? 'Auto' : slot.policy)}</small>`, 'ring-value') : `<span class="ring-read" title="${hints.ring}">${esc(slot.policy === 'auto' ? '' : slot.policy)}</span>`}
         <div class="calculated-bells" role="group" aria-label="Calculated strikes for ${esc(event.lyric || 'untexted note')}" title="${esc(strikeError || 'Calculated bell strikes and held bells')}">${strikeError ? '<em>Unavailable</em>' : event.sounding.length ? playableBells(song).filter(bell => event.sounding.includes(bell)).map(bell => `<span class="${event.strike.includes(bell) ? 'calculated-strike' : 'calculated-held'}" title="${esc(bellLabel(song, bell))}: ${event.strike.includes(bell) ? 'strike' : 'hold'}" style="--bell:${COLORS[pc(bell)]};--bell-ink:var(--${pc(bell) < 2 ? 'score-bell-dark-ink' : 'score-bell-ink'})">${esc(bellLabel(song, bell))}</span>`).join('') : '<em>No strikes</em>'}</div>
         ${event.boundaries.filter(offset => offset < event.beats).map(offset => `<span class="editor-crossing" style="left:${offset / event.beats * 100}%" title="Measure boundary; tied continuation"></span>`).join('')}
       </div>`;
@@ -238,7 +253,7 @@ function render() {
   const focusedValue = focused?.dataset.value;
   const scrolls = [...document.querySelectorAll<HTMLElement>('.word-track')].map(element => element.scrollLeft);
   const advancedOpen = document.querySelector<HTMLDetailsElement>('.advanced')?.open;
-  app.innerHTML = `<header class="app-header"><a class="brand" href="./" aria-label="Ringalong Studio"><span class="brand-mark">${icon('bell-ring')}</span><span>Ringalong<span class="brand-studio">STUDIO</span></span></a><nav aria-label="File actions">${tool('new', 'New ringalong', 'file-plus-2')}${tool('undo', 'Undo', 'undo-2', past.length ? '' : 'disabled')}${tool('redo', 'Redo', 'redo-2', future.length ? '' : 'disabled')}<span class="toolbar-divider"></span>${command('import', 'Import', 'upload', 'secondary')}${command('export', 'Save / Export', 'download', 'primary')}${themeButton()}</nav></header>
+  app.innerHTML = `<header class="app-header"><a class="brand" href="./" aria-label="Ringalong Studio"><span class="brand-mark">${icon('bell-ring')}</span><span>Ringalong<span class="brand-studio">STUDIO</span></span></a><nav aria-label="File actions">${tool('new', 'New ringalong', 'file-plus-2')}${tool('undo', 'Undo', 'undo-2', past.length ? '' : 'disabled')}${tool('redo', 'Redo', 'redo-2', future.length ? '' : 'disabled')}<span class="toolbar-divider"></span>${importMenu()}${command('export', 'Save / Export', 'download', 'primary')}${themeButton()}</nav></header>
     <main>
     <div id="notice" class="notice ${messageIsError ? 'error' : ''}" role="status" aria-live="polite" ${message ? '' : 'hidden'}>${esc(message)}</div>
     ${metadata()}<div class="workspace">${sidebar()}<div class="editor-column">${editor()}</div></div>
@@ -330,45 +345,26 @@ function resetNoteMusic(note: Note, type: string) {
 function syncRaw() { const section = selectedSection()!; section.raw = section.lines.map(line => line.tokens.map(token => token.text).join(' ')).join('\n'); }
 function confirmation(text: string) { return window.confirm(text); }
 
-function updateLookupButton() {
+function updateHymnBusy() {
   const reset = document.querySelector<HTMLButtonElement>('[data-action="reset-hymn"]');
   if (reset) reset.disabled = loadingHymn;
-  const button = document.querySelector<HTMLButtonElement>('[data-action="load-hymn"]');
-  if (!button) return;
-  button.disabled = loadingHymn || !song.hymnNumber.trim();
-  button.setAttribute('aria-busy', String(loadingHymn));
-  button.setAttribute('aria-label', loadingHymn ? 'Loading hymn' : 'Look up');
-  button.innerHTML = `${icon('globe')}<span>${loadingHymn ? 'Loading…' : 'Look up'}</span>`;
-  createIcons({ icons });
 }
 
-async function lookupHymn() {
+async function findHymn() {
   if (loadingHymn) return;
-  const requestedNumber = song.hymnNumber;
-  const reference = hymnReference(requestedNumber);
-  const number = reference.number;
-  loadingHymn = true; updateLookupButton();
+  loadingHymn = true; updateHymnBusy();
   try {
     const catalog = await loadHymnCatalog();
-    const matches = matchingHymns(catalog, requestedNumber);
-    if (!matches.length) {
-      notify(`No reviewed public-domain music is available for ${reference.abbreviation} ${number} yet. It may be restricted or not yet mapped. See the catalog refresh instructions in the project README to add coverage. Your arrangement has not been changed.`, true);
-      const link = document.createElement('a');
-      const hymnalSlug = reference.hymnal === 'TFWS2000' ? 'FWS' : 'UMH';
-      link.href = `https://hymnary.org/hymn/${hymnalSlug}/${number}`;
-      link.target = '_blank'; link.rel = 'noopener noreferrer'; link.textContent = `View ${reference.abbreviation} ${number} reference`;
-      const notice = document.querySelector('#notice'); notice?.append(document.createElement('br'), link);
-      return;
-    }
-    const choice = await chooseHymn(matches);
+    const choice = await chooseHymn(catalog);
     if (!choice) return;
     const imported = await loadHymn(choice.source, choice.keepBells ? song.bells : undefined);
     if (meaningful() && !confirmation(`Replace the current arrangement with ${choice.source.title}? Export first to keep your work.`)) return;
     checkpoint(); song = imported; selected = song.sections[0]?.id || ''; palette = undefined; verseOnly = false; previewed = true;
     changed();
     const unaligned = song.sections.filter(section => section.stage === 'lyrics').length;
-    notify(`Loaded ${choice.source.hymnal === 'TFWS2000' ? 'TFWS' : 'UMH'} ${number}: ${song.title}. Review the imported music and inferred harmony.${unaligned ? ` ${unaligned} additional verse${unaligned === 1 ? '' : 's'} need lyric alignment.` : ''}`);
-  } finally { loadingHymn = false; updateLookupButton(); }
+    const label = choice.source.number ? `${choice.source.hymnal === 'TFWS2000' ? 'TFWS' : 'UMH'} ${choice.source.number}` : 'Open Hymnal';
+    notify(`Loaded ${label}: ${song.title}. Review the imported music and inferred harmony.${unaligned ? ` ${unaligned} additional verse${unaligned === 1 ? '' : 's'} need lyric alignment.` : ''}`);
+  } finally { loadingHymn = false; updateHymnBusy(); }
 }
 
 function setPairNote(index: number, side: number, value: string) {
@@ -395,20 +391,19 @@ async function handleAction(button: HTMLElement) {
     if (index < song.combined.length) edit(() => { song.combined.splice(index, 1); });
     else { draftPairs.splice(index - song.combined.length, 1); render(); }
   }
-  else if (action === 'load-hymn') await lookupHymn();
   else if (action === 'reset-hymn') {
     if (loadingHymn) return;
     const baseline = restoreHymnDefaults(song);
     if (!baseline && !song.extensions.webSource) throw new Error('No original downloaded hymn is recorded for this arrangement.');
     if (!confirmation('Reset this entire hymn to its original imported arrangement? This replaces current lyrics, notes, sections, bells and song settings. Undo can restore your edits.')) return;
-    loadingHymn = true; updateLookupButton();
+    loadingHymn = true; updateHymnBusy();
     try {
       const restored = baseline || await loadHymn(song.extensions.webSource as HymnSource);
       const errors = problems(restored, false);
       if (errors.length) throw new Error(errors.join('\n'));
       checkpoint(); song = restored; selected = song.sections[0]?.id || ''; palette = undefined; verseOnly = false; previewed = true;
       changed(); notify('Original hymn restored. Undo will restore your previous edits.');
-    } finally { loadingHymn = false; updateLookupButton(); }
+    } finally { loadingHymn = false; updateHymnBusy(); }
   }
   else if (action === 'toggle-theme') {
     applyTheme(currentTheme() === 'dark' ? 'light' : 'dark', true);
@@ -422,7 +417,9 @@ async function handleAction(button: HTMLElement) {
     const from = action === 'undo' ? past : future, to = action === 'undo' ? future : past;
     const previous = from.pop(); if (!previous) return; to.push(JSON.stringify(song)); song = JSON.parse(previous);
     if (!selectedSection()) selected = song.sections[0]?.id || ''; palette = undefined; changed();
-  } else if (action === 'import') document.querySelector<HTMLInputElement>('#import-file')!.click();
+  } else if (action === 'import-menu') { importMenuOpen = !importMenuOpen; render(); document.querySelector<HTMLElement>(importMenuOpen ? '.import-menu-list [role="menuitem"]' : '[data-action="import-menu"]')?.focus(); }
+  else if (action === 'import') { importMenuOpen = false; render(); document.querySelector<HTMLInputElement>('#import-file')!.click(); }
+  else if (action === 'find-hymn') { importMenuOpen = false; render(); await findHymn(); }
   else if (action === 'export') {
     const saved = await downloadSong(song);
     if (saved) { savedSource = JSON.stringify(song); notify('HTML exported. Editing can continue.'); }
@@ -487,6 +484,17 @@ async function handleAction(button: HTMLElement) {
         bindings.forEach(binding => { delete binding.melody; delete binding.chord;
           if (bindings.length > 1) binding.beats = new Fraction(String(slot.beats)).div(bindings.length).toFraction(); else delete binding.beats; });
       })); });
+    } else if (action === 'split-section') {
+      const event = paletteEvent(); if (!event) return;
+      const used = new Set(song.patterns.map(item => item.type));
+      const target = await chooseSplitTarget(section.type, ['verse', 'chorus', 'bridge'].filter(type => !used.has(type)), used);
+      if (!target) return;
+      let created: Section[] = [];
+      edit(() => {
+        created = splitSection(song, section.type, event.slot.id, target, section.id);
+        selected = created[0]?.id ?? selected; palette = undefined; verseOnly = false;
+      });
+      notify(`Moved the rest of ${sectionTitle(section)} into ${created.map(sectionTitle).join(', ')}. Other ${section.type} sections no longer include those notes.`);
     } else if (action === 'break-line') {
       const event = paletteEvent(); if (!event) return;
       if (section.bindings[event.slot.id]?.[0]?.id !== event.binding.id) throw new Error('Select the first subdivision of the shared note to break the line.');
@@ -558,6 +566,7 @@ async function handleAction(button: HTMLElement) {
 }
 
 app.addEventListener('click', event => {
+  if (importMenuOpen && !(event.target as HTMLElement).closest('.import-menu')) { importMenuOpen = false; render(); }
   const button = (event.target as HTMLElement).closest<HTMLElement>('[data-action]');
   if (button && !button.hasAttribute('disabled')) void handleAction(button).catch(error => notify(error.message, true));
 });
@@ -629,15 +638,11 @@ app.addEventListener('input', event => {
     if (textEditName !== input.name) { checkpoint(); textEditName = input.name; }
     (song as unknown as Record<string, unknown>)[input.name] = input.value;
     changed(false);
-    if (input.name === 'hymnNumber') updateLookupButton();
     document.querySelectorAll<HTMLButtonElement>('[data-action="add-section"]').forEach(button => { button.disabled = !metadataReady(); });
   }
 });
 app.addEventListener('keydown', event => {
   const target = event.target as HTMLElement;
-  if (event.key === 'Enter' && (target as HTMLInputElement).name === 'hymnNumber') {
-    event.preventDefault(); void lookupHymn().catch(error => notify(error.message, true)); return;
-  }
   const toolbar = target.closest<HTMLElement>('[role="toolbar"]');
   if (toolbar && ['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) {
     const buttons = [...toolbar.querySelectorAll<HTMLButtonElement>('button:not(:disabled)')];
@@ -645,7 +650,8 @@ app.addEventListener('keydown', event => {
     index = event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + buttons.length) % buttons.length;
     event.preventDefault(); buttons[index]?.focus();
   }
-  if (event.key === 'Escape' && palette) { palette = undefined; render(); }
+  if (event.key === 'Escape' && importMenuOpen) { importMenuOpen = false; render(); document.querySelector<HTMLElement>('[data-action="import-menu"]')?.focus(); }
+  else if (event.key === 'Escape' && palette) { palette = undefined; render(); }
   if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's') {
     event.preventDefault(); const button = document.querySelector<HTMLElement>('[data-action="export"]'); if (button) void handleAction(button).catch(error => notify(error.message, true));
   }

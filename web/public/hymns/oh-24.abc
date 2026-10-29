@@ -1,0 +1,68 @@
+X: 24
+T: O Holy Spirit, Enter In
+%%combinevoices 1
+C: Words: Michael Schirmer, 1650 except verse 2 by unknown author circa 1660.  
+C: Verses 1, 4, 6-8 translated by by Catherine Winkworth, 1863.  Remaining verses unknown translator before 1931.
+C: Music: 'Wie Schön Leuchtet' Phillipp Nicolai, 1599.  Setting: "Mehrstimmiges ChoralBuch", 1906.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2012 Revision.
+S: Music source: "Mehrstimmiges ChoralBuch", 1906 Hymn #184, page 145 Ed. Karl Brauer.
+S: Text source "Evangelical Lutheran Hymn-Book", 1931.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Eb % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=150] z2 E2 | B2 G2 | E2 B2 | c c B2 | z B c d | e d
+w: 1.~O Ho- ly Spir- it, en- ter in, And in our hearts Thy 
+w: 2.~Give to Thy Word im- press- ive pow'r That in our hearts, from 
+w: 3.~Thou foun- tain whence all wis- dom flows Which God on pi- ous 
+w: 4.~Left to our- selves, we shall but stray; O lead us on the 
+w: 5.~Thy heav'n- ly strength sus- tain our heart That we may act the 
+[V: S1V2] x2 B,2 | F2 B,2 | C2 F2 | G F D2 | x E E F | G F
+[V: S2V1] z2 G,2 | F,2 G,2 | G,2 B, B,- | B, =A, B,2 | z G, G, B, | B, B,
+[V: S2V2] x2 E,2 | D,2 E,2 | C,2 D,2 | E, F, B,,2 | x E, C, B,, | E, B,,
+% 6
+[V: S1V1] c c | B2 z B | c2 B2 | A G F2 | E4 | z2 E2 | B2 G2 |
+w: work be- gin Thy Tem- ple deign to make us; Sun of the 
+w: this good hour, As fire it may be glow- ing; That we con- 
+w: hearts be- stows, Grant us Thy con- so- la- tion. That in our 
+w: nar- row way, With wis- est coun- sel guide us; And give us 
+w: val- iant part With Thee as our Re- li- ance; Be Thou our 
+[V: S1V2] F E | D2 x E | E2 E2 | C B, B,2 | B,4 | x2 B,2 | F2 B,2 |
+[V: S2V1] B, =A, | B,2 z G, | A,2 B,2 | E, E,2 D, | G,4 | z2 G,2 | F,2 G,2 |
+[V: S2V2] F, F,, | B,,2 x E, | A,,2 G,,2 | A,, E,, B,,2 | E,,4 | x2 E,2 | D,2 E,2 |
+% 13
+[V: S1V1] E2 B2 | c c B2 | z B c d | e d c c | B2 z B | c2 B2 |
+w: soul, Thou Light di- vine, A- round and in us bright- ly shine, To joy and 
+w: fess the Fa- ther, Son, And Thee, the Spir- it, Three in One, Thy glo- ry 
+w: pure faith's un- i- ty We faith- ful wit- ness- es may be Of grace that 
+w: stead- fast- ness, that we May ev- er faith- ful prove to Thee, What- ev- er 
+w: Re- fuge and our Shield That we may nev- er quit the field, But stand in 
+[V: S1V2] C2 F2 | G F D2 | x E E F | G F F E | D2 x E | E2 E2 |
+[V: S2V1] G,2 B, B,- | B, =A, B,2 | z G, G, B, | B, B, B, =A, | B,2 z G, | A,2 B,2 |
+[V: S2V2] C,2 D,2 | E, F, B,,2 | x E, C, B,, | E, B,, F, F,, | B,,2 x E, | A,,2 G,,2 |
+% 19
+[V: S1V1] A G F2 | E4 | B2 G2 | B2 G2 | G G F F | G G F F |
+w: glad- ness wake us. That we to Thee Tru- ly liv- ing, To Thee giv- ing 
+w: ev- er show- ing. Stay Thou, guide now Our souls ev- er that they nev- er 
+w: brings sal- va- tion. Hear us, cheer us, By Thy teach- ing; let our preach- ing, 
+w: woes be- tide us; Lord now Heal Thou All hearts bro- ken, And be- to- ken 
+w: bold de- fi- ance. De- scend, de- fend From all err- ors And earth's ter- rors 
+[V: S1V2] C B, B,2 | B,4 | D2 E2 | D2 E2 | B, E E D | B, E E D |
+[V: S2V1] E, E,2 D, | G,4 | B,2 B,2 | B,2 B,2 | E, B, B, F, | E, B, B, F, |
+[V: S2V2] A,, E,, B,,2 | E,,4 | G,2 E,2 | G,2 E,2 | E, E,, B,, B,, | E, E,, B,, B,, |
+% 25

@@ -1,0 +1,66 @@
+X: 168
+T: Jesus, King of Glory
+%%combinevoices 1
+C: Words: W. Hope Davison, 1880. 
+C: Music: 'St. Alban' Franz Joseph Haydn, 1774.  Setting: John Bacchus Dykes, 1868.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2005 Revision.
+S: Music source: 'The Evangelical Hymnal' 1921, Hymn 346.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] B B A A | G2 D2 | d d e e | A4 | c c B B |
+w: 1.~Je- sus, King of glo- ry, throned a- bove the sky, Je- sus, ten- der 
+w: 2.~On this day of glad- ness, Bend- ing low the knee In thine earth- ly 
+w: 3.~For the lit- tle child- ren Who have come to thee; For the glad, bright 
+w: 4.~Help us ev- er stead- fast in the faith to be: In Thy Church- 's 
+w: 5.~When the sha- dows leng- then, show us, Lord, Thy way; Through the dark- ness 
+[V: S1V2]  G G F F | D2 D2 | G G G G | F4 | E D D D |
+[V: S2V1]  D D C C | B,2 B,2 | B, B, A, A, | D4 | G, A, B, B, |
+[V: S2V2]  G, G, D, D, | G,2 G,2 | G,, G,, C, C, | D,4 | E, F, G, G, |
+% 5
+[V: S1V1]  A2 E2 | G G A A | G4 | d d c c | B2 E2 | c c e e |
+w: Sa- vior, hear Thy child- ren cry. Par- don our trans- gres- sions, cleanse us from our 
+w: tem- ple, Lord, we wor- ship thee; Ce- le- brate thy good- ness, Mer- cy, grace, and 
+w: spir- its Who thy glo- ry see; For the loved ones rest- ing In thy dear em- 
+w: con- flicts fight- ing val- iant- ly. Lov- ing Sa- vior, streng- then these weak hearts of 
+w: lead us to the heav'n- ly day; When our course is fin- ished, end- ed all the 
+[V: S1V2]  E2 E2 | D B, E F | G4 | G G G =F | (=F D) E2 | E E E E |
+[V: S2V1]  C2 C2 | B, G, C C | B,4 | D B, C C | (D =F) (E D) | C C C B,/A,/ |
+[V: S2V2]  C,2 C,2 | D, E, C, D, | G,4 | B, B, A, A, | ^G,2 G,2 | A, A, C, C, |
+% 13
+[V: S1V1]  (G2 F2) | c c A A | d2 B2 | A A F F | G4 | B B A A |
+w: sin, * By Thy Spi- rit help us heav'n- ly life to win. Je- sus, King of 
+w: truth, * All thy lov- ing guid- ance Of our heed- less youth.  *  *  *  * 
+w: brace; * For the pure and ho- ly Who be- hold thy face,  *  *  *  *
+w: ours, * Through Thy cross to con- quer craf- ty ev- il powers.  *  *  *  *
+w: strife, * Grant us, with the faith- ful, palms and crowns of life.  *  *  *  * 
+[V: S1V2]  D4 | E E D D | D2 G2 | E E D D | (D2 E2) | D D D D |
+[V: S2V1]  (B,2 A,2) | A, G, F, F, | G,2 D2 | C C A, A, | (B,2 C2) | B, G, F, C |
+[V: S2V2]  D,4 | A,, A,, D, C, | B,,2 B,,2 | C, C, D, D, | G,4 | G,, B,, D, F, |
+% 17
+[V: S1V1]  G2 D2 | d d e e | A4 | !sintro!c c B B | A2 E2 | G G A A | G4 !eintro!|]
+w: glo- ry, throned a- bove the sky, Je- sus, ten- der Sa- vior, hear Thy child- ren cry. 
+[V: S1V2]  (D C) (B, C) | D G G G | F4 | E D D D | (C E) (D C) | B, B, C C | B,4 |]
+[V: S2V1]  (B, C) (D C) | B, B, B, A, | D4 | G, A, B, G, | E,2 (^G, A,) | B, D, E, F, | G,4 |]
+[V: S2V2]  (G, A,) (B, A,) | G, G, C, C, | D,4 | E, F, G, B,, | C,2 (B,, A,,) | D, D, D, D, | G,,4 |]
+% 26
+W: 6.For thy faithful servants Who have entered in;
+W: For thy fearless soldiers Who have conquered sin; 
+W: For the countless legions Who have followed thee, 
+W: Heedless of the danger, On to victory,

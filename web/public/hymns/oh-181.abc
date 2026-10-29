@@ -1,0 +1,46 @@
+X: 181
+T: We Know Thee Who Thou Art
+%%combinevoices 1
+T: (also known as Prayer After Pardon)
+C: Words: William Bright, 1865. 
+C: Music: 'Sellinge' John Pyke Hullah, 1868. Setting: "Hymns Ancient and Modern", 1904.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2013 Revision.
+S: Music source: "Hymns Ancient and Modern", 1904 hymn 486.  Lyrics source "Hymns and Other Poems" by Bright, 1866 p.65
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] A | B A c d | G3 F | E B A B | E3 
+w: 1.~We know Thee who Thou art, Lord Je- sus, Ma- ry's Son; 
+w: 2.~That sac- red fount of grace, 'Mid all the bliss of Heav'n, 
+w: 3.~Brought home from ways per- verse, At peace Thine arms with- in, 
+w: 4.~We dare not ask to live Hence- forth from tri- als free; 
+w: 5.~We know Thee who Thou art, Our own re- deem- ing Lord; 
+[V: S1V2] F | G A G F | E3 D | D C D D | C3
+[V: S2V1] D | D D G, A, |A,3 A, | B, A, D B, | A,3
+[V: S2V2] D, | G, F, E, D, | C,3 D, | G, G, F, G, | A,3
+% 2
+[V: S1V1] F | F E D d | c B A !sintro!D | G F E E | D3 !eintro!|]
+w: We know the yearn- ings of Thy heart To end Thy work be- gun. 
+w: Has joy when- e'er we seek Thy face, And kneel to be for- giv'n. 
+w: We pray Thee, shield us from the curse Of fall- ing back to sin. 
+w: But oh! when next they tempt us, give More strength to cling to Thee. 
+w: Be Thou by will, and mind, and heart, Ac- cep- ted, loved, a- dored. 
+[V: S1V2] D | B, B, A, F | E D/E/ F D | D/C/ D D C D3 |]
+[V: S2V1] A, | G, G, F, A, | G,/A,/ B,/C/ D A, | G, A, B, A,/G,/ | F,3 |]
+[V: S2V2] D, | D, D, D, D, | E,/F,/ G, D, F, | E, D, G,, A,, | D,3 |]

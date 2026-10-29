@@ -1,0 +1,66 @@
+X: 262
+T: The God of Abraham Praise
+%%combinevoices 1
+C: Words: Daniel ben Judah, circa 1400. Paraphrased by Thomas Olivers, circa 1765. 
+C: Music: 'Yigdal' or 'Leoni' Traditional Hebrew. Setting: Meyer Lyon, 1780.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: 'Lutheran Worship' Hymnal, 1982 Hymn 450.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Ab % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] C | F G A B | c3 A | B c d e | c3
+w: 1.~The God of Ab- r'ham praise, Who reigns en- throned a- bove; 
+w: 2.~The God of Ab- r'ham praise, at Whose su- preme com- mand 
+w: 3.~The God of Ab- r'ham praise, Whose all suf- fic- ient grace 
+w: 4.~He by Him- self has sworn; I on His oath de- pend, 
+w: 5.~Tho' na- ture's strength de- cay, and earth and hell with- stand, 
+[V: S1V2]  C | F C C F | =E3 C | F E F E | E3
+[V: S2V1]  C, | F, =E, F, F, | G,3 A, | F, A, A, G, | A,3
+[V: S2V2]  z | z C, F, D, | C,3 F, | D, C, B,, E, | A,,3
+% 6
+[V: S1V1]  G | A B c d | e G A d | c2 B2 | A3
+w: An- cient of e- ver- last- ing days, and God of Love; 
+w: From earth I rise and seek the joys at His right hand; 
+w: Shall guide me all my hap- py days, in all my ways. 
+w: I shall, on ea- gle wings up- borne, to Heav'n a- scend. 
+w: To Ca- naan's bounds I urge my way, at His com- mand. 
+[V: S1V2]  E | E D C F | E D C F | E2 (E D) | C3
+[V: S2V1]  B, | A, G, A, A, | A, B, A, A, | A,2 G,2 | A,3
+[V: S2V2]  E, | C, B,, A,, D, | C, E, F, B,, | E,2 E,2 | A,,3
+% 10
+[V: S1V1]  A | c c c c | B3 A/G/ | F/G/ A/B/ c F | (F =E2)
+w: Je- ho- vah, great I AM! by * earth * and * Heav'n con- fessed; * 
+w: I all on earth for- sake, its * wis- * dom, * fame, and pow'r; * 
+w: He calls a worm His friend, He * calls * Him- * self my God! * 
+w: I shall be- hold His face; I * shall * His * pow'r a- dore, * 
+w: The wa- t'ry deep I pass, with * Je- * sus * in my view; * 
+[V: S1V2]  E | E C E F | G3 E | D D C D | C3
+[V: S2V1]  C | A, A, A, A, | G,3 A, | A, F, A, A, | G,3
+[V: S2V2]  A, | A, A,, C, =D, | E,3 C, | D, D, A,, B,, | C,3
+% 14
+[V: S1V1]  !sintro!C | F G A B | c B/c/ d c/B/ | A2 G2 | F3 !eintro!|]
+w: I bow and bless the sa- cred * Name for- * ev- er blessed. 
+w: And Him my on- ly Por- tion * make, my * Shield and Tow'r. 
+w: And He shall save me to the * end, thro' * Je- sus' blood. 
+w: And sing the won- ders of His * grace for- * ev- er- more. 
+w: And thro' the how- ling wil- der- * ness my * way pur- sue. 
+[V: S1V2]  C | C C C E | E F F F | F2 =E2 | F3 |]
+[V: S2V1]  =E, | F, =E, F, G, | A, A, B, D | C2 (C B,) | A,3 |]
+[V: S2V2]  C, | A,, C, F, _E, | A,, D, B,, B,, | C,2 C,2 | F,3 |]
+% 19

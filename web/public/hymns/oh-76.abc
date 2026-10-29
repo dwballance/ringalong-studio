@@ -1,0 +1,59 @@
+X: 76
+T: O Chief of Cities Bethlehem
+%%combinevoices 1
+C: Words: Aurelius Clemens Prudentius (348-413). v. 1,2,4 Translated by N. B. Smithers, 1879,
+C: v. 3 Translated by C. W. Douglas, v.5 Translated by John, Marquess of Bute c. 1879.
+C: Music: 'Puer Nobis Nascitur' Michael Praetorius, 1609. 
+C: Setting: George Ratcliffe Woodward for "The English Hymnal", 1906.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2007 Revision.
+S: Music source: 'The English Hymnal', 1906 Hymn 14.
+S: translation from "Translations of Latin hymns of the middle ages" By Nathaniel Barratt Smithers, 1879
+M: 3/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1]  [Q:1/4=120] D | D2 E | F2 G | F2 E | D2 D | A2 A |
+w: 1.~O chief of ci- ties, Beth- le- hem, Of Da- vid's 
+w: 2.~Be- yond the sun in splen- dor bright, A- bove you 
+w: 3.~The wise men, see- ing Him so fair, Bow low be- 
+w: 4.~The gold- en tri- bute owns Him King, But frank- in- 
+w: 5.~O Je- sus, whom the Gen- tiles see, With Fa- ther, 
+[V: S1V2]  A, | B,2 C | D2 D | D2 A, | ^F,2 B, | (D G) F |
+[V: S2V1]  F, | F,2 A, | A,2 D, | (A, B,) C | D2 D | D2 A, |
+[V: S2V2]  D, | B,,2 A,, | (D, C,) B,, | (A,, G,,) A,, | D,2 G, | (F, E,) D, |
+% 1
+[V: S1V1]  (A B) c | d2 d | d2 A | d2 d | c2 A |
+w: crown * the fair- est gem, But more to us than 
+w: stands * a won- drous light Pro- claim- ing from the 
+w: fore * Him, and with prayer Their trea- sured east- ern 
+w: cense * to God they bring, And last, pro- phe- tic 
+w: Spi- * rit, One in Three: To You, O God, be 
+[V: S1V2]  E2 E | F2 G | F2 E | (D F) E | E2 D |
+[V: S2V1]  A,2 A, | A,2 B, | A,2 A, | B,2 B, | (A, G,) F, |
+[V: S2V2]  C,2 A,, | D,2 D, | D,2 C, | (B,, A,,) ^G,, | A,,2 D, |
+% 9
+[V: S1V1]  B2 B | A2 !sintro!G | A2 F | E2 F | D2 C | !fermata!D2 !eintro!|]
+w: Da- vid's name, In you, as man, the Sa- vior came.
+w: con- scious skies That here, in flesh, the God- head lies.
+w: gifts un- fold Of in- cense, myrrh, and ro- yal gold.
+w: sign, with myrrh, They sha- dow forth His se- pul- cher.
+w: glo- ry giv'n By saints on earth and saints in Heav'n.
+[V: S1V2]  B,2 D | D2 B, | E2 D | C2 D | B,2 A, | A,2 |]
+[V: S2V1]  G,2 G, | F,2 G, | E,2 A, | A,2 A, | (G, F,) E, | !invertedfermata!F,2 |]
+[V: S2V2]  G,,2 B,, | D,2 E, | C,2 D, | (A,, G,,) F,, | G,,2 A,, | D,2 |]
+% 19

@@ -1,0 +1,64 @@
+X: 301
+T: O Father, All Creating
+%%combinevoices 1
+C: Words: John Ellerton, 1876.  Music: 'Aurelia' Samuel Sebastian Wesley, 1864. 
+C: Setting: "Order of worship for the Reformed Church in the United States", 1866.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2012 Revision.
+S: Music source: 'Lutheran Worship' Hymnal, 1982 Hymn 289.
+S: Music source: almost the same as "Order of worship for the Reformed Church in the United States", 1866 Hymn 441
+S: Lyrics from "The Church of England Hymnal" 1894 Hymn 238.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=130] F | F F G F | F2 E D | D B A G | F3
+w: 1.~O Fa- ther, all cre- a- ting, Whose wis- dom, love, and pow'r 
+w: 2.~O Sa- vior, Guest most bount- eous Of old in Ga- li- lee, 
+w: 3.~O Spi- rit of the Fa- ther, Breathe on them from a- bove, 
+w: 4.~Ex- cept Thou build it, Fa- ther, The house is built in vain; 
+[V: S1V2]  D | D D D D | D2 C D | B, D D C | D3
+[V: S2V1]  A, | A, A, B, A, | A,2 A, A, | E, E, F, A, | A,3
+[V: S2V2]  D, | D, D, D, D, | A,,2 G,, F,, | G,, G,, A,, A,, | D,3
+% 5
+[V: S1V1]  G | A d d c | c2 B A | G A F D | E3
+w: First bound two lives to- ge- ther In E- den's pri- mal hour, 
+w: Vouch- safe to- day Thy pre- sence With these who call on Thee; 
+w: So might- y in Thy pure- ness, So ten- der in Thy love; 
+w: Ex- cept Thou, Sa- vior, bless it, The joy will turn to pain; 
+[V: S1V2]  C | D D F E | E2 D F | G E D D | C3
+[V: S2V1]  A, | A, A, ^A, A, | ^A,2 B, C | D E A, ^G, | A,3
+[V: S2V2]  E, | F, F, F, F,, | G,,2 G,, =A,, | B,, C, D, B,, | A,,3
+% 9
+[V: S1V1]  E | F G A B | B2 A d | d3/2 c/ B F | G3
+w: To- day to these Thy child- ren Thy ear- liest gifts re- new: 
+w: Their store of earth- ly glad- ness Trans- form to heav'n- ly wine, 
+w: That, guard- ed by Thy pre- sence, From sin and strife kept free, 
+w: But naught can break the un- ion Of hearts in Thee made one, 
+[V: S1V2]  C | D C D D | D2 D F | F3/2 F/ F F | E3
+[V: S2V1]  A, | A, A, A, G, | G,2 A, B, | B,3/2 ^A,/ B, B, | B,3
+[V: S2V2]  A,, | D, E, F, G, | G,2 F, B,, | F,3/2 E,/ D, ^D, | E,3
+% 13
+[V: S1V1]  E | F F G F | F2 E !sintro!D | D E D C | D3 !eintro!|]
+w: A home by Thee made hap- py, A love by Thee kept true. 
+w: And teach them, in the tast- ing To know the gift is Thine. 
+w: Their lives may own Thy gui- dance, Their hearts be rul'd by Thee. 
+w: And love Thy Spi- rit hal- low'd Is end- less love be- gun. 
+[V: S1V2]  E | D D D D | B,2 B, B, | B, B, B, A, | A,3 |]
+[V: S2V1]  A, | A, A, B, A, | A,2 G, G, | G, G, E, G, | F,3 |]
+[V: S2V2]  C, | D, D, D, D, | G,,2 G,, G,, | E,, E,, A,, A,, | D,3 |]
+% 19

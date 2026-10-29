@@ -1,0 +1,57 @@
+X: 100
+T: O Sacred Head, Now Wounded
+%%combinevoices 1
+C: Words: Bernard of Clairvaux, 1153. Translated by James W. Alexander, 1830. 
+C: Music: 'Passion Chorale' or 'Herzlich Tut Mich Verlangen' Hans Leo Hassler, 1601. Adapted by J.S. Bach, 1729.  
+C: Setting: Johann Sebastian Bach, 1729.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2007 Revision.
+S: Music source: The Episcopal Hymnal, 1916, Hymn 158.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] E | A G F E | D2 E B | c c B/A/ B | A3
+w: 1.~O sac- red Head, now wound- ed, with grief and shame * weighed down, 
+w: 2.~What Thou, my Lord, hast suf- fered, was all for sin- * ners' gain; 
+w: 3.~Men mock and taunt and jeer Thee, Thou no- ble coun- * ten- ance, 
+w: 4.~Now from Thy cheeks has van- ished their co- lor once * so fair; 
+w: 5.~My bur- den in Thy Pas- sion, Lord, Thou hast borne * for me, 
+[V: S1V2]  C | C C C/D/ D/C/ | (C B,) C D | C/D/ E E3/2 D/ | C3
+[V: S2V1]  G, | F, G, A,/G,/ G, | (A, G,) G, ^G, | A, A, A, ^G, | A,3
+[V: S2V2]  C, | F, E, A,,/B,,/ C, | (F,, G,,) C, B,, | A,,/B,,/ C,/D,/ E, E,, | A,,3
+% 5
+[V: S1V1]  E | A G F E | D2 E B | c c B/A/ B | A3
+w: Now scorn- ful- ly sur- round- ed with thorns, Thine on- * ly crown; 
+w: Mine, mine was the trans- gres- sion, but Thine the dead- * ly pain. 
+w: Though migh- ty worlds shall fear Thee and flee be- fore * Thy glance. 
+w: From Thy red lips is ban- ished the splen- dor that * was there. 
+w: For it was my trans- gres- sion which brought this woe * on Thee. 
+[V: S1V2]  C | C C C/D/ D/C/ | (C B,) C D | C/D/ E E3/2 D/ | C3
+[V: S2V1]  G, | F, G, A,/G,/ G, | (A, G,) G, ^G, | A, A, A, ^G, | A,3
+[V: S2V2]  C, | F, E, A,,/B,,/ C, | (F,, G,,) C, B,, | A,,/B,,/ C,/D,/ E, E,, | A,,3
+% 9
+[V: S1V1]  c | B/A/ G A B | c2 c G | A G F F | E3
+w: O sac- * red Head, what glo- ry, what bliss till now was Thine! 
+w: Lo, here * I fall, my Sa- vior! 'Tis I de- serve Thy place; 
+w: How art * thou pale with an- guish, with sore a- buse and scorn! 
+w: Grim death, * with cru- el ri- gor, hath robbed Thee of Thy life; 
+w: I cast * me down be- fore Thee, wrath were my right- ful lot; 
+[V: S1V2]  E | D/F/ E/D/ C F | (F E/D/) E E | F E E D | ^C3
+[V: S2V1]  A,/G,/ | F,/A,/ C/B,/ A,/G,/ F,/G,/ | (A, G,/F,/) G, C | C _B, A, A, | A,3
+[V: S2V2]  A,, | D, E, F,/E,/ D, | C,2 C, C, | F,/E,/ D,/^C,/ D,/E,/ F,/G,/ | A,3
+% 13

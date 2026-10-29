@@ -1,0 +1,60 @@
+X: 235
+T: Take Thou My Hand and Lead Me
+%%combinevoices 1
+T: (also known as O Take My Hand, Dear Father or Lord Take My Hand and Lead Me)
+C: Words: Julie Katharina von Hausmann, 1862. 
+C: Translated by Rev. Julius Herman Edward Horstmann (1869-1954), before 1901. 
+C: Music: 'So Nimm Denn Meine Hände' Friedrich Silcher, 1842.  Setting: Donna Snell, circa 1975.
+C: copyright: public domain. Setting released into the public domain by Donna Snell 10 Nov 2010. 
+C: This score is a part of the Open Hymnal Project, 2010 Revision.
+S: Music source: St Paul Music Library, Royal Oak, MI.  Donna Snell, a former congregant, wrote many of the arrangements in the library.  Translation from "Select Songs for School and Home", published by Concordia Publishing House in 1922. Translation also found in "Sunday School Hymnal" American Lutheran Publication Board, 1901 #429.  Translation attribution from "Christian Hymns" Eden Publishing House, 1908 #83.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] c | d c B A | A2 G A | B2 c2 | A3
+w: 1.~Take Thou my hand, and lead me o'er life's rough way, 
+w: 2.~Take Thou my heart and hide it in folds of grace 
+w: 3.~Though oft I think Thou hid- est Thy won- drous might, 
+[V: S1V2]  A | B F D/E/ F | F2 E F | F2 G2 | A3
+[V: S2V1]  F, | F, C, B,,/C,/ C, | C,2 C, F, | F,2 E,2 | F,3
+[V: S2V2]  F, | B,, A,, G,, F,,/A,,/ | C,2 C, F,/E,/ | D,2 C,2 | F,3
+% 5
+[V: S1V1]  c | d c B A | A2 G A | B2 c2 | A3
+w: with Heav'n- ly Man- na feed me from day to day. 
+w: Though pain or woe be- tide it to know Thy face 
+w: Still to my goal Thou guid- est me through dark night, 
+[V: S1V2]  A | B F D/E/ F | F2 E F | F2 G2 | A3
+[V: S2V1]  F, | F, C, B,,/C,/ C, | C,2 C, F, | F,2 E,2 | F,3
+[V: S2V2]  F, | B,, A,, G,, F,,/A,,/ | C,2 C, F,/E,/ | D,2 C,2 | F,3
+% 9
+[V: S1V1]  A | G c =B d | (c3/2 d/) e f | e2 d2 | c3
+w: A- lone my foot- steps fal- * ter and strag- gle wide, 
+w: Draw, Lord, of Thy good plea- * sure Thy child to Thee, 
+w: Take, then, my hands and lead * me till life is o'er, 
+[V: S1V2]  A | G G B B | (c3/2 =B/) c d | c2 =B2 | G3
+[V: S2V1]  F, | E, E, G, G, | G,2 G, A, | G,2 (G, F,) | E,3
+[V: S2V2]  F, | E, C, G, F, | (E,3/2 D,/) C, F, | G,2 G,,2 | C,3
+% 13
+[V: S1V1]  c | f e/d/ c c | d2 c !sintro!B | (A B2) G | F3 !eintro!|]
+w: Lord who my * life canst al- ter be Thou * my guide. 
+w: And grant me * faith's full mea- sure though naught * I see. 
+w: With heav'n- ly * man- na feed me for- ev- * er- more. 
+[V: S1V2]  G | c c/B/ A F | B2 A G | F2 E2 | F3 |]
+[V: S2V1]  E, | F, F, F, F, | F,2 F, D, | C,2 C,2 | F,3 |]
+[V: S2V2]  B,, | A,, B,, F,, A,, | (B,, D,) F, B,, | C,2 C,2 | F,3 |]

@@ -1,0 +1,63 @@
+X: 255
+T: Joyful, Joyful, We Adore Thee
+%%combinevoices 1
+C: Words: Henry J. van Dyke, 1907. 
+C: Music: 'Ode to Joy' Ludwig van Beethoven; Adapted by Edward Hodges, 1824. 
+C: Setting: "The Methodist Hymnal", 1905.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2005 Revision.
+S: Music source: The Methodist Hymnal, 1905 Hymn 160.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=115] B B c d | d c B A | G G A B | B3/2 A/ A2 |
+w: 1.~Joy- ful, joy- ful, we a- dore Thee, God of glor- y, Lord of love; 
+w: 2.~All Thy works with joy sur- round Thee, earth and heaven re- flect Thy rays, 
+w: 3.~Thou art giv- ing and for- giv- ing, ev- er bless- ing, ev- er blessed, 
+w: 4.~Mor- tals, join the ha- ppy chor- us, which the morn- ing stars be- gan; 
+[V: S1V2]  D D D D | D E/F/ G D | D D F G | G3/2 F/ F2 |
+[V: S2V1]  G, G, A, B, | B, A, G, F, | G, B, C D | D3/2 D/ D2 |
+[V: S2V2]  G, G, G, G, | D, D, D, C, | B,, B,, A,, G,, | D,3/2 D,/ D,2 |
+% 5
+[V: S1V1]  B B c d | d c B A | G G A B | A3/2 G/ G2 |
+w: Hearts un- fold like flowers be- fore Thee, o- pening to the sun a- bove. 
+w: Stars and an- gels sing a- round Thee, cen- ter of un- bro- ken praise. 
+w: Well- spring of the joy of liv- ing, o- cean depth of hap- py rest! 
+w: Fa- ther love is reign- ing o'er us, bro- ther love binds man to man. 
+[V: S1V2]  G D E =F | =F E D E | D D F G | F3/2 G/ G2 |
+[V: S2V1]  D D C B, | G, A, B, C | B, B, C D | C3/2 B,/ B,2 |
+[V: S2V2]  G, G, G, G, | C, C, C, C, | D, D, D, D, | D,3/2 G,/ G,2 |
+% 9
+[V: S1V1]  A A B G | A B/c/ B G | A B/c/ B A | G A D2 |
+w: Melt the clouds of sin and * sad- ness; drive the * dark of doubt a- way; 
+w: Field and for- est, vale and * moun- tain, flow- ery * mea- dow, flash- ing sea, 
+w: Thou our Fa- ther, Christ our * Bro- ther, all who * live in love are Thine; 
+w: E- ver sing- ing, march we * on- ward, vic- tors * in the midst of strife, 
+[V: S1V2]  F D D G | F G/F/ G G | F F F ^D | E/=D/ ^C D2 |
+[V: S2V1]  D F, G, B, | C B,/A,/ G, B, | C B,/A,/ B, B, | B, A,/G,/ F,2 |
+[V: S2V2]  D, D, D, D, | D, D, D, D, | D, D, ^D, B,, | E, A,, D,2 |
+% 13
+[V: S1V1]  B B c d | d c B A | !sintro!G G A B | A3/2 G/ G2 !eintro!|]
+w: Giv- er of im- mor- tal glad- ness, fill us with the light of day! 
+w: Sing- ing bird and flow- ing foun- tain call us to re- joice in Thee. 
+w: Teach us how to love each o- ther, lift us to the joy div- ine. 
+w: Joy- ful mu- sic leads us Sun- ward in the tri- umph song of life. 
+[V: S1V2]  D D E =F | =F E D E | D D F G | F3/2 G/ G2 |]
+[V: S2V1]  G, D C B, | G, A, B, C | B, B, C D | C3/2 B,/ B,2 |]
+[V: S2V2]  G, G, G, G, | C, C, C, C, | D, D, D, D, | D,3/2 G,/ G,2 |]
+% 18

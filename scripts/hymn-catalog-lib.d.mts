@@ -3,7 +3,7 @@ export interface HymnNumberMapping {
   number: string;
   reference: string;
   title: string;
-  tune: string;
+  tune?: string;
   source?: string;
   sourceEdition?: string;
 }
@@ -43,4 +43,23 @@ export function createHymnCatalogEntry(
   rights: string;
   sourceEdition: string;
   reference: string;
+};export function firstLyricLine(abc: string): string;
+export function createUnnumberedCatalogEntry(
+  mapping: { reference: string; title: string; tune?: string },
+  abc: string,
+  file: string,
+  source: string,
+): {
+  id: string;
+  hymnal: 'OH';
+  hymnalName: string;
+  number: '';
+  title: string;
+  tune: string;
+  file: string;
+  source: string;
+  rights: string;
+  sourceEdition: string;
+  reference: string;
+  firstLine: string;
 };

@@ -1,0 +1,59 @@
+X: 118
+T: Come Holy Spirit, Lord Our God
+%%combinevoices 1
+T: (also known as Come Holy Ghost,  God and Lord)
+C: Words: v. 1 ancient Latin.  v.2-3 Martin Luther, 1524.  Translated by Arthur Tozel Russell (1806-1874). 
+C: Music: 'Komm Heiliger Geist, Herre Gott' ancient Latin found in Erfurt Enchiridion, 1524. 
+C: Setting: Leonard Woolsey Bacon, 1883 after Erythraeus, 1609.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] d2 e d | (B d) A2 | (B G B) ^c | d2 z d | e2 (d B) | (d A) (G c) |
+w: 1.~Come, Ho- ly Spi- * rit, Lord * * our God, And pour Thy * gifts * of * 
+w: 2.~O, ho- liest Light! * O Rock * * a- dored! Give us Thy * light, * Thy * 
+w: 3.~O ho- liest Fire! * O Source * * of rest! Grant that with * joy * and * 
+[V: S1V2]  G2 G G | (G F) F2 | G3 G | F2 G2 | G2 G2 | F2 G2 |
+[V: S2V1]  B,2 C B, | D2 D2 | (D B, D) E | A,2 B,2 | C2 (B, D) | (D3/2 C/ B,) E |
+[V: S2V2]  G,2 C, G, | (G, D,) D,2 | G,3 E, | D,2 G,2 | C,2 G,2 | D,2 E,3/2 F,/ |
+% 9
+[V: S1V1]  (B A G/E/) F | G2 z G | (A3/2 B/) c2 | (B3/2 ^c/) d2 | (A F) (G E) |
+w: grace * * * a- broad; Thy faith- * ful peo- * ple fill * with * 
+w: liv- * * * ing Word, To God * Him- self * our spir- * its * 
+w: hope * * * poss- est, And in * Thy ser- * vice kept * for- * 
+[V: S1V2]  (G F B,) D | D2 G2 | (G F) G2 | G2 (F E/D/) | (E D2) ^C |
+[V: S2V1]  (D3/2 C/ B,/G,/) A, | B,2 B,2 | D2 E2 | (D E) A,2 | (A,2 B,) A, |
+[V: S2V2]  (G, D, E,) D, | G,,2 G,2 | D,2 C,/D,/E,/F,/ | (G, E,) (D, ^C,/B,,/) | (^C, D,) (G,, A,,) |
+% 13
+[V: S1V1]  D D z D | G2 A2 | (B d2) c | (B G A2) | B4 |
+w: bles- sing, Love's fire their hearts * po- ssess- * * ing. 
+w: lead- ing, With Him as chil- * dren plea- * * ding. 
+w: ev- er, Naught us from Thee * may se- * * ver. 
+[V: S1V2]  D D D2 | (B, C2) D | D3 E | D4 | D4 |
+[V: S2V1]  F, F, F,2 | E,3 F, | (G, B,2) A,/G,/ | (G,3 F,) | G,4 |
+[V: S2V2]  D, D, D,2 | (E,/D,/C,/B,,/ A,,) D, | G,,3 C, | (G, B,, D,2) | G,,4 |
+% 17
+[V: S1V1]  d2 e d | (B d) A2 | (B G B) ^c | d2 z d | e2 (d B) | (d A) (G c) |
+w: O Lord, Thou by * Thy heav'n- * * ly Light Dost ga- ther * and * in * 
+w: From er- ror, Lord, * our souls * * de- fend, That they on * Christ * a- * 
+w: Lord, may Thy pow'r * pre- pare * * each heart; To our weak * na- * ture * 
+[V: S1V2]  G2 G G | (G F) F2 | G3 G | F2 G2 | G2 G2 | F2 G2 |
+[V: S2V1]  B,2 C B, | D2 D2 | (D B, D) E | A,2 B,2 | C2 (B, D) | (D3/2 C/ B,) E |
+[V: S2V2]  G,2 C, G, | (G, D,) D,2 | G,3 E, | D,2 G,2 | C,2 G,2 | D,2 E,3/2 F,/ |
+% 21

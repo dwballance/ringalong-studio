@@ -1,0 +1,52 @@
+X: 277
+T: I Am Jesus' Little Lamb
+%%combinevoices 1
+C: Words: Henrietta L. von Hayn, 1778. Translation composite. 
+C: Music: 'Weil Ich Jesu Schäflein Bin' from Bruder Choral-Buch, 1784. 
+C: Setting: "Church Book for the Use of Evangelical Lutheran Congregations", 1893.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2010 Revision.
+S: Music Source: Church Book for the Use of Evangelical Lutheran Congregations, 1893 Hymn 531.  Hymnal arranged by Harriet Reynolds Krauth (1845-1925).
+S: Translation is public domain per LSB 2006 Hymn 740
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1]  [Q:1/4=112] G c | A A G F | E2 G c | A A G =F | E2
+w: 1.~I am Je- sus' lit- tle lamb, Ev- er glad at heart I am; 
+w: 2.~Day by day, at home, a- way, Je- sus is my Staff and Stay. 
+w: 3.~Who so hap- py as I am, Ev- en now the Shep- herd's lamb? 
+[V: S1V2]   C C | C C C C/B,/ | C2 E G | F _E =E D | E2
+[V: S2V1]   E, G, | F, F, E, D,/ G,/ | G,2 G, C | C C C B, | C2
+[V: S2V2]   C, E, | F, F,, G,, G,, | C,2 C, E, | F, ^F, G, G, | C,2
+% 5
+[V: S1V1]  G c | A A A d/=c/ | B/A/ G G c | A A A d/_c/ | B/A/ G
+w: For my Shep- herd gen- tly  * guides * me, Knows my need, and well pro- * vides  * me, 
+w: When I hun- ger, Je- sus  * feeds  * me, In- to pleas- ant pas- tures  * leads  * me; 
+w: And when my short life is  * end-  * ed, By His an- gel host at-  * tend-  * ed, 
+[V: S1V2]  E C | C ^C D D | D/C/ B, C C | C ^C D D | D/C/ B,
+[V: S2V1]  C G, | F, G, ^F, A, | G,2 E, G, | F, G, ^F, A, | G,2
+[V: S2V2]  C, E, | F, E, D, ^F, | G, G,, C, E, | F, E, D, ^F, | G, G,,
+% 9
+[V: S1V1]  c G | A G F E | D2 !sintro!G c | A d c B | c2 !eintro!|]
+w: Loves me ev- 'ry day the same, Ev- en calls me by my name. 
+w: When I thirst, He bids me go Where the qui- et wa- ters flow. 
+w: He shall fold me to His breast, There with- in His arms to rest. 
+[V: S1V2]  C C | C C C/B,/ C | B,2 C E | F F E D/F/ | E2 |]
+[V: S2V1]  G, E, | F, E, G, G, | G,2 G, G, | F, A, G, G, | G,2 |]
+[V: S2V2]  E, C, | F,, C, D, E,/F,/ | G,2 E, C, | F, D, G, G,, | C,2 |]
+% 13

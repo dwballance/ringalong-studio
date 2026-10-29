@@ -1,0 +1,57 @@
+X: 238
+T: Happy the Man Who Feareth God
+%%combinevoices 1
+T: (also known as Happy Who in God's Fear Doth Stay)
+C: Words: Martin Luther, 1524.  Translated by Richard Massie, 1854. 
+C: Music: 'Wo Gott Zum Haus (Walter)' from Walter's Geistliche Gesangbüchlein, 1524. 
+C: Setting: Bartolomäus Gesius, 1605.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] D2 A A | F A (B/ d) c/ | d2 z d | B A B A |
+w: 1.~Hap- py the man who fear- * eth God, Whose feet His ho- ly 
+w: 2.~Thy wife shall, like a fruit- * ful vine, Fill all thy house with 
+w: 3.~Lo! to the man these bless- * ings cleave Who in God's ho- ly 
+w: 4.~Out of Mount Zi- on God * shall send, And crown with joy thy 
+w: 5.~He shall be with thee in * thy ways, And give thee health and 
+[V: S1V2]  z D E F | D F G A | F2 x A | G F G E |
+[V: S2V1]  A,2 C D | A, D3/2 D/ E | D2 z F | D D D =C |
+[V: S2V2]  D,2 A,, D, | D, D, G,/B,/ A, | D,2 x D, | G, D, G,, A,, |
+% 5
+[V: S1V1]  G/F/ E D2 | z A A G | (F E/) B A/ G |
+w: ways * have trod; Thine own good hand * shall nour- ish 
+w: clus- * ters fine; Thy child- ren all * be fresh and 
+w: fear * doth live; From him the an- * cient curse hath 
+w: lat- * ter end; That thou Je- ru- * sa- lem mayst 
+w: length * of days Yea, thou shalt child- * ren's child- ren 
+[V: S1V2]  (E/ D) ^C/ D2 | x F F E | D3/4C//B,/ E/ D E |
+[V: S2V1]  C/A,/ A, A,2 | z D D B, | B, G, B,//C//D/ D/C/ |
+[V: S2V2]  =C,/D,/ A,, D,2 | x D, D, E, | B,, E, G,/F,/ E, |
+% 9
+[V: S1V1]  F2 z/ !sintro!B/ d- | d/ c/ B e (d/e/- | e/d//c//B/) B/ A2 !eintro!|]
+w: thee, And well  * and hap- py shalt *  * * * * thou be. 
+w: sound, Like ol- * ive\- plants thy ta- * * * * * ble round. 
+w: fled By A- * dam's race in- her- * * * * * it- ed. 
+w: see, In fa- * vor and pros- per- * * * * * it- y. 
+w: see, And peace  * on Is- ra- el *  * * * * shall be. 
+[V: S1V2]  A,2 x/ G/ A | A G2 F/G/- | G/ F E/ C2 |]
+[V: S2V1]  D2 z/ D/ F | E (E3/2 D//C//) B,/ (B,/ | A,3/2) ^G,/ A,2 |]
+[V: S2V2]  D,2 x/ G,/ D, | A, E,/F,/G,/A,/ B,/ (E,/ | C,/D,/E,/) E,/ A,,2 |]
+% 12

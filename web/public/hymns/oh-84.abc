@@ -1,0 +1,46 @@
+X: 84
+T: Tis Good, Lord, To Be Here
+%%combinevoices 1
+C: Words: Joseph Armitage Robinson, 1888.
+C: Music: 'Potsdam' adapted from Johann Sebastian Bach, 1750, by John Goss, 1854. Setting: John Goss, 1854.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music source: "The Church Psalter and Hymn Book", 1863 hymns 212-214 (rev. from 1854 edition).  Mus. Dir and arrangements by John Goss.
+S: Words match those in "Hymns Ancient And Modern", 1904, Hymn 251
+M: 2/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: E % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] E | F A | G F | !fermata!E B | c e | d c | !fermata!B
+w: 1.~'Tis good, Lord, to be here, Thy glo- ry fills the night; 
+w: 2.~'Tis good, Lord, to be here, Thy beau- ty to be- hold 
+w: 3.~Ful- fill- er of the past, Pro- mise of things to be, 
+w: 4.~Be- fore we taste of death, We see Thy King- dom come; 
+w: 5.~'Tis good, Lord, to be here. Yet we may not re- main; 
+[V: S1V2] B, | B, E | E D | E F | E G | F F/E/ | D
+[V: S2V1] G, | F, E,/F,/ | G,/A,/ B,/A,/ | G, F, | G, G,/^A,/ | B, ^A, | B,
+[V: S2V2] E, | D, C, | B,, B,, | !invertedfermata!E, D, | E, C, | D,/E,/ F, | !invertedfermata!B,,
+% 7
+[V: S1V1] !sintro!G | A c | B A | G ^A | B E | F A | G F | !fermata!E !eintro!|]
+w: Thy face and gar- ments, like the sun, Shine with un- bor- rowed light. 
+w: Where Mo- ses and El- i- jah stand, Thy mess- en- gers of old. 
+w: We hail Thy bo- dy glor- i- fied And our re- demp- tion see. 
+w: We fain would hold the vi- sion bright And make this hill our home. 
+w: But since Thou bidst us leave the mount, Come with us to the plain. 
+[V: S1V2] E | E E | F D | E E | D E | C C/D/ | E D | E |]
+[V: S2V1] B, | C A,/G,/ | F, B, | B,/C/ C | B, B, | A, A, | B, B,/A,/ | G, |]
+[V: S2V2] E, | E, E, | D, B,, | E,/C,/ F, | B,, G,, | A,, F,, | G,,/A,,/ B,, | !invertedfermata!E, |]

@@ -1,0 +1,65 @@
+X: 109
+T: Jesus Christ Is Risen Today
+%%combinevoices 1
+C: Words: 14th Century Bohemian Latin carol. Stanzas 1-3 translated in John Arnold's Compleat Psalmist, 1749.
+C: Stanza 4 Charles Wesley, 1740, alt. 
+C: Music: 'Easter Hymn' from Lyra Davidica, 1708.  Setting: composite found in "Church Praise: with tunes", 1885.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2005 Revision.
+S: Music source: almost exactly like "Church praise: with tunes", 1885 Hymn 91 page 74
+S: also look at "Congregational church hymnal", 1887 Hymn 151 page 120
+S: and "Hymnal of the Protestant Episcopal Church: with music", 1872 hymn 99 page 84 - mostly the same but not quite
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] C E G C | F A (A G) | (E/F/G/C/ F) E/F/ | (E D) C2 |
+w: 1.~Je- sus Christ is ris'n to- day, * Al- * * * * le- * lu- * ia! 
+w: 2.~Hymns of praise then let us sing, * Al- * * * * le- * lu- * ia! 
+w: 3.~But the pain which He en- dured, * Al- * * * * le- * lu- * ia! 
+w: 4.~Sing we to our God a- bove, * Al- * * * * le- * lu- * ia! 
+[V: S1V2]  C C D C | C F (F E) | (C2 C/B,/) C | (C B,) C2 |
+[V: S2V1]  E, G, G, E, | F, C C2 | (G,2 A,/F,/) G,/A,/ | (G,3/2 F,/) E,2 |
+[V: S2V2]  C, C, B,, C, | A,, F,, C,2 | (C,/D,/ E, D,) C,/F,,/ | G,,2 C,2 |
+% 5
+[V: S1V1]  F G A G | F E (E D) | (E/F/G/C/ F) E/F/ | (E D) C2 |
+w: Our tri- um- phant ho- ly day, * Al- * * * * le- * lu- * ia! 
+w: Un- to Christ, our heav'n- ly King, * Al- * * * * le- * lu- * ia! 
+w: Our sal- va- tion hath pro- cured, * Al- * * * * le- * lu- * ia! 
+w: Praise e- ter- nal as His love, * Al- * * * * le- * lu- * ia! 
+[V: S1V2]  C C C C | C/B,/ C (C B,) | (C2 C/B,/) C | (C B,) C2 |
+[V: S2V1]  F, E, F, G, | A,/F,/ G, G,2 | (G,2 A,/F,/) G,/A,/ | (G,3/2 F,/) E,2 |
+[V: S2V2]  A,, C, F, E, | D, C, G,,2 | (C,/D,/ E, D,) C,/F,,/ | G,,2 C,2 |
+% 9
+[V: S1V1]  B c d G | c d e2 | (B/c/d/G/ c) B/c/ | (B A) G2 |
+w: Who did once, up- on the cross, Al- * * * * le- * lu- * ia! 
+w: Who en- dured the cross and grave, Al- * * * * le- * lu- * ia! 
+w: Now a- bove the sky He's king, Al- * * * * le- * lu- * ia! 
+w: Praise Him, all you heav'n- ly host, Al- * * * * le- * lu- * ia! 
+[V: S1V2]  G3/2 ^F/ G G | G F E2 | (G2 G/^F/) G | (G ^F) G2 |
+[V: S2V1]  D C B, B, | C3/2 B,/ C2 | (D2 D) D/C/ | (D3/2 C/) B,2 |
+[V: S2V2]  G,, A,, B,, G,/=F,/ | E, D, [C,2C2] | (G,/A,/ B, A,) G,/E,/ | D,2 G,,2 |
+% 13
+[V: S1V1]  G/A/ B/G/ c E | F A (A G) | !sintro!(c/B/c/G/ A/B/) c/d/ | (c B) c2 !eintro!|]
+w: Suf- * fer * to re- deem our loss, * Al- * * * * * le- * lu- * ia! 
+w: Sin- * ners * to re- deem and save, * Al- * * * * * le- * lu- * ia! 
+w: Where * the * an- gels ev- er sing, * Al- * * * * * le- * lu- * ia! 
+w: Fa- * ther, * Son, and Ho- ly Ghost, * Al- * * * * * le- * lu- * ia! 
+[V: S1V2]  B,/C/ D/B,/ C C | C F (F E) | (E/F/G/E/ F) E/D/ | (E G/F/) E2 |]
+[V: S2V1]  G, G, G, G, | F, C C2 | (G,3/2 C/ C/D/) G,/A,/ | G,2 G,2 |]
+[V: S2V2]  G,3/2 F,/ E, C,/B,,/ | A,, F,, C,2 | (C,/D,/E,/C,/ F,/D,/) E,/F,/ | (G, G,,) C,2 |]
+% 18

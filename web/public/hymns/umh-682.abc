@@ -1,0 +1,55 @@
+X: 309
+T: All Praise To Thee, My God, This Night
+%%combinevoices 1
+C: Words: Thomas Ken, circa 1674. 
+C: Music: 'Tallis` Canon' Thomas Tallis, circa 1567.  Setting: "A Hymnal" (Episcopal), 1916.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2008 Revision.
+S: Music source: Episcopal Hymnal, 1916 Hymn 25.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] G | G F G G | A A B G | c c B B | A A G
+w: 1.~All praise to Thee, my God, this night, For all the bless- ings of the light! 
+w: 2.~For- give me, Lord, for Thy dear Son, The ill that I this day have done, 
+w: 3.~Teach me to live, that I may dread The grave as lit- tle as my bed. 
+w: 4.~O may my soul on Thee re- pose, And with sweet sleep mine eye- lids close, 
+w: 5.~When in the night I sleep- less lie, My soul with heav'n- ly thoughts sup- ply; 
+[V: S1V2]  D | D D B, D | E D D G | E F G D | E D D
+[V: S2V1]  B, | A, A, G, G, | G, F, G, G, | A, A, B, G, | C C B,
+[V: S2V2]  G, | D, D, E, B,, | C, D, G,, B,, | A,, A,, G,, G, | G, F, G,
+% 6
+[V: S1V1]  d | c A B B | A A G !sintro!D | E F G B | A A G !eintro!|]
+w: Keep me, O keep me, King of kings, Be- neath Thine own al- migh- ty wings. 
+w: That with the world, my- self, and Thee, I, ere I sleep, at peace may be. 
+w: Teach me to die, that so I may Rise glo- rious at the judg- ment day. 
+w: Sleep that may me more vig- 'rous make To serve my God when I a- wake. 
+w: Let no ill dreams dis- turb my rest, No pow'rs of dark- ness me mo- lest. 
+[V: S1V2]  G | E D D D | E F G G, | E D B, D | C A, B, |]
+[V: S2V1]  B, | A, A, G, D | C A, B, B, | A, A, G, D, | E, F, G, |]
+[V: S2V2]  G, | A, F, G, G,, | C, D, G,, B,, | C, D, E, B,, | C, D, G,, |]
+% 11
+W: 6.O when shall I, in endless day,
+W: For ever chase dark sleep away,
+W: And hymns divine with angels sing,
+W: All praise to thee, eternal King?
+W: 
+W: 7.Praise God, from Whom all blessings flow;
+W: Praise Him, all creatures here below;
+W: Praise Him above, ye heavenly host;
+W: Praise Father, Son, and Holy Ghost.

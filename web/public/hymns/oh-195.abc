@@ -1,0 +1,54 @@
+X: 195
+T: Blessed Assurance
+%%combinevoices 1
+C: Words: Fanny Crosby, 1873. 
+C: Music and Setting: 'Blessed Assurance' or 'Assurance' Phoebe P. Knapp, 1873.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2008 Revision.
+S: Music source: "The Lesser Hymnal", 1875 hymn 323.  Most of hymnal does not contain 4 part music.  This does, attr. to Mrs. Joseph Knapp.
+M: 9/8 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] F/ E/ D/ | A3/2 A3/2 G/ A/ B/ | A3 A/ F/ A/ | d3/2 c c/ B/ A/ ^G/ | A3
+w: 1.~Bless- èd a- ssu- rance, Je- sus is mine! O what a fore- taste of glo- ry di- vine! 
+w: 2.~Per- fect sub- mis- sion, per- fect de- light, Vis- ions of rap- ture now burst on my sight; 
+w: 3.~Per- fect sub- mis- sion, all is at rest I in my Sa- vior am hap- py and blest, 
+[V: S1V2]  D/ D/ D/ | F3/2 F3/2 D/ D/ D/ | D3 F/ D/ F/ | F3/2 E E/ E/ E/ E/ | E3
+[V: S2V1]  A,/ G,/ F,/ | A,3/2 A,3/2 B,/ F,/ G,/ | F,3 A,/ A,/ A,/ | A,3/2 A, A,/ D/ C/ B,/ | C3
+[V: S2V2]  D,/ D,/ D,/ | D,3/2 D,3/2 D,/ D,/ D,/ | D,3 D,/ D,/ D,/ | D,3/2 E, E,/ E,/ E,/ E,/ | A,,3
+% 5
+[V: S1V1]  F/ E/ D/ | A3/2 A3/2 G/ A/ B/ | A3 D/ E/ F/ | G3/2 E3/2 D/ E/ C/ | D3
+w: Heir of sal- va- tion, pur- chase of God, Born of His Spi- rit, washed in His blood. 
+w: An- gels de- scend- ing bring from a- bove E- choes of mer- cy, whisp- ers of love. 
+w: Watch- ing and wait- ing, look- ing a- bove, Filled with His good- ness, lost in His love. 
+[V: S1V2]  D/ D/ D/ | F3/2 F3/2 D/ D/ D/ | D3 D/ D/ D/ | E3/2 B,3/2 D/ C/ A,/ | A,3
+[V: S2V1]  A,/ G,/ F,/ | A,3/2 A,3/2 B,/ F,/ G,/ | F,3 F,/ G,/ A,/ | B,3/2 G,3/2 F,/ G,/ G,/ | F,3
+[V: S2V2]  D,/ D,/ D,/ | D,3/2 D,3/2 D,/ D,/ D,/ | D,3 D,/ D,/ D,/ | G,,3/2 G,,3/2 A,,/ A,,/ A,,/ | D,3
+% 9
+[V: S1V1]  A/ A/ A/ | d3/2 A3/2 B/ B/ B/ | A3 A/ A/ A/ | B3/2 d3/2 c/ c/ B/ | c3
+w: This is my stor- y, this is my song, Prais- ing my Sa- vior, all the day long; 
+[V: S1V2]  F/ F/ F/ | F3/2 F3/2 G/ G/ G/ | F3 F/ F/ F/ | G3/2 A3/2 A/ A/ ^G/ | A3
+[V: S2V1]  D/ D/ D/ | A,3/2 D3/2 D/ D/ D/ | D3 D/ D/ D/ | D3/2 D3/2 E/ E/ E/ | E3
+[V: S2V2]  D,/ D,/ D,/ | D,3/2 D,3/2 G,/ G,/ G,/ | D,3 D,/ D,/ D,/ | G,3/2 F,3/2 E,/ E,/ E,/ | A,3
+% 13
+[V: S1V1]  c/ d/ e/ | d3/2 A3/2 B/ A/ B/ | A3 !sintro!D/ E/ F/ | G3/2 E3/2 D3/4 E// C/ | D3 !eintro!|]
+w: This is my stor- y, this is my song, Prais- ing my Sa- vior, all the day long. 
+[V: S1V2]  =G/ G/ G/ | F3/2 F3/2 G/ F/ G/ | F3 D/ C/ D/ | E3/2 B,3/2 D3/4 C// A,/ | A,3 |]
+[V: S2V1]  A,/ B,/ C/ | D3/2 D3/2 D/ D/ D/ | D3 A,/ A,/ A,/ | B,3/2 G,3/2 F,3/4 G,// E,/ | F,3 |]
+[V: S2V2]  A,/ A,/ A,/ | D,3/2 D,3/2 D,/ D,/ D,/ | D,3 F,/ E,/ D,/ | G,,3/2 G,,3/2 A,,3/4 A,,// A,,/ | D,3 |]
+% 19

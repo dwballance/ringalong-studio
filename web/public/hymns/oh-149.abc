@@ -1,0 +1,73 @@
+X: 149
+T: Jesus Christ, Our Blessed Savior
+%%combinevoices 1
+T: (also known as Jesus Christ Our Redeemer Born or Christ Who Freed Our Souls From Danger
+T: or Jesus Christ Our God and Savior)
+C: Words: John Hus (1369-1415) expanded by Martin Luther, 1524. 
+C: Translator v.4,6 by Richard Massie Other verses unknown. 
+C: Music: 'Jesus Christus Unser Heiland, Der Von Uns (Klug)' from Klug's Geistliche Lieder, Wittenberg, 1533. 
+C: Setting: "Evangelical Lutheran Hymn-Book", 1931.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=140] F2 c2 | A F G A | B2 A2 | F c A d | c B c2 | A4 |
+w: 1.~Je- sus Christ, our Bless- ed Sav- ior, Turned a- way God's wrath for- ev- er; 
+w: 2.~To re- mind us that, to save us He hath died, His flesh He gave us 
+w: 3.~Who- so to this board re- pair- eth, Take good heed how He pre- par- eth; 
+w: 4.~Praise the Fa- ther, God in hea- ven, Who such dain- ty food hath gi- ven, 
+w: 5.~Thou shalt hold with faith un- shak- en, That this food is to be tak- en 
+[V: S1V2]  C2 E2 | C D E C | D2 C2 | C E F F | F D E2 | C4 |
+[V: S2V1]  A,2 G,2 | F, A, C F, | F,2 F,2 | A, G, F, B, | A, G, G,2 | F,4 |
+[V: S2V2]  F,2 C,2 | F, D, B,, F, | B,,2 F,2 | F, C, D, B,, | F, G, C,2 | F,4 |
+% 5
+[V: S1V1]  c c B A | A G F2 | !sintro!c2 A F | c B A G | A4 !eintro!|]
+w: Suf- f'ring pains no tongue can tell, He saved us from the pains of hell. 
+w: With this bread, a quick- 'ning food, And with this wine, His pre- cious blood. 
+w: Death in- stead of life shall He Re- ceive who comes un- worth- il- y. 
+w: And for mis- deeds thou hast done Gave to die His be- lov- ed Son. 
+w: By the sick who are dis- tressed, By those whose heart is sin\- o- ppressed. 
+[V: S1V2]  F G F F | F E D2 | E2 C C | E D D D | E4 |]
+[V: S2V1]  A, C D C | C C A,2 | G,2 F, F, | G, G, F, D | ^C4 |]
+[V: S2V2]  F, E, D, F, | A,, C, D,2 | C,2 F,, A,, | C, G,, D, B,, | A,,4 |]
+% 13
+W: 6.To such grace and mercy turneth
+W: Every soul that truly mourneth;
+W: Art thou well? Avoid this board,
+W: Else thou reapest an ill reward.
+W: 
+W: 7.Christ says: "Come ye heavy-laden,
+W: I your weary hearts will gladden;
+W: They that are yet strong  and well,
+W: Despise the best physician's skill.
+W: 
+W: 8.Couldst thou earn thine own salvation,
+W: Useless were my death and passion;
+W: This feast is not spread for thee,
+W: If thine own helper thou wilt be.
+W: 
+W: 9.If thou this believest truly,
+W: And confession makest duly,
+W: Thou a welcome guest art here,
+W: This heavenly food thy soul shall cheer.
+W: 
+W: 10.But the fruits must not be missing,
+W: Love thy neighbor without ceasing,
+W: That true love let him receive,
+W: Which here to thee thy God doth give.

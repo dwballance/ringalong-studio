@@ -1,0 +1,57 @@
+X: 167
+T: I Need Thee Every Hour
+%%combinevoices 1
+C: Words: Annie Sherwood Hawks, 1872.
+C: Music: 'I Need Thee Every Hour' Robert Lowry, 1872.  Setting: "Pentecostal Hymns, No. 2", 1898.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2012 Revision.
+S: Music source: "Pentecostal Hymns, No. 2" 1898 page 155.   ABC file contributed to the Open Hymnal by Samuel Cantrell, 18 Jan 2012.
+M: 3/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Ab % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=80] A | c3/2 B/ A/G/ | A2 A | (A3/2 B/) A/F/ | E2
+w: 1.~I need Thee ev- 'ry hour, Most gra- * cious_ Lord; 
+w: 2.~I need Thee ev- 'ry hour, Stay Thou_ near_ by; 
+w: 3.~I need Thee ev- 'ry hour, In joy _ or _ pain; 
+w: 4.~I need Thee ev- 'ry hour, Teach me _ Thy _ will; 
+w: 5.~I need Thee ev- 'ry hour, Most Ho- - ly _ One; 
+[V: S1V2] C | E3/2 D/ C/B,/ | C2 C | D2 D | C2
+[V: S2V1] E, | A,3/2 F,/ E,/E,/ | E,2 E, | F,2 F,/A,/ | A,2
+[V: S2V2] A,, | A,,3/2 D,/ E,/E,/ | A,,2 A,, | D,2 D, | A,,2
+% 5
+[V: S1V1] E | B3/2 c/ B/E/ | c2 A | (G3/2 A/) G/F/ | E2 ||
+w: No ten- der voice like Thine Can peace_ af- * ford. 
+w: Temp- ta- tions lose their pow'r When Thou_ art_ nigh. 
+w: Come quick- ly and a- bide, Or life_ is_ vain. 
+w: And Thy rich pro- mis- es In me _ ful- * fill. 
+w: O make me Thine in- deed, Thou bless- * ed _ Son! 
+[V: S1V2] E | E3/2 E/ E/E/ | E2 E | (E3/2 F/) E/=D/ | E2 ||
+[V: S2V1] G, | G,3/2 A,/ G,/G,/ | A,2 C | B,2 B,/A,/ | G,2 ||
+[V: S2V2] E, | E,3/2 E,/ E,/E,/ | A,2 A,, | B,,2 B,, | E,2 ||
+% 9
+[V: S1V1] c | c3/2 A/ d/c/ | c B2 | B3/2 A/ c/B/ | B A
+w: I need Thee, O I need Thee; Ev- 'ry hour I need Thee; 
+[V: S1V2] A | A3/2 E/ A/A/ | A G2 | E3/2 E/ E/E/ | E E
+[V: S2V1] E | E3/2 C/ F/E/ | E E2 | D3/2 C/ E/D/ | D C
+[V: S2V2] A, | A,3/2 A,/ A,/A,/ | E, E,2 | E,3/2 E,/ E,/E,/ | A,, A,,
+% 13
+[V: S1V1] !sintro!A | A3/2 B/ A/F/ | E A B | (c3/2 A/) B | A2 !eintro!|]
+w: O bless me now, my Sav- ior, I come * to Thee! 
+[V: S1V2] E | F3/2 F/ F/D/ | C E F | (E3/2 C/) D | C2 |]
+[V: S2V1] A, | A,3/2 A,/ A,/A,/ | A, A, A, | A,2 G, | A,2 |]
+[V: S2V2] C, | D,3/2 D,/ D,/D,/ | A,, C, D, | E,2 E, | A,,2 |]

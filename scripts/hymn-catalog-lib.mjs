@@ -25,7 +25,8 @@ export function validateNumberedHymnMapping(mapping) {
   if (typeof mapping.number !== 'string' || !/^\d{1,4}$/.test(mapping.number)) throw new Error(`${label}: invalid hymn number.`);
   if (typeof mapping.reference !== 'string' || !/^\d+$/.test(mapping.reference)) throw new Error(`${label}: invalid Open Hymnal source reference.`);
   if (typeof mapping.title !== 'string' || !mapping.title.trim()) throw new Error(`${label}: missing hymn title.`);
-  if (typeof mapping.tune !== 'string' || !mapping.tune.trim()) throw new Error(`${label}: missing tune.`);
+  // The tune is only a display label in the picker, so a blank one is allowed.
+  if (mapping.tune !== undefined && typeof mapping.tune !== 'string') throw new Error(`${label}: invalid tune.`);
 }
 
 export function collectUnmappedCandidates(entries, mappings) {
@@ -42,7 +43,30 @@ export function collectUnmappedCandidates(entries, mappings) {
   });
 }
 
-export function createHymnCatalogEntry(mapping, file, source) {
+// First sung line of the first verse, rejoined from the hyphenated ABC syllables.
+export function firstLyricLine(abc) {
+  const line = /^w:\s*(.+)$/m.exec(abc)?.[1] ?? '';
+  return line.replace(/^\s*\d+\.[\s~]*/, '').replace(/[-_]\s+/g, '').replace(/[*|~]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+export function createUnnumberedCatalogEntry(mapping, abc, file, source) {
+  return {
+    id: `oh-${mapping.reference}`,
+    hymnal: 'OH',
+    hymnalName: 'Open Hymnal (no hymnal number)',
+    number: '',
+    title: mapping.title,
+    tune: mapping.tune ?? '',
+    file,
+    source,
+    rights: 'Public domain (United States)',
+    sourceEdition: 'Open Hymnal, June 2014',
+    reference: String(mapping.reference),
+    firstLine: firstLyricLine(abc),
+  };
+}
+
+export function createHymnCatalogEntry(mapping, file, source, abc = '') {
   const tfws = mapping.hymnal === 'TFWS2000';
   return {
     id: `${tfws ? 'tfws-2000' : 'umh-1989'}-${mapping.number}`,
@@ -50,11 +74,12 @@ export function createHymnCatalogEntry(mapping, file, source) {
     hymnalName: tfws ? 'The Faith We Sing (2000)' : 'The United Methodist Hymnal (1989)',
     number: mapping.number,
     title: mapping.title,
-    tune: mapping.tune,
+    tune: mapping.tune ?? '',
     file,
     source: mapping.source || source,
     rights: 'Public domain (United States)',
     sourceEdition: mapping.sourceEdition || 'Open Hymnal, June 2014',
     reference: mapping.reference,
+    firstLine: firstLyricLine(abc),
   };
 }

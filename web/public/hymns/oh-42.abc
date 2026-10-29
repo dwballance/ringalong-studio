@@ -1,0 +1,68 @@
+X: 42
+T: O Lord, How Shall I Meet Thee
+%%combinevoices 1
+C: Words: Paul Gerhardt, 1653.  translator unknown. 
+C: Music: 'Wie Soll ich Dich Empfange' Johann Crüger, 1653. 
+C: Setting: "Evangelical Lutheran Hymn-Book", 1931.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2008 Revision.
+S: Music source: Evangelical Lutheran Hymn Book (LCMS), Edition of 1931 Hymn 136.
+S: Translation found in "Hymn book for the use of Evangelical Lutheran schools and congregations" By August Crull, 1884
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Eb % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=140] E2 | G A B B | A2 G A | G E F F | E2
+w: 1.~O Lord, how shall I meet Thee, How wel- come Thee a- right? 
+w: 2.~Thy Zi- on palms is strew- ing, And branch- es fresh and fair; 
+w: 3.~What hast Thou left un- grant- ed To give me glad re- lief?
+w: 4.~I lay in fet- ters groan- ing, Thou com'st to set me free; 
+w: 5.~Love caused Thine in- car- na- tion Love brought Thee down to me; 
+[V: S1V2]  B,2 | E E D E | (C D) E E | E B, C D | B,2
+[V: S2V1]  G,2 | B, C F, G, | A,2 C C | B, B, A, F, | G,2
+[V: S2V2]  E,2 | E, C, B,, E, | F,2 C, A,, | E, G,, A,, B,, | E,2
+% 5
+[V: S1V1]  E2 | G A B B | A2 G A | G E F F | E2
+w: All na- tions long to see Thee, My Hope, my heart's De- light! 
+w: My heart, its pow'rs re- new- ing, An an- them shall pre- pare. 
+w: When soul and bo- dy pant- ed In ut- most depth of grief,
+w: I stood, my shame be- moan- ing, Thou com'st to hon- or me. 
+w: Thy thirst for my sal- va- tion Pro- cured my lib- er- ty. 
+[V: S1V2]  B,2 | E E D E | (C D) E E | E B, C D | B,2
+[V: S2V1]  G,2 | B, C F, G, | A,2 C C | B, B, A, F, | G,2
+[V: S2V2]  E,2 | E, C, B,, E, | F,2 C, A,, | E, G,, A,, B,, | E,2
+% 9
+[V: S1V1]  B2 | c d e d | c2 B G | c B A G | F2
+w: O kin- dle, Lord, most ho- ly, Thy lamp with- in my breast, 
+w: My soul puts off her sad- ness Thy glor- ies to pro- claim; 
+w: In deep- est de- gra- da- tion, De- void of joy and peace,
+w: A glor- y Thou dost give me, A trea- sure safe on high, 
+w: O love be- yond all tell- ing, That led Thee to em- brace, 
+[V: S1V2]  E2 | E F G F | F2 D E | E D E E | D2
+[V: S2V1]  G,2 | A, A, B, B, | (B, =A,) B, B, | A, F, C B, | B,2
+[V: S2V2]  E,2 | A, F, E, B,, | F,2 B,, E, | A,, B,, C, E, | B,,2
+% 13
+[V: S1V1]  !sintro!G2 | E F G B | A2 G B | A G F F | !fermata!E2 !eintro!|]
+w: To do in spir- it low- ly All that may please Thee best. 
+w: With all her strength and glad- ness She fain would serve Thy Name. 
+w: Then, Thou, my soul's Sal- va- tion, Didst come to bring re- lease.
+w: That will not fail nor leave me As earth- ly rich- es fly. 
+w: In love all love ex- cel- ling, Our lost and fal- len race! 
+[V: S1V2]  B,2 | C D E E | E2 E G | E E E D | E2 |]
+[V: S2V1]  G,2 | G, B, B, B, | C2 B, B, | C B, B,3/2 A,/ | !invertedfermata!G,2 |]
+[V: S2V2]  E,2 | C, B,, E, G,, | A,,2 E, E, | C, E, B,, B,, | E,2 |]
+% 19

@@ -1,0 +1,55 @@
+X: 45
+T: The King Shall Come
+%%combinevoices 1
+C: Words: Unknown author. Translated by John Brownlie, 1907.  
+C: Music and Setting: 'Consolation' or 'Morning Song' John Wyeth, 1813. 
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: ccel - 'Repository of Sacred Music, Part Second' 1813. Ed. John Wyeth
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Ab % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] C | F G A B/A/ | G F/E/ C C | F G A B | c3
+w: 1.~The King shall come when * morn- ing * dawns, And light tri- um- phant breaks; 
+w: 2.~Not as of old a * lit- tle * child To bear, and fight, and die, 
+w: 3.~O bright- er than the * ris- ing * morn When He, vic- tor- ious, rose, 
+w: 4.~O bright- er than that * glor- ious * morn Shall this fair morn- ing be, 
+w: 5.~The King shall come when * morn- ing * dawns, And earth's dark night is past; 
+[V: S1V2]  C | C C C D | E C A, C | B, E C E | E3
+[V: S2V1]  C, | C B, A, F, | E, G, A, G, | F, C A, G, | A,3
+[V: S2V2]  C, | A, G, F, B,, | C, C, F, E, | D, C, F, E, | A,,3
+% 5
+[V: S1V1]  A/B/ | c d/c/ B A | G F/E/ C !sintro!C | F G A/F/ G | F3 !eintro!|]
+w: When * beau- ty * gilds the east- ern * hills, And life to joy * a- wakes. 
+w: But * crowned with * glo- ry like the * sun That lights the morn- * ing sky. 
+w: And * left the * lone- some place of * death, De- spite the rage * of foes. 
+w: When * Christ, our * King, in beau- ty * comes, And we His face * shall see. 
+w: O * haste the * ris- ing of that * morn, The day that aye * shall last. 
+[V: S1V2]  E | E D F D | B, C C C | C E C C | A,3 |]
+[V: S2V1]  A, | A, F, F, F, | E,/F,/ G, A, A,/B,/ | C B, A, E, | F,3 |]
+[V: S2V2]  C,/B,,/ | A,, B,,/C,/ D, B,, | E, C, F, F,/G,/ | A, E, A,, C, | F,,3 |]
+% 10
+W: 6.And let the endless bliss begin,
+W: By weary saints foretold,
+W: When right shall triumph over wrong,
+W: And truth shall be extolled.
+W: 
+W: 7.The King shall come when morning dawns,
+W: And light and beauty brings:
+W: Hail, Christ the Lord! Thy people pray,
+W: Come quickly, King of kings.

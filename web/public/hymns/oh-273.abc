@@ -1,0 +1,63 @@
+X: 273
+T: Fear Not, O Little Flock
+%%combinevoices 1
+C: Words: Attr. to King Gustavus Adolphus of Sweden (1594-1632), Jacob Fabricius (1593-1654)
+C: or Johann M. Altenburg (1584-1640).  Translated by Catherine Winkworth, 1855. 
+C: Music: 'Kommt her zu mir, spricht Gottes Sohn' traditional German, 1490. 
+C: Setting: "Mehrstimmiges Choralbuch", 1906.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music source: "Mehrstimmiges Choralbuch", 1906 Hymn 110.  Translation from "Lyra Germanica", 1855 for St. Stephen's Day.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=160] G2 G G | d3 c | d B !fermata!A2 | z G B A | B3
+w: 1.~Fear not, O lit- tle flock, the foe Who mad- ly seeks 
+w: 2.~Be of good cheer; your cause be- longs To Him who can 
+w: 3.~As true as God's own word is true, Not earth nor hell 
+w: 4.~A- men, Lord Je- sus, grant our prayer! Great Cap- tain, now 
+[V: S1V2] D2 D _E | D3 F | F D D2 | x D _E E | F3
+[V: S2V1] B,2 B, C | F,3 A, | A, G, !invertedfermata!^F,2 | z B, G, C | D3
+[V: S2V2] G,,2 G,, C, | B,,3 F, | D, G, D,2 | x G, _E, C, | B,,3
+% 5
+[V: S1V1] d | c B !fermata!A2 | z A c2- | c B A B | (G2 !fermata!F2) |
+w: your ov- er- throw; Dread not * his rage and pow'r; * 
+w: a- venge your wrongs; Leave it * to Him our Lord. * 
+w: with all their crew A- gainst * us shall pre- vail. * 
+w: Thine arm make bare; Fight for * us once a- gain. * 
+[V: S1V2] F | F D D2 | x D _E2- | _E D C (F- | F) (E F2) |
+[V: S2V1] B, | A, G, !invertedfermata!^F,2 | z F, G,2- | G, F,/G,/ A, D | (C2 !invertedfermata!A,2) |
+[V: S2V2] B, | F, G, D,2 | x D, C,2- | C, D,/E,/ F, B,, | (C,2 F,,2) |
+% 10
+[V: S1V1] z F B A | B3 d | c B !fermata!A2 | z G B A | B3 d |
+w: What though your cou- rage some- times faints, His seem- ing tri- umph 
+w: Though hid- den yet from all our eyes, He sees the Gid- eon 
+w: A jest and by\- word are they grown; God is with us, we 
+w: So shall thy saints and mar- tyrs raise A might- y cho- rus 
+[V: S1V2] x F D F | F3 F | F D D2 | x D _E E | F3 F |
+[V: S2V1] z A, B, C | D3 B, | A, G, !invertedfermata!^F,2 | z B, G, C | D3 B, |
+[V: S2V2] x D, G, F, | B,,3 B, | F, G, D,2 | x G, _E, C, | B,,3 B, |
+% 15
+[V: S1V1] c B !fermata!A2 | z !sintro!G d2- | d c B c | (A2 !fermata!G2) !eintro!|]
+w: o'er God's saints Lasts but * one lit- tle hour. * 
+w: who shall rise; To save * us, and His word. * 
+w: are His own, Our vic- * t'ry can- not fail. * 
+w: to Thy praise, World with- * out end. A- men. * 
+[V: S1V2] F D D2 | x B, D2- | D F D _E | (D2 D2) |]
+[V: S2V1] A, G, !invertedfermata!^F,2 | z G, F,2- | F, A, G, G, | (^F,2 !invertedfermata!=B,2) |]
+[V: S2V2] F, G, D,2 | x _E, B,,2- | B,, F, G, C, | (D,2 G,,2) |]

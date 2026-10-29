@@ -1,0 +1,52 @@
+X: 154
+T: Almighty God Your Word Is Cast
+%%combinevoices 1
+C: Words: John Cawood, 1816.  Music: 'St. Anne' William Croft, 1708. 
+C: Setting: composite found in "The Lutheran Hymnary", 1913.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2007 Revision.
+S: Music source: 'The Lutheran Hymnary', 1913, Hymn 261.
+S: Arrangement is composite, first half from "Hymns Ancient and Modern", 1869, Hymn 231. ed  William Henry Monk
+S: Second half is from "The Hymnal Companion to the Book of Common Prayer", 1890, Hymn 279. ed. Charles Vincent, D.J. Wood, John Stainer
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] G | E A G c | c B c G | c G A ^F | G3
+w: 1.~Al- might- y God, Your Word is cast Like seed in- to the ground; 
+w: 2.~Let not the foe of Christ and man This ho- ly seed re- move, 
+w: 3.~Let not the world's de- ceit- ful cares The ris- ing plant de- stroy. 
+w: 4.~Nor let Your Word so kind- ly sent To raise us to Your throne 
+w: 5.~Oft as the prec- ious seed is sown, Your quick- 'ning grace be- stow, 
+[V: S1V2]  C | C C C E | D D E E | E E E D | D3
+[V: S2V1]  E, | G, A, C C | A, G, G, C | C B, A, A, | B,3
+[V: S2V2]  C, | C, F, E, A, | F, G, C, C, | A,, E, C, D, | G,,3
+% 6
+[V: S1V1]  B | c A d B | c A B !sintro!G | A c d B | c3 !eintro!|]
+w: Now let the dew of Heav'n de- scend, And right- eous fruits a- bound. 
+w: But give it root in ev- 'ry heart To bring forth fruits of love. 
+w: But let it yield a hun- dred- fold The fruits of peace and joy. 
+w: Re- turn to You, and sad- ly tell That we re- ject Your Son. 
+w: That all whose souls the truth re- ceive, Its sa- ving power may know. 
+[V: S1V2]  D | E C F D | E3/2 D/ B, C | F E D D | E3 |]
+[V: S2V1]  G, | G, A, A, G, | G, A, ^G, =G, | F, G, A, G, | G,3 |]
+[V: S2V2]  G, | C, F, D, G, | C, F, E, E, | D, C, F, G, | C,3 |]
+% 11
+W: 6.Great God, come down and on Your Word
+W: Your mighty power bestow,
+W: That all who hear the joyful sound,
+W: Your saving grace may know.

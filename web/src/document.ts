@@ -218,6 +218,59 @@ export function breakLineHere(song: Song, type: string, noteId: string): boolean
   return true;
 }
 
+// Moves the selected note and everything after it out of a section type's shared pattern into a new
+// pattern of `targetType`. Every musical section that sings words on the moved notes gets a new section
+// of the target type holding those words; sections that sing nothing there simply lose the notes.
+export function splitSection(song: Song, type: string, noteId: string, targetType: string, sectionId: string): Section[] {
+  const target = targetType.trim().toLowerCase();
+  if (!target) throw new Error('Choose a section type for the split.');
+  if (song.patterns.some(pattern => pattern.type === target)) throw new Error(`A ${target} section already exists. Choose an unused type.`);
+  const pattern = song.patterns.find(item => item.type === type);
+  if (!pattern) throw new Error('The shared music pattern was not found.');
+  const lineIndex = pattern.lines.findIndex(line => line.slots.some(note => note.id === noteId));
+  if (lineIndex < 0) throw new Error('The selected note was not found.');
+  const line = pattern.lines[lineIndex];
+  const noteIndex = line.slots.findIndex(note => note.id === noteId);
+  if (lineIndex === 0 && noteIndex === 0) throw new Error('Select a note after the first one; splitting at the first note would leave nothing behind.');
+  const movingLines = [{ id: noteIndex === 0 ? line.id : id(), slots: line.slots.slice(noteIndex) }, ...pattern.lines.slice(lineIndex + 1)];
+  const movingNotes = movingLines.flatMap(item => item.slots);
+  const sections = song.sections.filter(section => section.type === type && ['music', 'done'].includes(section.stage));
+  const plans = sections.map(section => {
+    // A later verse may sing fewer lines than the shared pattern; the missing lines are simply empty.
+    if (section.lines.length > pattern.lines.length) throw new Error('Align every musical verse with the shared pattern before splitting.');
+    const movingTokens = new Set(movingNotes.flatMap(note => (section.bindings[note.id] || []).flatMap(binding => binding.tokenId ? [binding.tokenId] : [])));
+    const moved = movingLines.map((_, offset) => (section.lines[lineIndex + offset]?.tokens ?? []).filter(token => movingTokens.has(token.id)));
+    if (moved.flat().length !== movingTokens.size || section.lines.slice(lineIndex + 1).some((item, offset) => item.tokens.length !== moved[offset + 1].length))
+      throw new Error('Resolve this verse’s lyric mapping before splitting.');
+    return { section, moved, words: movingTokens.size > 0 };
+  });
+  if (!plans.some(plan => plan.words)) {
+    const own = plans.find(plan => plan.section.id === sectionId);
+    if (own) own.words = true;
+  }
+  const created: Section[] = [];
+  song.patterns.push({ id: id(), type: target, lines: movingLines });
+  pattern.lines.splice(lineIndex + 1);
+  if (noteIndex === 0) pattern.lines.pop(); else line.slots.splice(noteIndex);
+  for (const { section, moved, words } of plans) {
+    if (words) {
+      const added = newSection(song, target);
+      added.stage = section.stage;
+      added.lines = moved.map(tokens => ({ id: id(), tokens }));
+      added.raw = added.lines.map(item => item.tokens.map(token => token.text).join(' ')).join('\n');
+      for (const note of movingNotes) added.bindings[note.id] = section.bindings[note.id] || [{ id: id(), kind: 'unused' }];
+      song.sections.splice(song.sections.indexOf(section) + 1, 0, added);
+      created.push(added);
+    }
+    for (const note of movingNotes) delete section.bindings[note.id];
+    const keep = new Set(moved.flat().map(token => token.id));
+    if (noteIndex === 0) section.lines.splice(lineIndex);
+    else { if (section.lines[lineIndex]) section.lines[lineIndex].tokens = section.lines[lineIndex].tokens.filter(token => !keep.has(token.id)); section.lines.splice(lineIndex + 1); }
+    section.raw = section.lines.map(item => item.tokens.map(token => token.text).join(' ')).join('\n');
+  }
+  return created;
+}
+
 const legacyNote = noteSchema.omit({ id: true, policy: true, ringMelody: true });
 const legacySchema = z.object({
   title: z.string().optional(), key_signature: z.string().optional(), credit: z.string().optional(),

@@ -1,0 +1,59 @@
+X: 280
+T: I Place My Trust In God
+%%combinevoices 1
+C: Words: verses by Dorothy Amstutz, 2007. Refrain by Loren J. Kropf, 2010. 
+C: Music and Setting: 'Haly - Trust' Loren J. Kropf, 2010. 
+C: copyright: public domain.  Hymn text verified as public domain by Dorothy Amstutz on July 30, 2011. 
+C: Music, Setting, and refrain verified as public domain by Loren Kropf August 19, 2011. 
+C: This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music source: image sent via email by Loren Kropf
+M: 2/2 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Bb % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] F | G A B B | B3/2 G/ F F/G/ | B B d d | B3/2 G/ F
+w: 1.~I placed my trust in God to- day, For * it is He who knows the way,
+w: 2.~I placed my trust in God to- day, A- * lone I could not find my way.
+w: 3.~I place my trust in God each day, Co- * mmitt- ed, yield- ed to His way.
+w: 4.~I'll place my trust in God each day, And * while I walk the nar- row way,
+w: 5.~I'll place my trust in God each day, Yes, * ev- en though the skies are gray.
+[V: S1V2] D | E E F F | F3/2 E/ D F/E/ | D D F F | F3/2 E/ D
+[V: S2V1] B, | B, C D D | D3/2 B,/ B, B,/G,/ | F, F, B, B, | D3/2 B,/ B,
+[V: S2V2] B,, | B,, F, B,, B,, | B,,3/2 B,,/ B,, D,/C,/ | B,, B,, B,, B,, | B,,3/2 B,,/ B,,
+% 5
+[V: S1V1] F | G G G d | B3/2 B/ B F | G G A A | c3/2 c/ B
+w: And when un- cer- tain- ties a- rise, I trust His judg- ment, true and wise.
+w: Led by His gui- dance, safe and sure, I then can rest in peace, se- cure.
+w: Naught can o'er- throw me when I'm there Be- neath His ev- er- last- ing care.
+w: Each bur- den God will help me bear; He hears my cry, my ev'- ry prayer.
+w: Led by His hand, I will not fear; I know that God is al- ways near.
+[V: S1V2] F | E E E F | D3/2 D/ D D | E E E E | E3/2 E/ D
+[V: S2V1] B, | G, G, G, B, | F,3/2 F,/ F, B, | B, B, C C | C3/2 G,/ F,
+[V: S2V2] D, | C, C, C, F, | B,,3/2 B,,/ B,, B,, | E, E, C, C, | F,3/2 C,/ B,,
+% 9
+[V: S1V1] F/G/ | B B B d | B3/2 G/ F  F/G/ | B B d d | c3/2 d/ c
+w: I'll * place my trust in God to- day, Ev- en when I can- not see the way,
+[V: S1V2] F | F F F F | F3/2 E/ D F/E/ | D D F F | F3/2 F/ F
+[V: S2V1] B,/C/ | D D D D | D3/2 B,/ B, B,/G,/ | F, F, B, B, | A,3/2 B,/ A,
+[V: S2V2] D,/C,/ | B,, B,, B,, B,, | B,,3/2 B,,/ B,, D,/C,/ | B,, B,, B,, B,, | F,3/2 F,/ F,
+% 13
+[V: S1V1] !sintro!d/c/ | B B B c | c3/2 d/ e e | d d d B | c A B !eintro!|]
+w: He'll * lead me on with His strong hand, Un- til I reach the pro- mised land.
+[V: S1V2] F/E/ | F F F F | G3/2 F/ G G | F F F D | E E D |]
+[V: S2V1] B,/C/ | D D D C | C3/2 B,/ C B, | B, B, B, B, | A, A, F, |]
+[V: S2V2] D,/C,/ | B,, B,, B,, F, | E,3/2 D,/ C, E, | B,, B,, B,, B,, | C, F, B,, |]

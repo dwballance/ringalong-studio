@@ -1,0 +1,59 @@
+X: 211
+T: Hark, Hark, My Soul!
+%%combinevoices 1
+C: Words: Frederick W. Faber, 1854.  Arranged and alt. by Mike Hosken, 2014.
+C: Music: 'Finlandia' Jean Sibelius, 1899.  Setting: from Jean Sibelius, 1900.
+C: copyright: public domain.  All alterations to the lyrics are placed into the public domain by 
+C: the author on 20 Jan 2014.  This score is a part of the Open Hymnal Project, 2014 Revision.
+S: Lyrics source: emailed by M. Hosken, 17 Jan 2014.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] A G A | B3 A | G A F3/2 G/ | (G A3- | A) A G A | B3
+w: 1.~Hark! hark, my soul! an- gel- ic songs are swell- ing * O'er earth's green fields 
+w: 2.~And through the dark, its ech- oes sweet- ly ring- ing, * The mu- sic of 
+w: 3.~Faith's jour- neys end in wel- come to the wear- y, * And Heav'n, the heart's 
+[V: S1V2]  F E F | F3 F | E F D3/2 E/ | (E F3- | F) F E F | F3
+[V: S2V1]  C B, C | D3 C | B, C B,3/2 C/ | C4- | C C B, C | D3 
+[V: S2V2]  F, F, F, | F,3 F, | F, F, F,3/2 C,/ | (C, F,3- | F,) F, F, F, | F,3
+% 5
+[V: S1V1]  A | G A F3/2 G/ | A4- | A c c c | d3 A | A c c3/2 G/ | (G B3- | B)
+w: and o- cean's wave\- beat shore: * How sweet the truth those bless- èd strains are tell- ing * 
+w: the Gos- pel leads us home. * Far, far a- way, like bells at ev'n- ing peal- ing, * 
+w: true home will come at last. * An- gels, sing on, your faith- ful watch- es keep- ing, * 
+[V: S1V2]  F | E F D3/2 E/ | F4- | F F F F | F3 F | F F F3/2 E/ | (E G3- | G)
+[V: S2V1]  C | B, C B,3/2 C/ | C4- | C A, A, A, | A,3 D | D C C3/2 C/ | (C D3- | D)
+[V: S2V2]  F, | F, F, F,3/2 C,/ | F,4- | F, F, F, E, | D,3 D, | D, A,, A,,3/2 C,/ | (C, G,,3- | G,,)
+% 13
+[V: S1V1]  B A G | A3 F | F G G3/2 A/ | A4- | A c c c | d3 A | A
+w: Of that new life when sin shall be no more! * On- ward we go, for still 
+w: The voice of Je- sus sounds o'er land and sea, * And la- den souls, by thou- 
+w: Sing us sweet frag- ments of the songs a- bove; * Till morn- ing's joy shall end 
+[V: S1V2]  G ^F G | F3 F | F F F3/2 F/ | E4- | E A F F | F3 F | F
+[V: S2V1]  D C D | C3 C | D D D3/2 D/ | ^C4- | ^C =C A, A, | A,3 D | D
+[V: S2V2]  G,, A,, B,, | A,,3 A, | B, B, B,3/2 B,/ | A,4- | A, F, F, E, | D,3 D, | D,
+% 17
+[V: S1V1]  c c3/2 G/ | (G B3- | B) B A G | A3 !sintro!F | F G G3/2 F/ | F4- | F !eintro!|]
+w: we hear them sing, * * "Come, wear- y souls, for Je- sus bids you come"; * 
+w: sands meek- ly steal- ing, * Kind Shep- herd, turn their wear- y steps to Thee. * 
+w: the night of weep- ing, * And life's long sha- dows break in cloud- less love. * 
+[V: S1V2]  F F3/2 E/ | (E G3- | G) G ^F G | F3 C | F F E3/2 D/ | C4- | C |]
+[V: S2V1]  C C3/2 C/ | (C D3- | D) D C D | C3 A, | B, B, B,3/2 B,/ | A,4- | A, |]
+[V: S2V2]  A, A,3/2 C/ | (C G,3- | G,) G,, A,, B,, | C,3 C, | C, C, C,3/2 C,/ | F,4- | F, |]
+% 27

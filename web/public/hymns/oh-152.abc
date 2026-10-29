@@ -1,0 +1,63 @@
+X: 152
+T: Thou, Who at Thy First Eucharist
+%%combinevoices 1
+T: (also known as Lord, Who the Night You Were Betrayed or At That First Eucharist)
+C: Words: William H. Turton, 1881. 
+C: Music: 'Unde Et Memores' William Henry Monk, 1875. 
+C: Setting: "The Church Hymnal, Revised and Enlarged" (Episcopal), 1896.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music source: "The Church Hymnal, Revised and Enlarged" (Episcopal), 1896  Ed. Charles Hutchins Hymn 228 second tune. 
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] F | F3/2 D/ D E | F3/2 F/ F G | A3 F | E F G3/2 G/ |
+w: 1.~Thou, who at Thy first Eu- cha- rist didst pray That all Thy Church might 
+w: 2.~For all Thy Church, O Lord, we in- ter- cede; Make Thou our sad di- 
+w: 3.~We pray Thee too for wan- d'rers from Thy fold; O bring them back, good 
+w: 4.~So, Lord, at length when sac- ra- ments shall cease, May we be one with 
+[V: S1V2] D | D3/2 D/ D D | D3/2 D/ D C | D3 D | C D E3/2 E/ |
+[V: S2V1] A, | A,3/2 F,/ F, G, | A,3/2 A,/ A, A, | A,3 A, | A, A, B,3/2 B,/ |
+[V: S2V2] D, | D,3/2 D,/ D, D, | D,3/2 D,/ D, E, | F,3 D, | G, F, E,3/2 D,/ |
+% 6
+[V: S1V1] G F A F | E3 F | F3/2 D/ D E | F3/2 F/ F G | A3
+w: be for- ev- er one, Grant us at ev- 'ry Eu- cha- rist to say 
+w: vi- sions soon to cease; Draw us the near- er each to each, we plead,
+w: Shep- herd of the sheep, Back to the faith which saints be- lieved of old,
+w: all Thy Church a- bove, One with Thy saints in one un- bro- ken peace,
+[V: S1V2] E D D D | C3 D | D3/2 D/ D D | D3/2 D/ D D | D3
+[V: S2V1] A, A, A, A, | A,3 A, | A,3/2 F,/ F, G, | A,3/2 D,/ D, E, | F,3
+[V: S2V2] C, D, F,,3/2 G,,/ | A,,3 D, | D,3/2 D,/ D, D, | D,3/2 B,,/ B,, B,, | F,,3 
+% 10
+[V: S1V1] F | B A ^G3/2 ^G/ | A B c B | A3 A | d A G F |
+w: With long- ing heart and soul, "Thy will be done." O may we all one 
+w: By draw- ing all to Thee, O Prince of Peace; Thus may we all one 
+w: Back to the Church which still that faith doth keep; Soon may we all one 
+w: One with Thy saints in one un- bound- ed love; More bless- èd still, in 
+[V: S1V2] D | D D D3/2 D/ | C F E D | C3 C | D D C D |
+[V: S2V1] A, | G, A, B,3/2 B,/ | A, A, A, ^G, | A,3 A, | A, A, A, A, |
+[V: S2V2] D, | G, F, E,3/2 E,/ | F,  D, E, E, | A,,3 G, | F, F, E, D, |
+% 15
+[V: S1V1] B B d B | A3 !sintro!A | G F E D | B3/2 G/ F E | D3 !eintro!|]
+w: bread, one bo- dy be, Through this blest sac- ra- ment of un- i- ty.
+w: bread, one bo- dy be, Through this blest sac- ra- ment of un- i- ty.
+w: bread, one bo- dy be, Through this blest sac- ra- ment of un- i- ty.
+w: peace and love to be One with the Trin- i- ty in un- i- ty.
+[V: S1V2] D D D G | F3 D | C D C D | D3/2 E/ D C | D3 |]
+[V: S2V1] G, G, G, D | D3 A, | A, A, G, F, | G,3/2 B,/ A, G, | F,3 |]
+[V: S2V2] G,, G,, B,, G,, | D,3 F, | E, D, A,, B,, | G,,3/2 G,,/ A,, A,, | D,3 |]

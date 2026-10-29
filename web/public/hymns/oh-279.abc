@@ -1,0 +1,73 @@
+X: 279
+T: If God Himself Be For Me
+%%combinevoices 1
+C: Words: Paul Gerhardt, 1656.  Verses 1-3, 7-9, 11-15 Translated by Richard Massie, 1856, alt. 
+C: Verses 4-6,10 Translated for Evangelical Lutheran Hymn-Book (Pittsburgh), 1907, alt.
+C: Music: 'Woodbird' or 'Es Flog Ein Kleins Waldvögelein' traditional German found in 
+C: "Memminger Tabulaturbuche", 17th Century. Setting: George Ratcliffe Woodward, 1904.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music can be found in "AltDeutsches Liederbuch", 1877 page 232 song 134. (no arrangement, melody only)
+S: Music source: Episcopal Hymnal, 1940, Hymn 474.   arrangement is from George Ratcliffe Woodward's "Songs of Syon", 1904 or 1910 per CCEH and other sites
+S: translation (from TLH 1941) is very close to that in the Evangelical Hymn Book of 1931.
+S: Original Massie translation found in "The Church Psalter and Hymn Book" (UK), 1863.
+S: Translation is public domain per Project Wittenberg: : http://www.iclnet.org/pub/resources/text/wittenberg/hymns/ifgodbe.txt
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+%%staffsep 0.62cm
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=130] G | G d B G | (F3/2 G/) A D | E G G F | G3
+w: 1.~If God Him- self be for * me, I may a host de- fy;
+w: 2.~This I be- lieve, yea, ra- * ther, Of this I make my boast,
+w: 3.~I build on this foun- da- * tion, That Je- sus and His blood
+w: 4.~My Je- sus is my Splen- * dor, My Sun, my Light, a- lone;
+w: 5.~He can- celed my of- fen- * ses, De- liv- ered me from death;
+[V: S1V2]  D | E D D G | D2 D D | D C/B,/ A, D | D3
+[V: S2V1]  B, | B, A, B, D | (A,3/2 G,/) F, G,/F,/ | E, E D A, | (C B,2)
+[V: S2V2]  G, | E, F, G, B,, | D,2 D, B,, | C, A,, D, D, | [G,,3D,3]
+% 5
+[V: S1V1]  G | G d B G | (F3/2 G/) A D | E G G F | G3
+w: For when I pray, be- fore * me My foes, con- found- ed, fly.
+w: That God is my dear Fa- * ther, The Friend who loves me most,
+w: A- lone are my sal- va- * tion, The true, e- ter- nal good.
+w: Were He not my De- fen- * der Be- fore God's awe\- full throne,
+w: He is the Lord who clean- * ses My soul from sin through faith.
+[V: S1V2]  D | E D D G | D2 D D | D C/B,/ A, D | D3
+[V: S2V1]  B, | B, A, B, D | (A,3/2 G,/) F, G,/F,/ | E, E D A, | B,3
+[V: S2V2]  G, | E, F, G, B,, | D,2 D, B,, | C, A,, D, D, | G,3
+% 9
+[V: S1V1]  B | G d d/c/ B | A2 A c | B A B G | A3
+w: If Christ, my Head * and Mas- ter, Be- friend me from a- bove,
+w: And that, what- e'er * be- tide me, My Sa- vior is at hand
+w: With- out Him all * that plea- ses Is val- ue- less on earth;
+w: I nev- er should * find fa- vor And mer- cy in His sight,
+w: In Him I can * be cheer- ful, Bold, and un- daun- ted aye;
+[V: S1V2]  D | D A G G | E2 F E | D D D B, | (^C D2)
+[V: S2V1]  G, | B, D E3/2 D/ | (D ^C) D G, | G, F, F, G, | (E, F,2)
+[V: S2V2]  G, | G, F, E, E, | A,2 D, =C,/E,/ | G, D, B,, E, | (A,, D,2)
+% 13
+[V: S1V1]  d | c B A G | (F3/2 G/) A !sintro!D | E G G F | G3 !eintro!|]
+w: What foe or what dis- as- * ter Can drive me from His love?
+w: Through storm- y seas to guide * me And bring me safe to land.
+w: The gifts I owe to Je- * sus A- lone my love are worth.
+w: But be de- stroyed for- ev- * er As dark- ness by the light.
+w: In Him I am not fear- * ful Of God's great Judg- ment Day.
+[V: S1V2]  D | E D C D | D2 D D | D C/B,/ A, D | D3 |]
+[V: S2V1]  G, | G, G, E,/F,/ G, | (A,3/2 G,/) F, G,/F,/ | E, E D A, | B,3 |]
+[V: S2V2]  B,, | C, G,, A,, B,, | D,2 D, B,, | C, A,, D, D, | G,,3 |]
+% 19

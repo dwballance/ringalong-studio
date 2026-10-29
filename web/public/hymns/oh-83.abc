@@ -1,0 +1,60 @@
+X: 83
+T: O Wondrous Type, O Vision Fair
+%%combinevoices 1
+C: Words: From the "Sarum Breviary", 1495.  Translated by John Mason Neale, 1851.
+C: Music: 'Deo Gracias' or 'Agincourt' traditional English, circa 1415.  Setting: Charles Winfred Douglas, 1918, alt.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music source: "A Hymnal" (Episcopal), 1918 Hymn 439, alt by BJD 21 Mar 2011.  Translation found in Hymns Ancient & Modern, 1861.
+M:3/4	% time signature
+L:1/4	% default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2)
+V:S1V1 clef=treble
+%%MIDI beat 127 125 110 1
+V:S1V2
+%%MIDI beat 127 125 110 1
+V:S2V1 clef=bass
+%%MIDI beat 127 125 110 1
+V:S2V2
+%%MIDI beat 127 125 110 1
+K: E % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+% 1
+[V: S1V1] [Q:1/4=140] c | c2 B   | c2   B  | B    A2          | G2 c | (c B) G |
+w: 1.~O won- drous type! O vi- sion fair Of glo- * ry 
+w: 2.~From age to age the tale de- clare, How with * the 
+w: 3.~The law and pro- phets there have place, Two cho- * sen 
+w: 4.~With shin- ing face and bright ar- ray, Christ deigns * to 
+w: 5.~And faith- ful hearts are raised on high by this * great 
+[V: S1V2]            E  | E2 E   | E2   D  | E    E2          | E2  E  | E2 E |
+[V: S2V1]            G, | G,2 G, | A,2  G, | G,   C2          | C2  C    | (A, B,) B, |
+[V: S2V2]            C, | C,2 E, | A,,2 G,, | (G,, A,,3/2) B,,/ | E,2  A,, | (A, G,) E, |
+% 7
+[V: S1V1] (F G) F/C/ | E D2 | C2 G | B2 B | (c B) A |
+w: that * the * Church may share, Which Christ up- on * the 
+w: three * di- * sci- ples there, Where Mo- ses and * El- 
+w: wit- * ness- * es of grace; The Fa- ther's voice * from 
+w: man- * i- * fest to- day What glo- ry shall * be 
+w: vi- * sion's * mys- te- ry; For which in joy- * ful 
+[V: S1V2] C2 C       | C2 ^B,           | C2 E   | D E2   | E2 F |
+[V: S2V1] (A, G,) A, | G,2 G,/F,/      | E,2 C  | B,2 G,  | (A, B,) C |
+[V: S2V2] (F, E,) A, | (E,/F,/ G,) G,, | C,2 C, | G,2 E, | (A, G,) F, |
+% 12
+[V: S1V1] G F2 | E2 !sintro!E | G2 G | F2 E | E D2 | C2 !eintro!|]
+w: moun- tain shows, where bright- er than the sun He glows! 
+w: i- jah meet, The Lord holds con- verse high and sweet. 
+w: out the cloud pro- claims His on- ly Son a- loud. 
+w: theirs a- bove who joy in God with per- fect love. 
+w: strains we raise the voice of prayer, the hymn of praise. 
+[V: S1V2] E2 D | B,2 C | B, C2 | (C ^B,) C | C2 ^B, | C2 |]
+[V: S2V1] B,2 B, | G,2 A, | (B, G,) E, | (A, G,) G, | (A,/G,/ A,) G, | E,2 |]
+[V: S2V2] (G,/A,/ B,) B,, | E,2 E, | E,2 C, D,2 E, (F,/G,/ F,) G, C,2 |]
+W: 6.O Father, with th'Eternal Son,
+W: and Holy Spirit, ever One,
+W: Vouchsafe to bring us by Thy grace
+W: to see Thy glory face to face.

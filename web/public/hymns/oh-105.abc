@@ -1,0 +1,88 @@
+X: 105
+T: Christ Jesus Lay In Death's Strong Bands
+%%combinevoices 1
+T: (also known as In Death's Strong Bands)
+C: Words: Martin Luther, 1524.  Translated by Richard Massie, 1854.
+C: Music: 'Christ lag in Tobes Banden' or 'Torgau' from Walter's Geistliche Gesangbüchlein, 1524.
+C: Setting: "Evangelical Lutheran Hymn-Book", 1931, alt.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2008 Revision.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+%%staffsep 0.62cm
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=110] A2 | G A c d | c B A3/2 A/ | F G A G/F/ |
+w: 1.~Christ Je- sus lay in death's strong bands, For our of- fen- ses * 
+w: 2.~No son of man could con- quer Death, Such mis- chief sin had * 
+w: 3.~But Je- sus Christ, God's on- ly Son, To our low state de- * 
+w: 4.~It was a strange and dread- ful strife When life and death con- * 
+w: 5.~Here the true Pas- chal Lamb we see, Whom God so free- ly * 
+[V: S1V2]  F2 | E E A F | E3/2 D/ C3/2 C/ | D E F D |
+[V: S2V1]  D2 | B, C A, A, | A, ^G, A,3/2 A,/ | A, C C _B,/A,/ |
+[V: S2V2]  D,2 | E, A, F, D, | E, E, A,,3/2 F,/ | D, C, F,, G,,/D,/ |
+% 5
+[V: S1V1]  E !fermata!D A2 | G A c d | c B A3/2 A/ | F G A G/F/ |
+w: giv- en; But now at God's right hand He stands, And brings us life from * 
+w: wrought us, For in- no- cence dwelt not on earth, And there- fore Death had * 
+w: scend- ed, The cause of Death He has un- done, His power for- ev- er * 
+w: ten- ded; The vic- to- ry re- mained with life; The reign of death was * 
+w: gave us; He died on the ac- cur- sed tree So strong His love! to * 
+[V: S1V2]  D/^C/ D F2 | E E A F | E3/2 D/ C3/2 C/ | D E F D |
+[V: S2V1]  A, !invertedfermata!F, D2 | B, C A, A, | A, ^G, A,3/2 A,/ | A, C C _B,/A,/ |
+[V: S2V2]  A,, D, D,2 | E, A, F, D, | E, E, A,,3/2 F,/ | D, C, F,, G,,/D,/ |
+% 9
+[V: S1V1]  E !fermata!D D F | G D F G | A3/2 A/ d c | d e
+w: Hea- ven. Where- fore let us joy- ful be, And sing to God right 
+w: brought us In- to thrall- dom from of old And ev- er grew more 
+w: end- ed, Ru- ined all his right and claim And left him no- thing 
+w: end- ed. Stripped of power, no more it reigns, An emp- ty form a- 
+w: save us. See, His blood doth mark our door; Faith points to it, Death 
+[V: S1V2]  D/^C/ D A, D | D _B,/C/ C D/E/ | F3/2 C/ F E | G G
+[V: S2V1]  A, !invertedfermata!F, F, A, | _B, F, A, B, | C3/2 A,/ A, C | B, B,
+[V: S2V2]  A,, D, D, D, | G,, _B,, A,, G,, | F,,3/2 F,/ D, A, | G, E,
+% 13
+[V: S1V1]  c B | A3/2 !sintro!A/ c A | c G (F/D/ E) | D2 A G/F/ | E !fermata!D !eintro!|]
+w: thank- ful- ly Loud songs of Al- le- lu- * * ia! Al- le- * lu- ia! 
+w: strong and bold And kept us in his bon- * * dage. Al- le- * lu- ia! 
+w: but the name, His sting is lost for- ev- * * er. Al- le- * lu- ia! 
+w: lone re- mains Death's sting is lost for- ev- * * er! Al- le- * lu- ia! 
+w: pas- ses o'er, And Sa- tan can- not harm * * us. Al- le- * lu- ia! 
+[V: S1V2]  E3/2 D/ | C3/2 F/ G F | E E (D ^C) | D2 F D | D/^C/ D |]
+[V: S2V1]  A, ^G, | A,3/2 C/ C C | C C (A,3/2 G,/) | F,2 C _B,/A,/ | A, !invertedfermata!F, |]
+[V: S2V2]  A, E, | A,,3/2 F,/ E, F, | A,, C, (F,,/G,,/ A,,) | _B,,2 F,, G,,/D,/ | A,, D, |]
+% 18
+%%multicol start
+%%rightmargin 12cm
+%%textfont Times-Roman 12.5
+%%begintext obeylines justify
+%% 6.\tSo let us keep the festival Where to the Lord invites us;
+%% \t\t\t\tChrist is Himself the joy of all, The Sun that warms and lights us.
+%% \t\t\t\tBy His grace He doth impart Eternal sunshine to the heart;
+%% \t\t\t\tThe night of sin is ended! Alleluia!
+%%endtext
+%%multicol new
+%%leftmargin 10.5cm
+%%rightmargin 2cm
+%%textfont Times-Roman 12.5
+%%begintext obeylines justify
+%% 7.\tThen let us feast this Easter day On the true Bread of Heaven;
+%% \t\t\t\tThe Word of grace hath purged away The old and wicked leaven.
+%% \t\t\t\tChrist alone our souls will feed; He is our Meat and Drink indeed;
+%% \t\t\t\tFaith lives upon no other! Alleluia!
+%%endtext
+%%multicol end

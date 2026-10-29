@@ -1,0 +1,57 @@
+X: 176
+T: O The Deep, Deep Love of Jesus
+C: Words: S. Trevor Francis, 1875. 
+C: Music: 'Ebenezer' or 'Ton-Y-Botel' Thomas J. Williams, 1890.  Setting: "A Hymnal" (Episcopal), 1916.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2010 Revision.
+S: Music source: The Episcopal Hymnal, 1918, Hymn 433.
+M: 8/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Ab % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=180] F2(3FGA  G2 F2 | G2(3GAB  (A3/2 G/) F2 | c2(3Bcd  (c3/2 B/) A2 | (B3/2 A/) G2 F4 |
+w: 1.~O the * * deep, deep love of * * Je- * sus, vast, un- * * meas- * ured, bound- * less, free! 
+w: 2.~O the * * deep, deep love of * * Je- * sus, spread His * * praise * from shore * to shore! 
+w: 3.~O the * * deep, deep love of * * Je- * sus, love of * * ev- * ery love * the best! 
+[V: S1V2]  C2 C2 =E2 F2 | F2 =E2 F2 C2 | C2(3::2_E2F  G2 F2 | F2 =E2 F4 |
+[V: S2V1]  A,2 C2 C2 A,2 | D2 C2 (C3/2 B,/) A,2 | E2(3::2B,2A,  C2 C2 | (D3/2 C/) B,2 A,4 |
+[V: S2V2]  F,,2 A,,2 C,2 D,2 | B,,2 C,2 F,2 F,2 | A,2(3::2G,2F,  =E,2 F,2 | B,,2 C,2 F,4 |
+% 5
+[V: S1V1]  F2(3FGA  G2 F2 | G2(3GAB  (A3/2 G/) F2 | c2(3Bcd  (c3/2 B/) A2 | (B3/2 A/) G2 F4 |
+w: Rol- ling * * as a might- y * * o- * cean in its * * full- * ness ov- * er me! 
+w: How He * * lov- eth, ev- er * * lov- * eth, chang- eth * * ne- * ver, nev- * er- more! 
+w: 'Tis an * * o- cean full of * * bless- * ing, 'tis a * * ha- * ven giv- * ing rest! 
+[V: S1V2]  C2 C2 =E2 F2 | F2 =E2 F2 C2 | C2(3::2_E2F  G2 F2 | F2 =E2 F4 |
+[V: S2V1]  A,2 C2 C2 A,2 | D2 C2 (C3/2 B,/) A,2 | E2(3::2B,2A,  C2 C2 | (D3/2 C/) B,2 A,4 |
+[V: S2V2]  F,,2 A,,2 C,2 D,2 | B,,2 C,2 F,2 F,2 | A,2(3::2G,2F,  =E,2 F,2 | B,,2 C,2 F,4 |
+% 9
+[V: S1V1]  c2(3ABc  B2 B2 | A2(3FGA  G2 G2 | F2(3FGA  B2 B2 | A2(3BAB  c4 |
+w: Un- der- * * neath me, all ar- * * ound me, is the * * cur- rent of Thy * * love 
+w: How He * * watch- es o'er His * * loved ones, died to * * call them all His * * own; 
+w: O the * * deep, deep love of * * Je- sus, 'tis a * * heav'n of heav'ns to * * me; 
+[V: S1V2]  E2 E2 E2 E2 | C2 F2 F2 =E2 | F2 C2 F2 E2 | C2 F2 =E4 |
+[V: S2V1]  A,2 A,2 A,2 G,2 | A,2 C2 C2 C2 | F,2 A,2 A,2 G,2 | A,2 F,2 G,4 |
+[V: S2V2]  A,,2 C,2 E,2 E,2 | F,2 A,,2 C,2 C,2 | F,2 E,2 D,2 E,2 | (F, E,) D,2 C,4 |
+% 13
+[V: S1V1]  F2(3FGA  G2 F2 | G2(3GAB  (A3/2 G/) F2 | !sintro!c2(3Bcd  (c3/2 B/) A2 | (B3/2 A/) G2 F4 !eintro!|]
+w: Lead- ing * * on- ward, lead- ing * * home- * ward to Thy * * glor- * ious rest * a- bove! 
+w: How for * * them He in- ter- * * ce- * deth, watch- eth * * o'er * them from * the throne! 
+w: And it * * lifts me up to * * glo- * ry, for it * * lifts * me up * to Thee! 
+[V: S1V2]  A,2 F2 =E2 F2 | F2 =E2 F2 F2 | E2 E2 E2 F2 | F2 =E2 F4 |]
+[V: S2V1]  F,2 C2 C2 A,2 | D2 C2 (C3/2 B,/) A,2 | A,2(3G,A,B,  (A,3/2 G,/) F,2 | (D3/2 C/) B,2 A,4 |]
+[V: S2V2]  D,2 A,,2 C,2 D,2 | B,,2 C,2 F,2 F,2 | A,2 E,2 A,,2 D,2 | B,,2 C,2 F,4 |]
+% 18

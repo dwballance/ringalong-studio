@@ -1,0 +1,46 @@
+X: 244
+T: Did You Think To Pray?
+%%combinevoices 1
+C: Words: Mary A. Pepper Kidder, 1876. 
+C: Music: 'Stockbridge' or 'Did You Think To Pray' William Oscar Perkins, 1876. 
+C: Setting: William Oscar Perkins, 1876.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: "Gospel Echoes" by R.G. Staples, 1877 hymn 27.  There referenced from "Shining River" by William Oscar Perkins; O. Ditson & Co.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves S1 | S2 
+V: S1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S2 clef=bass 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%
+% 1
+[V: S1] [Q:1/4=120] [F3/2A3/2] [F/A/] [F/B/][F/A/] [C/G/][C/F/] | C2 [C2F2] | [E3/2G3/2] [E/G/] [GB] [FA] | [E4G4] |
+w: 1.~Ere you left your room this morn- ing, Did you think to pray? 
+w: 2.~When you met with great temp- ta- tion, Did you think to pray? 
+w: 3.~When your heart was filled with an- ger, Did you think to pray? 
+w: 4.~When sore tri- als came up- on you, Did you think to pray? 
+[V: S2]  [F,3/2C3/2] [F,/C/] [F,/D/][F,/C/] [F,/B,/][F,/A,/] | [F,2A,2] [F,2A,2] | [C,3/2C3/2] [C,/C/] [E,C] [F,C] | [C,4C4] |
+% 5
+[V: S1]  [E3/2G3/2] [E/G/] [E/G/][E/G/] F/[E/G/] | [F2A2] [F2c2] | [F3/2A3/2] [F/A/] [F/B/][F/A/] [C/G/][C/F/] | D2 [D2F2] |
+w: In the name of Christ our Sa- vior, Did you sue for lov- ing fa- vor, 
+w: By His dy- ing love and mer- it, Did you claim the Ho- ly Spir- it 
+w: Did you plead for grace, my bro- ther, That you might for- give a- no- ther 
+w: When your soul was bowed in sor- row, Balm of Gil- ead did you bor- row 
+[V: S2]  [C,3/2C3/2] [C,/C/] [C,/C/][C,/C/] [A,,/C/][C,/C/] | [F,2C2] [F,2A,2] | [F,3/2C3/2] [F,/C/] [F,/D/][F,/C/] [F,/B,/][F,/A,/] | [B,,2B,2] [B,,2B,2] |
+% 9
+[V: S1]  [C3/2E3/2] [C/F/] [E3/2G3/2] [E/A/] | F4 | [A3/2c3/2] [A/c/] [B/d/][A/c/] [^G/=B/][A/c/] | [A2f2] [A2c2] | [F3/2A3/2] [A/c/]
+w: As a shield to- day? O how pray- ing rests the wea- ry! Prayer will 
+w: As your guide and stay?  *  *  *  *  *  * *  *  *  * 
+w: Who had crossed your way?  *  *  *  *  *  * *  *  *  * 
+w: At the gates of day?  *  *  *  *  *  * *  *  *  * 
+[V: S2]  [C,3/2G,3/2] [C,/A,/] [C,3/2B,3/2] [C,/C/] | [F,4A,4] | [F,3/2C3/2] [F,/F/] [F,/F/][F,/F/] [F,/F/][F,/F/] | [F,2C2] [F,2F2] | [F,3/2C3/2] [F,/F/]
+% 13
+[V: S1]  [B/d/][A/c/] [G/B/][F/A/] | [E4G4] | [F3/2A3/2] [F/A/] [F/B/][F/A/] [C/G/][C/F/] | D2 [D2F2] | !sintro![C3/2E3/2] [C/F/] [E3/2G3/2] [F/A/] | F4 !eintro!|]
+w: change the night to day; So when life seems dark and drea- ry, Don't for- get to pray. 
+[V: S2]  [F,/F/][F,/F/] [F,/C/][F,/C/] | [C,4C4] | [F,3/2C3/2] [F,/C/] [F,/D/][F,/C/] [F,/B,/][F,/A,/] | [B,,2B,2] [B,,2B,2] | [C,3/2G,3/2] [C,/A,/] [C,3/2B,3/2] [C,/C/] | [F,4A,4] |]
+% 20

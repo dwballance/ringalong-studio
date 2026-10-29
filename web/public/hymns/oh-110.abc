@@ -1,0 +1,44 @@
+X: 110
+T: Jesus Christ Who Came to Save
+%%combinevoices 1
+T: (also known as Jesus Christ Today is Risen or Jesus Christ Our Savior True
+T: or Jesus Christ, Our Blessed Savior)
+C: Words: Martin Luther, 1524.  Translated by Leonard Woolsey Bacon, 1883. 
+C: Music: 'Jesus Christus Unser Heiland, Der Den Tod (Klug)' from Klug's Geistliche Lieder, Wittenberg, 1533. 
+C: Setting: Johann Sebastian Bach.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] A A G A | B A (G ^F | !fermata!E) G A B | A ^G !fermata!A
+w: 1.~Je- sus Christ, who came to save, * * And o- ver- came the grave, 
+w: 2.~Who with- out- en sin was found, * * Bore our trans- gres- sion's wound. 
+w: 3.~Life and mer- cy, sin and death, * * All in His hands He hath; 
+[V: S1V2]  C E E D | D ^F (E ^D | E) E D F | E E E
+[V: S2V1]  E, A, B, A, | G, C (B, B,/A,/ | !invertedfermata!G,) C A, D | C B, !invertedfermata!C
+[V: S2V2]  A,, C, E, ^F, | G, A, (B, B,, | E,) C, F, G, | A, E, A,,
+% 5
+[V: S1V1]  d | A/B/ c (B A) | !fermata!B A A A | B A (G ^F) | !fermata!E !sintro!G A B | (A ^G) !fermata!A2 !eintro!|]
+w: Is now * a- ris- * en, And sin hath bound in pri- * son. Ky- ri' e- lei- * son. 
+w: He is * our Sa- * vior, And brings us to God's fa- * vor.  *  *  *  *  *  * 
+w: Them He'll * de- li- * ver, Who trust in Him for- ev- * er.  *  *  *  *  *  * 
+[V: S1V2]  F | E E (F D) | B, ^C D D | D E (E ^D) | E E C D | (E E/D/) ^C2 |]
+[V: S2V1]  A, | A, A, (A, B,) | !invertedfermata!^G, =G, F, ^F, | G, C (B, B,/A,/) | !invertedfermata!G, G, ^F, G, | (C B,) !invertedfermata!A,2 |]
+[V: S2V2]  B,, | C, A, (D, F,) | E, A,, D, D, | G,, A,, B,,2 | E, C, A,, G,, | (A,, E,) A,,2 |]
+% 11

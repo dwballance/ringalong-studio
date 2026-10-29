@@ -1,0 +1,67 @@
+X: 185
+T: Dear Christians, One and All Rejoice
+%%combinevoices 1
+C: Words: Martin Luther, 1523.  Translated by Richard Massie, 1854, alt. 
+C: Music: 'Nun Freut Euch' attr. Martin Luther from Etlich Christlich Lider, Wittenberg, 1524. 
+C: Setting: Johann Hermann Schein, 1627.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+S: Music source: "The Hymns of Martin Luther" by Bacon, 1883.  Setting originally from "Cantional oder Gesangbuch Augburgischer Konfession" by Johann Hermann Schein.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=140] G2 G D | G c B A | G2 z G | A c B A | (E F) G2 |
+w: 1.~Dear Christ- ians, one and all re- joice, With ex- ul- ta- tion spring- * ing, 
+w: 2.~Fast bound in Sa- tan's chains I lay. Death brood- ed dark- ly o'er * me; 
+w: 3.~My good works could a- vail me naught, For they with sin were stain- * éd; 
+w: 4.~God saw, in his e- ter- nal grace, My sor- row out of mea- * sure; 
+w: 5.~He spake to his be- lov- ed Son: 'Tis time to take com- pass- * ion; 
+[V: S1V2]  D2 D A, | B, E D D | [B,2D2] x D | F A G F | (E D) D2 |
+[V: S2V1]  B,2 B, A, | G, G, G, F, | G,2 z B, | D E D A, | A,2 B,2 |
+[V: S2V2]  G,2 G, F, | E, C, D, D, | G,,2 x G, | D, A,, B,, D, | (C, D,) G,,2 |
+% 5
+[V: S1V1]  G2 G D | G c B A | G2 z G | A c B A | (E F) G2 |
+w: And with u- ni- ted heart and voice And ho- ly rap- ture sing- * ing, 
+w: Sin was my tor- ment night and day, There- in my mo- ther bore * me. 
+w: Free- will a- gainst God's judg- ment fought, And dead to good re- main- * éd. 
+w: He thought u- pon his ten- der- ness To save was his good pleas- * ure. 
+w: Then go, bright je- wel of my crown, And bring to man sal- va- * tion; 
+[V: S1V2]  D2 D A, | B, E D D | [B,2D2] x D | F A G F | (E D) D2 |
+[V: S2V1]  B,2 B, A, | G, G, G, F, | G,2 z B, | D E D A, | A,2 B,2 |
+[V: S2V2]  G,2 G, F, | E, C, D, D, | G,,2 x G, | D, A,, B,, D, | (C, D,) G,,2 |
+% 13
+[V: S1V1]  z G c B | c d d ^c | d2 z d | e c d3/2 c/ |
+w: Pro- claim the won- ders God hath done, How his right arm the 
+w: Deep- er and deep- er still I fell, Life was be- come a 
+w: Grief drove me to des- pair, and I Had no- thing left me 
+w: He turn'd to me a Fa- ther's heart\- Not small the cost to 
+w: From sin and sor- row set him free, Slay bit- ter death for 
+[V: S1V2]  x D E D | G F E E | F2 x G | G =F =F E |
+[V: S2V1]  z B, G, G, | G, A, B, A, | A,2 z B, | C A, B, G, |
+[V: S2V2]  x G, C, G, | E, F, G, A, | D,2 x G, | C, =F, D, E, |
+% 17
+[V: S1V1]  B A G2 | z !sintro!B A D | G A (B A) | G4 !eintro!|]
+w: vic- t'ry won; Right dear- ly it hath cost * him. 
+w: li- ving hell, So firm- ly sin po- ssessed * me. 
+w: but to die, To hell I fast was sink- * ing. 
+w: heal my smart He gave his best and dear- * est. 
+w: him, that he May live with thee for- ev- * er. 
+[V: S1V2]  D D [B,2D2] | x D D D | E C D2 | [B,4D4] |]
+[V: S2V1]  G, F, G,2 | z G, F, G, | E, E, G, F, | G,4 |]
+[V: S2V2]  G, D, G,,2 | x G, D, B,, | C, A,, G,, D, | G,,4 |]
+% 20

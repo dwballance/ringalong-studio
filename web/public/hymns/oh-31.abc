@@ -1,0 +1,49 @@
+X: 31
+T: Come, Thou Long-Expected Jesus
+%%combinevoices 1
+T: (also known as Hail, Thou Long-Expected Jesus)
+C: Words: Charles Wesley, 1745. 
+C: Music and Setting: 'Jefferson'  from "Southern Harmony", 1835, alt.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2008 Revision.
+S: Music source: Southern Harmony, 1835, Hymn 42.  Setting heavily altered for congregational use.
+M: 2/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | S2 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2 clef=bass 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100]  A A/G/ | E G/A/ | c B/A/ | B A | A/G/ E/D/ | E G/A/ | c B | A2 |
+w: 1.~Come, Thou * long ex- * pect- ed * Je- sus Born * to * set Thy * peo- ple free; 
+w: 2.~Born Thy * peo- ple * to de * li- ver, Born * a * child and * yet a King, 
+[V: S1V2]   A, A,/B,/ | C A, | E B | G/F/ E | C B, | A, B,/A,/ | C B, | A,2 |
+[V: S2]   E, E,/G,/ | A, A, | G, E,/F,/ | G, E, | C,/D,/ E,/G,/ | A, D, | E, E, | A,,2 |
+% 9
+[V: S1V1]  A A/G/ | E G/A/ | c B/A/ | B A | A/G/ E/D/ | E G/A/ | c B | A2 |
+w: From our * fears and * sins re- * lease us, Let * us * find our * rest in Thee. 
+w: Born to * reign in * us for- * ev- er, Now * Thy * grac- ious * king- dom bring. 
+[V: S1V2]  A, A,/B,/ | C A, | E B | G/F/ E | C B, | A, B,/A,/ | C B, | A,2 |
+[V: S2]  E, E,/G,/ | A, A, | G, E,/F,/ | G, E, | C,/D,/ E,/G,/ | A, D, | E, E, | A,,2 |
+% 17
+[V: S1V1]  c d | e e | c B/A/ | B A | c d | e e/d/ | c B/A/ | B2 |
+w: Is- rael's Strength and Con- sol- * a- tion, Hope of all the  * earth Thou * art; 
+w: By Thine own e- ter- nal * Spi- rit Rule in all our  * hearts a- * lone; 
+[V: S1V2]  C B, | A, A, | C/D/ E/D/ | E E | E D | C A, | C D/C/ | B,2 |
+[V: S2]   E, G, | A, A, | G, A, | E, E, | C, D, | E, A, | G, D, | E,2 |
+% 25
+[V: S1V1]  A c/d/ | e e | c B/A/ | B A | !sintro!A/G/ E/D/ | E G/A/ | c B | A2 !eintro!|]
+w: Dear De- * sire of ev- ery * na- tion, Joy * of * ev- ery * long- ing  heart. 
+w: By Thine * all suf- fi- cient * mer- it, Raise * us * to Thy * glor- ious throne. 
+[V: S1V2]  E E/D/ | B, C/B,/ | C B,/C/ | D E | C B, | A, B,/A,/ | G, B, | A,2 |]
+[V: S2]  A, G,/A,/ | B, A, | A, E, | D, E, | A, B, | A, D, | E, E, | A,,2 |]
+% 34

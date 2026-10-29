@@ -1,0 +1,56 @@
+X: 64
+T: Now Praise We Christ, the Holy One
+%%combinevoices 1
+T: (also known as Jesus We Now Must Laud and Sing or From East to West)
+C: Words: Coelius Sedulius, circa 450.  Translated to German by Martin Luther, 1524. 
+C: Translated from German to English by Richard Massie, 1854, alt. 
+C: Music: 'Christum Wir Sollen Loben Schon' ancient Latin found in Erfurt Enchiridion, 1524. 
+C: Setting: Michael Praetorius, 1609.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=130] D2 F G | A D G F | E2 z G | A c c B | A B c2 |
+w: 1.~Now praise we Christ, the Ho- ly One, The spot- less vir- gin Ma- ry's Son, 
+w: 2.~He, who Him- self all things did make, A ser- vant's form vouch- safed to take, 
+w: 3.~The grace of God, th'Al- might- y Lord, On the chaste mo- ther was out- poured 
+w: 4.~The ho- ly maid be- came th'a- bode And tem- ple of the liv- ing God; 
+w: 5.~The no- ble mo- ther bare a Son, For so did Ga- briel's pro- mise run, 
+[V: S1V2]  A,2 D E | D3/2 C/ B,/C/ D | ^C2 x E | F A G G | F G G2 |
+[V: S2V1]  F,2 A, C | A, B,/A,/ G, A, | A,2 z B, | D E E D | D D E2 |
+[V: S2V2]  D,2 D, C, | F, G, E, D, | A,2 x E, | D, A, C G, | D, G, C,2 |
+% 5
+[V: S1V1]  z G A c | c B A ^G | A2 z !sintro!D | A A c A | (G/A/ F) E2 | E4 !eintro!|]
+w: Far as the bless- éd sun doth shine E'en to the world's re- mote * * con- fine 
+w: That He as man man- kind might win, And save His crea- tures from * * their sin. 
+w: a vir- gin pure and un- de- filed In won- drous wise con- ceived * * a child. 
+w: And she, who knew not man, was blest With God's own Word made man- * * i- fest. 
+w: Whom John con- fessed and leapt with joy, Ere yet the mo- ther knew * * her boy. 
+[V: S1V2]  x E E F | G G E E | C2 x D | F F E C | (E D) (C B,/A,/) | B,4 |]
+[V: S2V1]  z C C A, | E D C B, | A,2 z B, | C D G, A, | (B,/C/ A,2) ^G,/^F,/ | ^G,4 |]
+[V: S2V2]  x C A, F, | C, G, A, E, | A,2 x G, | F, D, C, F, | (E,/C,/ D,) E,2 | E,4 |]
+% 13
+W: 6. In a rude manger, stretched on hay, In poverty content He lay;
+W: With milk was fed the Lord of all, Who feeds the ravens when they call.
+W: 
+W: 7. Th' angelic choir rejoice, and raise Their voice to God in songs of praise;
+W: To humble shepherds is proclaimed The Shepherd who the world hath framed.
+W: 
+W: 8. Honor to Thee, O Christ, be paid, Pure offspring of a holy maid,
+W: With Father and with Holy Ghost, Till time in time's abyss be lost.

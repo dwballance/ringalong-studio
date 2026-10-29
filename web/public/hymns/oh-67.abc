@@ -1,0 +1,62 @@
+X: 67
+T: See Amid the Winter's Snow
+%%combinevoices 1
+C: Words: Edward Caswall, 1851.  Music: 'Humility' John Goss, 1870. 
+C: Setting: "The Children's Hymnal, with Tunes", 1875.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2008 Revision.
+S: Music source: "The Children's Hymnal, with Tunes", 1875 Hymn 233.  Ed. John Ireland Tucker, but marked as being an older arrangement.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] G3/2 A/ G F | E3/2 D/ D2 | G A c B | B3/2 A/ A2 |
+w: 1.~See a- mid the win- ter's snow, Born for us on earth be- low, 
+w: 2.~Lo, with- in a man- ger lies He Who built the star- ry skies; 
+w: 3.~Say, you ho- ly shep- herds, say, Tell your joy- ful news to- day. 
+w: 4.~"As we watched at dead of night, Lo, we saw a won- drous light; 
+w: 5.~Sac- red In- fant, all di- vine, What a ten- der love was Thine, 
+[V: S1V2]  B,2 C D | G, A, (B, C) | D2 G2 | G2 F2 |
+[V: S2V1]  G,2 G, D, | E, F, (G, A,) | B,2 E D | D ^C D2 |
+[V: S2V2]  G,,2 A,, B,, | C,2 G,,2 | G, F, E, G, | D,2 (D, C,) |
+% 5
+[V: S1V1]  G3/2 A/ G F | E3/2 D/ D2 | G A B c | A3/2 G/ G2 |
+w: See, the gen- tle Lamb ap- pears, Pro- mised from e- ter- nal years. 
+w: He Who, thronèd in height sub- lime, Sits a- mid the cher- u- bim. 
+w: Why have you now left your sheep On the lone- ly moun- tain steep? 
+w: An- gels sing- ing 'Peace on earth' Told us of the Sa- vior's birth." 
+w: Thus to come from high- est bliss Down to such a world as this.  
+[V: S1V2]  D B, C D | G, A, (B, A,) | B, C D E | C2 B,2 |
+[V: S2V1]  G,2 G, D, | E, F, (G, A,) | G,2 G,2 | G, F, G,2 |
+[V: S2V2]  B,, G,, A,, B,, | C,2 (G, F,) | E,2 D, C, | D,2 G,,2 |
+% 9
+[V: S1V1]  d3/2 d/ c B | A G F2 | d3/2 d/ c B | A G F2 |
+w: Hail that ev- er bles- sèd morn, Hail re- demp- tion's hap- py dawn, 
+[V: S1V2]  G3/2 G/ G G | D D D2 | D3/2 G/ G G | E D D2 |
+[V: S2V1]  B,3/2 B,/ E D | C B, A,2 | G,3/2 G,/ E D | C B, A,2 |
+[V: S2V2]  G,3/2 G,/ G, G, | F, G, D,2 | B,,3/2 B,,/ C, G,, | A,, B,,/C,/ D,2 |
+% 13
+[V: S1V1]  !sintro!G3/2 A/ G F | E3/2 D/ D2 | d3/2 B/ G c | B A G2 !eintro!|]
+w: Sing through all Jer- u- sa- lem: Christ is born in Beth- le- hem. 
+[V: S1V2]  B,3/2 B,/ ^C D | D ^C D2 | D3/2 D/ E G | F F G2 |]
+[V: S2V1]  G,3/2 G,/ E, D, | B, A,/G,/ F,2 | G,3/2 G,/ G, E | D C B,2 |]
+[V: S2V2]  E,3/2 E,/ A,, B,, | G,, A,, (D, C,) | B,,3/2 B,,/ C, A,, | D, D, G,,2 |]
+% 18
+W: 6.Teach, O teach us, holy Child,
+W: By Thy face so meek and mild,
+W: Teach us to resemble Thee,
+W: In Thy sweet humility.

@@ -1,0 +1,67 @@
+X: 85
+T: A Lamb Goes Uncomplaining Forth
+%%combinevoices 1
+C: Words: Paul Gerhardt, 1648.  Translation composite. 
+C: Music: 'An Wasserflüssen Babylon' Wolfgang Dachstein, 1525.  Setting: "Evangelical Lutheran Hymn-Book", 1931.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2008 Revision.
+S: Music source: Evangelical Lutheran Hymnal, 1931 Hymn 191.
+S: Translation is public domain per Project Wittenberg: http://www.iclnet.org/pub/resources/text/wittenberg/hymns/lambgoes.txt
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] c2 d c | A2 c2 | B B A2 | G2 A B | c2 (B A) | G2 F2 |
+w: 1.~A Lamb goes un- com- plain- ing forth, The guilt of all men * bear- ing; 
+w: 2.~This Lamb is Christ, the soul's great Friend, The Lamb of God, our * Sa- vior; 
+w: 3.~"Yea, Fa- ther, yea, most will- ing- ly I'll bear what Thou com- * man- dest; 
+w: 4.~Thou lay'st Him, Love, u- pon the cross, With nails and spear Him * bruis- ing;  
+w: 5.~Lord, all my life I'll cleave to Thee, Thy love for- e'er be- * hold- ing, 
+[V: S1V2]  F2 F E | F2 F2 | F E F2 | E2 F F | F2 F2 | (F E) F2 |
+[V: S2V1]  A,2 B, G, | F,2 C2 | D B, C2 | C2 C D | C2 (D C) | C2 A,2 |
+[V: S2V2]  F,2 B,, C, | D,2 A,,2 | B,, G,, F,,2 | C,2 F, D, | A,,2 (B,, F,) | C,2 F,,2 |
+% 5
+[V: S1V1]  c2 d c | A2 c2 | B B A2 | G2 A B | c2 (B A) | G2 F2 |
+w: And la- den with the sins of earth, None else the bur- den * shar- ing!  
+w: Him God the Fa- ther chose to send To gain for us His * fa- vor. 
+w: My will con- forms to Thy de- cree, I do what Thou de- * man- dest." 
+w: Thou slay'st Him as a lamb, His loss from soul and bod- y * ooz- ing; 
+w: Thee ev- er, as Thou ev- er me, With lo- ving arms en- * fold- ing. 
+[V: S1V2]  F2 F E | F2 F2 | F E F2 | E2 F F | F2 F2 | (F E) F2 |
+[V: S2V1]  A,2 B, G, | F,2 C2 | D B, C2 | C2 C D | C2 (D C) | C2 A,2 |
+[V: S2V2]  F,2 B,, C, | D,2 A,,2 | B,, G,, F,,2 | C,2 F, D, | A,,2 (B,, F,) | C,2 F,,2 |
+% 13
+[V: S1V1]  F2 G A | B2 G2 | A G F2 | F2 A B | c2 d2 |
+w: Goes pa- tient on, grow weak and faint, To slaugh- ter led with- 
+w: "Go forth, My Son," the Fa- ther saith, "And free men from the 
+w: O won- drous Love, what hast Thou done! The Fa- ther o- ffers 
+w: From bo- dy 'tis the crim- son flood Of pre- cious sac- ri- 
+w: Yea, Thou shalt be my Bea- con- light, To guide me safe through 
+[V: S1V2]  C2 E F | F2 E2 | F E C2 | D2 F F | E2 F2 |
+[V: S2V1]  A,2 C C | D2 C2 | C C A,2 | B,2 C F, | G,2 B,2 |
+[V: S2V2]  F,2 C, F, | B,,2 C,2 | F, C, F,,2 | B,,2 F, D, | C,2 B,,2 |
+% 17
+[V: S1V1]  A =B c2 | z2 A2 | c d c A | B2 A2 | d2 d d |
+w: out com- plaint, That spot- less life to o- ffer; Bears shame and 
+w: fear of death, From guilt and con- dem- na- tion. The wrath and 
+w: up His Son! The Son, con- tent, de- scend- eth! O Love, how 
+w: fi- cial blood From soul, the strength of an- guish: My gain it 
+w: death's dark night. And cheer my heart in sor- row; Hence- forth my- 
+[V: S1V2]  F F E2 | x2 F2 | F F E D | D2 D2 | F2 F F |
+[V: S2V1]  A, F, G,2 | z2 F,2 | F, B, G, F, | G,2 ^F,2 | F,2 B, B, |
+[V: S2V2]  D, D, C,2 | x2 D,2 | A,, B,, C, D, | G,,2 D,2 | B,,2 D, B,, |
+% 25

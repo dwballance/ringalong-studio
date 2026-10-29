@@ -1,10 +1,10 @@
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { hymnNumber, hymnReference, loadHymnCatalog, matchingHymns, type HymnSource } from '../src/hymns';
+import { hymnNumber, hymnReference, loadHymnCatalog, matchingHymns, searchHymns, type HymnSource } from '../src/hymns';
 import { importABC } from '../src/hymn-music';
 import { problems, eventsFor } from '../src/music';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { abcEntryId, collectUnmappedCandidates, createHymnCatalogEntry, hasExplicitPublicDomainNotice,
+import { abcEntryId, collectUnmappedCandidates, createHymnCatalogEntry, createUnnumberedCatalogEntry, firstLyricLine, hasExplicitPublicDomainNotice,
   isNumberedHymnMapping, parseAbcEntries, validateNumberedHymnMapping } from '../../scripts/hymn-catalog-lib.mjs';
 
 describe('offline catalog refresh rules', () => {
@@ -30,7 +30,10 @@ describe('offline catalog refresh rules', () => {
   });
   it('rejects numbered mappings missing fields required by the browser catalog', () => {
     expect(() => validateNumberedHymnMapping({ hymnal: 'UMH1989', number: '218', reference: '60',
-      title: 'It Came Upon A Midnight Clear', tune: '' })).toThrow('missing tune');
+      title: 'It Came Upon A Midnight Clear', tune: '' })).not.toThrow();
+    expect(() => validateNumberedHymnMapping({ hymnal: 'UMH1989', number: '218', reference: '60',
+      title: '', tune: 'CAROL' })).toThrow('missing hymn title');
+    expect(createHymnCatalogEntry({ hymnal: 'UMH1989', number: '218', reference: '60', title: 'Song' }, 'umh-218.abc', 'collection').tune).toBe('');
     expect(() => validateNumberedHymnMapping({ hymnal: 'unmapped', number: '', reference: '60',
       title: 'Candidate', tune: '' })).not.toThrow();
   });
@@ -55,6 +58,26 @@ describe('hymn number lookup', () => {
     const catalog = [{ number: '378', id: 'one' }, { number: '378', id: 'two' }, { number: '57', id: 'three' }] as HymnSource[];
     expect(matchingHymns(catalog, '378').map(entry => entry.id)).toEqual(['one', 'two']);
   });
+  it('searches titles, tunes and first lines by keyword, and numbers only for registered hymns', () => {
+    const catalog = [
+      { id: 'a', number: '378', hymnal: 'UMH1989', title: 'Amazing Grace', tune: 'NEW BRITAIN', firstLine: 'Amazing grace! How sweet the sound' },
+      { id: 'b', number: '', hymnal: 'OH', title: 'Come, Thou Fount', tune: '', firstLine: 'Come, thou fount of every blessing' },
+      { id: 'c', number: '57', hymnal: 'UMH1989', title: 'O For a Thousand Tongues to Sing', tune: 'AZMON', firstLine: '' },
+    ] as HymnSource[];
+    expect(searchHymns(catalog, '').map(entry => entry.id)).toEqual(['a', 'b', 'c']);
+    expect(searchHymns(catalog, 'fount blessing').map(entry => entry.id)).toEqual(['b']);
+    expect(searchHymns(catalog, 'AZMON').map(entry => entry.id)).toEqual(['c']);
+    expect(searchHymns(catalog, '378').map(entry => entry.id)).toEqual(['a']);
+    expect(searchHymns(catalog, 'UMH 57').map(entry => entry.id)).toEqual(['c']);
+    expect(searchHymns(catalog, '999')).toEqual([]);
+    expect(searchHymns(catalog, '12')).toEqual([]);
+  });
+  it('rebuilds the first sung line from hyphenated ABC lyrics and lists unnumbered hymns by title', () => {
+    expect(firstLyricLine('K:C\nw: 1.~A- maz- ing * grace! How sweet')).toBe('Amazing grace! How sweet');
+    expect(firstLyricLine('K:C')).toBe('');
+    expect(createUnnumberedCatalogEntry({ reference: '22', title: 'Blessed Jesus' }, 'w: Bless- ed Je- sus', 'oh-22.abc', 'http://example.test/all.abc'))
+      .toMatchObject({ id: 'oh-22', hymnal: 'OH', number: '', tune: '', file: 'oh-22.abc', firstLine: 'Blessed Jesus' });
+  });
   it('uses an explicit hymnal prefix to filter source choices', () => {
     const catalog = [{ number: '2175', id: 'tfws', hymnal: 'TFWS2000' }, { number: '2175', id: 'other', hymnal: 'OTHER' }] as HymnSource[];
     expect(matchingHymns(catalog, 'TFWS 2175').map(entry => entry.id)).toEqual(['tfws']);
@@ -77,7 +100,7 @@ describe('hymn number lookup', () => {
 describe('reviewed public-domain music imports', () => {
   const folder = resolve(import.meta.dirname, '../public/hymns');
   const catalog: HymnSource[] = JSON.parse(readFileSync(resolve(folder, 'catalog.json'), 'utf8'));
-  for (const source of catalog) it(`loads ${source.hymnal} ${source.number} with real notes and aligned lyrics`, () => {
+  for (const source of catalog.filter(entry => entry.hymnal !== 'OH')) it(`loads ${source.hymnal} ${source.number} with real notes and aligned lyrics`, () => {
     const song = importABC(readFileSync(resolve(folder, source.file), 'utf8'), source);
     expect(song.title).toBe(source.title); expect(song.hymnNumber).toBe(source.number);
     expect(song.sections.length).toBeGreaterThan(0);
@@ -85,6 +108,18 @@ describe('reviewed public-domain music imports', () => {
     expect(problems(song, false)).toEqual([]);
     expect(song.credit).toContain('public domain');
     expect(song.extensions.webSource).toMatchObject({ harmony: expect.stringContaining('inferred') });
+  });
+  it('imports most unnumbered Open Hymnal scores and fails the rest with a message instead of bad music', () => {
+    const unnumbered = catalog.filter(entry => entry.hymnal === 'OH');
+    let loaded = 0;
+    for (const source of unnumbered) {
+      try {
+        const song = importABC(readFileSync(resolve(folder, source.file), 'utf8'), source);
+        expect(problems(song, false)).toEqual([]);
+        loaded++;
+      } catch (error) { expect((error as Error).message).toBeTruthy(); }
+    }
+    expect(loaded).toBeGreaterThan(unnumbered.length * 0.9);
   });
   it('imports Amazing Grace in 3/4 with a one-beat pickup and source melody', () => {
     const source = catalog.find(entry => entry.number === '378')!;

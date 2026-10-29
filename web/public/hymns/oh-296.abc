@@ -1,0 +1,50 @@
+X: 296
+T: 'Take Up Thy Cross', the Savior Said
+%%combinevoices 1
+C: Words: Charles W. Everest, 1833.  Music: 'Nun Lasst Uns Den Leib Begraben' George Rhau, 1544.  
+C: Setting: "Evangelical Lutheran Hymn-Book", 1931.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2006 Revision.
+S: Music source: 'Evangelical Lutheran Hymn Book' Edition of 1931, Hymn 538.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: G % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=120] G2 A G | F G A B | G3 G | A B c B | G A B2 |
+w: 1.~"Take up thy cross," the Sa- vior said, "If thou wouldst My dis- ci- ple be; 
+w: 2.~Take up thy cross, let not its weight Fill thy weak spi- rit with a- larm; 
+w: 3.~Take up thy cross, nor heed the shame, Nor let thy fool- ish pride re- bel; 
+w: 4.~Take up thy cross then in His strength, And calm- ly sin's wild de- luge brave, 
+w: 5.~Take up thy cross and fol- low Christ, Nor think til death to lay it down; 
+[V: S1V2]  D2 D B, | D D E/F/ G | E3 E | D D E D | E F G2 |
+[V: S2V1]  B,2 F, G, | A, B, C D | C3 B, | A, G, G, G, | B, D D2 |
+[V: S2V2]  G,2 D, E, | D, B,, A,, G,, | C,3 E, | F, G, C, G, | E, D, G,2 |
+% 5
+[V: S1V1]  G2 A A | B A G F | E3 !sintro!A | B A G E | G A G2 !eintro!|]
+w: De- ny thy- self, the world for- sake, And hum- bly fol- low af- ter Me." 
+w: His strength shall bear thy spi- rit up, And brace thy heart and nerve thine arm. 
+w: Thy Lord for thee the cross en- dured, And saved thy soul from death and hell. 
+w: 'Twill guide thee to a bet- ter home, It points to glo- ry o'er the grave. 
+w: For on- ly those who bear the cross May hope to wear the glor- ious crown. 
+[V: S1V2]  D2 D F | G F E ^D | E3 F | G E D C | B, D B,2 |]
+[V: S2V1]  B,2 A, D | D C B,3/2 A,/ | G,3 D | D C B, G, | G,3/2 F,/ G,2 |]
+[V: S2V2]  G,2 F, D, | G,, A,, B,, B,, | C,3 D, | G,, A,, B,, C, | E, D, G,,2 |]
+% 12
+W: 6.To Thee, great Lord, the One in Three,
+W: All praise forevermore ascend:
+W: O grant us in our home to see
+W: The heavenly life that knows no end.

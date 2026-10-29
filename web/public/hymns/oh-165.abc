@@ -1,0 +1,57 @@
+X: 165
+T: From Nazareth
+%%combinevoices 1
+C: Words: Margaret E. Sangster, 1911. Music: 'Puer Nobis Nascitur' Michael Praetorius, 1609. 
+C: Setting: George Ratcliffe Woodward for "The English Hymnal", 1906.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2013 Revision.
+S: Music source: 'The English Hymnal', 1906 Hymn 14.
+S: Lyric source: "A Little Book of Homespun Verse" by Margaret Sangster, 1911. page 21-22.
+M: 3/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1]  [Q:1/4=120] D | D2 E | F2 G | F2 E | D2 D | A2 A |
+w: 1.~Comes a- ny good from Na- za- reth? The scorn- ful 
+w: 2.~Comes a- ny good from Na- za- reth? Be- hold, the 
+w: 3.~One touch u- pon His gar- ment's fringe Still heals the 
+w: 4.~O ci- ty of the Car- pen- ter, U- pon the 
+w: 5.~For He who dwelt in Na- za- reth, And wrought with 
+[V: S1V2]  A, | B,2 C | D2 D | D2 A, | ^F,2 B, | (D G) F |
+[V: S2V1]  F, | F,2 A, | A,2 D, | (A, B,) C | D2 D | D2 A, |
+[V: S2V2]  D, | B,,2 A,, | (D, C,) B,, | (A,, G,,) A,, | D,2 G, | (F, E,) D, |
+% 1
+[V: S1V1]  (A B) c | d2 d | d2 A | d2 d | c2 A |
+w: cha- * llenge as of old Is flung on man- y'a 
+w: might- * y Na- za- rene, The Lord of life, the 
+w: hurt * of bit- ter years. Be- fore Him yet the 
+w: hill * slope old and gray, The world a- mong its 
+w: toil * of hand and brain, A- lone gives vic- tor- 
+[V: S1V2]  E2 E | F2 G | F2 E | (D F) E | E2 D |
+[V: S2V1]  A,2 A, | A,2 B, | A,2 A, | B,2 B, | (A, G,) F, |
+[V: S2V2]  C,2 A,, | D,2 D, | D,2 C, | (B,, A,,) ^G,, | A,,2 D, |
+% 9
+[V: S1V1]  B2 B | A2 !sintro!G | A2 F | E2 F | D2 C | !fermata!D2 !eintro!|]
+w: jeer- ing breath From cloi- stered cells and marts of gold. 
+w: Lord of death, Through warr- ing a- ges walks se- rene. 
+w: de- mons cringe, He gives the wine of joy for tears. 
+w: pain and stir Turns yearn- ing eyes on thee to- day. 
+w: y to faith Un- til the day He come a- gain. 
+[V: S1V2]  B,2 D | D2 B, | E2 D | C2 D | B,2 A, | A,2 |]
+[V: S2V1]  G,2 G, | F,2 G, | E,2 A, | A,2 A, | (G, F,) E, | !invertedfermata!F,2 |]
+[V: S2V2]  G,,2 B,, | D,2 E, | C,2 D, | (A,, G,,) F,, | G,,2 A,, | D,2 |]
+% 19

@@ -1,0 +1,51 @@
+X: 29
+T: Lord, Dismiss Us With Thy Blessing
+%%combinevoices 1
+C: Words: John Fawcett, 1773; verse 3 alt. by Godfrey Thring, 1880.
+C: Music: 'Regent Square' Henry Smart, 1867.  Setting: "Psalms and Hymns for Divine Worship", 1867.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music source: "Psalms and Hymns for Divine Worship", 1867 Hymn 58.  
+S: Fawcett's original 3 verses can be found in "The Anglican Hymn Book" of 1871 Hymn 332.
+S: modified verse three found in "The hymnal, revised and enlarged" (Episcopal), 1889 Hymn 34.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: C % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] G E | c G e3/2 d/ | c G A A | G c G F | E2
+w: 1.~Lord, dis- miss us with Thy bless- ing; Fill our hearts with joy and peace; 
+w: 2.~Thanks we give and a- dor- a- tion For Thy Gos- pel's joy- ful sound; 
+w: 3.~So that when Thy love shall call us, Sa- vior, from the world a- way, 
+[V: S1V2]  E C | G E G3/2 G/ | G G C C | C C D B, | C2
+[V: S2V1]  C G, | G, C C3/2 B,/ | C C A, C | G, A, G, G, | G,2
+[V: S2V2]  C, C, | E, C, G,3/2 F,/ | E, E, F, F, | E, A,, B,, G,, | C,2
+% 5
+[V: S1V1]  G E | c G e3/2 d/ | c B c B | A B/c/ B A | G2
+w: Let us each Thy love pos- ses- sing, Tri- umph in re- * deem- ing grace. 
+w: May the fruits of Thy sal- va- tion In our hearts and * lives a- bound. 
+w: Fear of death shall not ap- pall us, Glad Thy sum- mons * to o- bey. 
+[V: S1V2]  E C | G G/F/ E3/2 F/ | E E E E | E E G ^F | G2
+[V: S2V1]  C C | G, G, C3/2 B,/ | A, ^G, A, G, | E D/C/ D C | B,2
+[V: S2V2]  C G, | E, E,/D,/ C,3/2 D,/ | E, E, A, E, | C, A,, D, D, | G,,2
+% 9
+[V: S1V1]  d3/2 d/ | B G e3/2 d/ | c A !sintro!f e | d c c B | c2 !eintro!|]
+w: O re- fresh us, O re- fresh us, Trav'- ling through this wil- der- ness. 
+w: Ev- er faith- ful, ev- er faith- ful, To the truth may we be found. 
+w: May we ev- er, may we ev- er, Reign with Thee in end- less day. 
+[V: S1V2]  G3/2 G/ | G G G3/2 E/ | F F A G | F E/F/ G3/2 F/ | E2 |]
+[V: S2V1]  B,3/2 B,/ | D B, C3/2 _B,/ | A, C D G, | A,/B,/ C D D | C2 |]
+[V: S2V2]  G,3/2 G,/ | G, G, C,3/2 C,/ | F, F, D, E, | F,/G,/ A, G, G,, | C,2 |]

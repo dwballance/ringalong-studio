@@ -1,0 +1,56 @@
+X: 25
+T: Open Now Thy Gates of Beauty
+%%combinevoices 1
+C: Words: Benjamin Schmolck, 1730.  Translated by Catherine Winkworth, 1863. 
+C: Music: 'Unser Herrscher' or 'Neander' Joachim Neander, 1680.  Setting: "Chorale Book for England", 1863.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+S: Music source: "Chorale Book for England", 1863 Hymn 15.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Bb % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] B,3/2 C/ D B, | D E F F | B A/G/ F d | c c B2 |
+w: 1.~Op- en now thy gates of beau- ty, Zi- on, * let me en- ter there, 
+w: 2.~Lord, my God, I come be- fore Thee, Come Thou * al- so un- to me; 
+w: 3.~Here Thy praise is glad- ly chant- ed, Here Thy * seed is du- ly sown; 
+w: 4.~Thou my faith in- crease and quick- en, Let me * keep Thy gift di- vine, 
+w: 5.~Speak, O God, and I will hear Thee, Let Thy * will be done in- deed; 
+[V: S1V2]  B,3/2 A,/ B, B, | B, B, C C | B, B, B, F | G F/E/ D2 |
+[V: S2V1]  D,3/2 F,/ F, F, | F, G, A, A, | B, B, B, B, | B, A, F,2 |
+[V: S2V2]  B,,3/2 F,,/ B,, D, | B,, G,, F,, F, | G, F,/E,/ D, B,, | E, F, B,,2 |
+% 5
+[V: S1V1]  B,3/2 C/ D B, | D E F F | B A/G/ F d | c c B2 |
+w: Where my soul in joy- ful du- ty Waits for * Him Who an- swers prayer. 
+w: Where we find Thee and a- dore Thee, There a * heav'n on earth must be. 
+w: Let my soul, where it is plant- ed, Bring forth * pre- cious sheaves a- lone, 
+w: How- so- e'er temp- ta- tions thick- en; May Thy * Word still o'er me shine 
+w: May I un- dist- urbed draw near Thee While Thou * dost Thy peo- ple feed. 
+[V: S1V2]  B,3/2 A,/ B, B, | B, B, C C | B, B, B, F | G F/E/ D2 |
+[V: S2V1]  D,3/2 F,/ F, F, | F, G, A, A, | B, B, B, B, | B, A, F,2 |
+[V: S2V2]  B,,3/2 F,,/ B,, D, | B,, G,, F,, F, | G, F,/E,/ D, B,, | E, F, B,,2 |
+% 9
+[V: S1V1]  d3/2 d/ c c | B B A2 | !sintro!G3/2 G/ F B | c A B2 !eintro!|]
+w: Oh, how bless- èd is this place, Filled with so- lace, light and grace! 
+w: To my heart, oh, en- ter Thou, Let it be Thy tem- ple now! 
+w: So that all I hear may be Fruit- ful un- to life in me. 
+w: As my guid- ing star through life, As my com- fort in my strife. 
+w: Here of life the foun- tain flows, Here is balm for all our woes. 
+[V: S1V2]  F3/2 F/ F F | D D D2 | B,3/2 E/ D D | C C D2 |]
+[V: S2V1]  B,3/2 B,/ A, A, | G, G, ^F,2 | G,3/2 B,/ B, B, | G, F, F,2 |]
+[V: S2V2]  B,,3/2 D,/ F, F, | G, B,,/C,/ D,2 | E,3/2 E,/ B,, G, | E, F, B,,2 |]
+% 14

@@ -29,7 +29,7 @@ to the site's browser origin, so use a consistent local port to find the same dr
 
 ## Editing
 
-1. Optionally enter a hymn number and choose **Look up**, or enter the title
+1. Choose **Import → Find a public domain hymn** to start from a hymn, or enter the title
    and key signature yourself. Set meter and pickup beats. Configure the bell set and
    ringing options under **Bells & ringing**.
 2. Add a verse, chorus, bridge, or named section. Enter one lyric line per line,
@@ -136,14 +136,16 @@ subsequent melody-mode edits are strict.
 
 ## Load From Web
 
-The compact hymn-number field precedes the title, with **Look up** beside it. Lookup
-supports The United Methodist Hymnal (1989) and The Faith We Sing (2000). Enter
-`378` or `UMH 378` for UMH, or `2062`, `TFWS 2062`, or `FWS 2062` for TFWS.
-Plain numbers 1-962 select UMH; 2001-2284 select TFWS. An explicit prefix limits
-matching to that book. Enter also starts lookup.
-A popup identifies the hymnal, title, tune, source edition, and rights status. When
-multiple hymnal/setting matches exist, choose the appropriate one there. Cancel
-leaves the arrangement unchanged. Loading over existing work requires confirmation.
+**Import** opens a small menu: **Load from file** (a saved `.json` or exported `.html`)
+or **Find a public domain hymn**. The hymn search matches the title, tune and first
+line of every public-domain Open Hymnal score in the shipped catalog. A hymn number
+(`378`, `UMH 378`, `2062`, `TFWS 2062`) finds only hymns already registered to that
+number. Each result can be expanded for its first line, tune, hymnal and source
+edition. Choose one and **Load hymn**; Cancel leaves the arrangement unchanged.
+Loading over existing work requires confirmation. Run **Update catalog** in the hymn
+editor (or `node scripts/update-hymns.mjs`) to add every public-domain score that is
+not hidden to the search, numbered or not.
+
 
 Initial reviewed catalog:
 

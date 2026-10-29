@@ -1,0 +1,59 @@
+X: 73
+T: What Child Is This?
+%%combinevoices 1
+C: Words: William Chatterton Dix, 1865. 
+C: Music: 'Greensleeves' 16th Century English Traditional. 
+C: Setting: traditional from "The Sunday School Hymnal and Service Book", 1871.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2005 Revision.
+S: Music source: 'Lutheran Worship' Hymnal, 1982 Hymn 61. very tiny changes from "The Sunday school hymnal and service book", 1871 edited by Charles Lewis Hutchins Carol 9 (after hymns)
+M: 3/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: D % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=80]  E/ | G A/ B3/4=c// B/ | A F/ D3/4E// F/ | G E/ E3/4^D// E/ | F3/2 B,
+w: 1.~What Child is this * who, laid to rest * On Ma- ry's lap * is sleep- ing? 
+w: 2.~Why lies He in * such mean e- state, * Where ox and ass * are feed- ing? 
+w: 3.~So bring Him in- * cense, gold and myrrh, * Come pea- sant, king * to own Him; 
+[V: S1V2]  E/ | E D/ D G/ | F D/ D D/ | B, B,/ A, E/ | ^D3/2 B,
+[V: S2V1]   G,/ | B, A,/ G, B,/ | D A,/ F, A,/ | G, G,/ E, E,/ | B,3/2 B,
+[V: S2V2]  E,/ | E, F,/ G, G,/ | D, D,/ D, D,/ | E, E,/ =C, =C,/ | B,,3/2 B,,
+% 5
+[V: S1V1]  E/ | G A/ B3/4=c// B/ | A F/ D3/4E// F/ | G3/4F// E/ ^D3/4^C// D/ | E3/2 E3/2 |
+w: Whom an- gels greet * with an- thems sweet, * While shep- * herds watch * are keep- ing? 
+w: Good Christ- ians, fear, * for sin- ners here * The si- * lent Word * is plead- ing. 
+w: The King of kings * sal- va- tion brings, * Let lov- * ing hearts * en- throne Him. 
+[V: S1V2]  E/ | E D/ D G/ | F D/ D D/ | B, =C/ B, B,/ | B,3/2 B,3/2 |
+[V: S2V1]  G,/ | B, A,/ G, B,/ | D A,/ F, A,/ | G, A,/ F, B,/ | A,3/2 G,3/2 |
+[V: S2V2]  E,/ | E, F,/ G, G,/ | D, D,/ D, D,/ | E, A,,/ B,, B,,/ | E,3/2 E,3/2 |
+% 9
+[V: S1V1]  d3/2 d3/4c// B/ | A F/ D3/4E// F/ | G E/ E3/4^D// E/ | F D/ B,3/2 |
+w: This, this * is Christ the King, * Whom shep- herds guard * and an- gels sing; 
+w: Nails, spear * shall pierce Him through, * The cross be borne * for me, for you. 
+w: Raise, raise * a song on high, * The vir- gin sings * her lul- la- by. 
+[V: S1V2]  F3/2 B3/4A// G/ | F D/ D D/ | B, B,/ A, E/ | ^D B,/ B,3/2 |
+[V: S2V1]  D3/2 D D/ | D A,/ F, A,/ | G, G,/ E, E,/ | B,3/2 B,3/2 |
+[V: S2V2]  B,3/2 G, G,/ | D, D,/ D, D,/ | E, E,/ =C, =C,/ | B,,3/2 B,,3/2 |
+% 13
+[V: S1V1]  d3/2 d3/4c// B/ | A F/ D3/4E// !sintro!F/ | G3/4F// E/ ^D3/4^C// D/ | E3/2 E !eintro!|]
+w: Haste, haste, * to bring Him laud, * The Babe, * the Son * of Ma- ry. 
+w: Hail, hail * the Word made flesh, * The Babe, * the Son * of Ma- ry. 
+w: Joy, joy * for Christ is born, * The Babe, * the Son * of Ma- ry. 
+[V: S1V2]  F3/2 B3/4A// G/ | F D/ D D/ | B, =C/ B, B,/ | B,3/2 B, |]
+[V: S2V1]  D3/2 D D/ | D A,/ F, A,/ | G, A,/ F, B,/ | A,3/2 G, |]
+[V: S2V2]  B,3/2 G, G,/ | D, D,/ D, D,/ | E, A,,/ B,, B,,/ | E,3/2 E, |]
+% 19

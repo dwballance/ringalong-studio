@@ -1,0 +1,56 @@
+X: 50
+T: Angels We Have Heard On High
+%%combinevoices 1
+C: Words: French Carol; Translated by James Chadwick, 1862. 
+C: Music: 'Gloria' French carol melody.  Setting: Edward (or Edwin) S. Barnes, before 1916.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2005 Revision.
+S: Music source: 'Lutheran Worship' Hymnal, 1982 Hymn 55. "Carols Old And Carols New", 1916 Carol 181.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=130] A A A c | c3/2 B/ A2 | A G A c | A3/2 G/ F2 |
+w: 1.~An- gels we have heard on high Sweet- ly sing- ing o'er the plains, 
+w: 2.~Shep- herds, why this ju- bi- lee? Why your joy- ous strains pro- long? 
+w: 3.~Come to Beth- le- hem and see Christ Whose birth the an- gels sing; 
+w: 4.~See Him in a man- ger laid, Whom the choirs of an- gels praise; 
+[V: S1V2]  F F E E | G E F2 | F E F F | F E F2 |
+[V: S2V1]  C C C C | D C C2 | C C C C | C3/2 B,/ A,2 |
+[V: S2V2]  F, F, A, A, | G, C, F,2 | F, C, F, A, | C C, F,2 |
+% 5
+[V: S1V1]  A A A c | c3/2 B/ A2 | A G A c | A3/2 G/ F2 |
+w: And the moun- tains in re- ply E- cho- ing their joy- ous strains. 
+w: What the glad- some ti- dings be Which in- spire your heav'n- ly song? 
+w: Come, a- dore on bend- ed knee, Christ the Lord, the new- born King. 
+w: Ma- ry, Jo- seph, lend your aid, While our hearts in love we raise. 
+[V: S1V2]  F F E E | G E F2 | F E F F | F E F2 |
+[V: S2V1]  C C C C | D C C2 | C C C C | C3/2 B,/ A,2 |
+[V: S2V2]  F, F, A, A, | D, E, F,2 | F, C, F, A,, | C, C, F,2 |
+% 9
+[V: S1V1]  (c2 d/c/B/A/ | B2 c/B/A/G/ | A2 B/A/G/F/ | G3/2) C/ C2 | F G A B | A2 G z |
+w: Glo- * * * * * * * * * * * * * * * ri- a, in ex- cel- sis De- o!
+[V: S1V2]  (F A/G/ F2 | F G/F/ E2 | E F/E/ D2 | C3/2) C/ C2 | C E F F | F2 E x |
+[V: S2V1]  (A,2 D2 | D2 C2 | C2 B,2 | G,) F, E,2 | F, C C D | C2 C z |
+[V: S2V2]  (F,2 D, F, | G,2 C, E, | F,2 B,, D, | E,) D, (C, B,,) | A,, C, F, B,, | C,2 C, x |
+% 13
+[V: S1V1]  (c2 d/c/B/A/ | B2 c/B/A/G/ | A2 B/A/G/F/ | G3/2) C/ C2 | !sintro!F G A B | (A2 G2) | F4 !eintro!|]
+w:  Glo- * * * * * * * * * * * * * * * ri- a, in ex- cel- sis De- * o! 
+[V: S1V2]  (F A/G/ F2 | F G/F/ E2 | E F/E/ D2 | C3/2) C/ C2 | C E F F | (F2 E2) | C4 |]
+[V: S2V1]  (A,2 D2 | D2 C2 | C2 B,2 | G,) F, E,2 | F, C C D | (C3 B,) | A,4 |]
+[V: S2V2]  (F,2 D, F, | G,2 C, E, | F,2 B,, D, | E,) D, (C, B,,) | A,, C, F, B,, | C,4 | F,4 |]
+% 23

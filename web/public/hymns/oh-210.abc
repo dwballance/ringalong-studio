@@ -1,0 +1,62 @@
+X: 210
+T: Glorious Things of Thee are Spoken
+%%combinevoices 1
+C: Words: John Newton, 1779, alt.
+C: Music: 'Austria (Haydn)' or 'Austrian Hymn' Franz Joseph Haydn, 1797.
+C: Setting: "The Evangelical Hymnal with Tunes", 1880.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2014 Revision.
+S: Music source: "The Evangelical Hymnal with Tunes", 1880 Hymn 527 page 463.  Lyrics: same source, alt.    ABC file contributed to the Open Hymnal by Tobin Strong, 10 Feb 2014.
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: F % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=100] F3/2 G/ A G | B A G/E/ F | d c B    A | G A/F/ c2 |
+w: 1.~Glo- rious things of thee are spo- * ken, Zi- on ci- ty of our * God; 
+w: 2.~See, the streams of liv- ing wa- * ters, Spring- ing from E- ter- nal * Love, 
+w: 3.~Round each hab- i- ta- tion ho- * v'ring, See the cloud and fire ap- * pear, 
+w: 4.~Sav- ior, if of Zi- on's ci- * ty I, through grace, a mem- ber * am, 
+[V: S1V2]  C3/2 C/ F E | C C C    C | F F G F | D F    E2 |
+[V: S2V1]  A,3/2 B,/ C  C  | G, A, B, A, | B, A, C  C  | D    D   C2  |
+[V: S2V2]  F,3/2 F,/ F, C, | E, F, C, F, | F, F, E, F, | B,, =B,, C,2 |
+% 5
+[V: S1V1]  F3/2 G/ A G | B A G/E/ F |  d c B    A | G A/F/ c2 |
+w: He, Whose Word can- not be bro- * ken Formed thee for His Own a- * bode: 
+w: Well supp- ly thy sons and daugh- * ters, And all fear of want re- * move: 
+w: For a glo- ry and a co- * v'ring: Show- ing that the Lord is * near. 
+w: Let the world de- ride or pi- * ty, I will glo- ry in Thy * Name: 
+[V: S1V2]  F3/2 F/ F E | C C B,   A, | F F D/E/ F | D F    E2 |
+[V: S2V1]  A, =B, C  C  | G, A, E,/G,/ F, | B, A, B,  C  | D    D   G,2  |
+[V: S2V2]  D,3/2 D,/ C, C, | E, F, C,     F, | B,, F, G, F, | B,, =B,, C,2 |
+% 9
+[V: S1V1]  G A G/E/ C | B    A G/E/ C | c B    A3/2 A/ | =B B/c/ c2 |
+w: On the Rock * of A- ges found- * ed, What can shake thy sure re- * pose? 
+w: Who can faint, * while such a riv- * er Ev- er will their thirst as- * suage? 
+w: Thus de- riv- * ing from their ban- * ner Light by night, and shade by * day, 
+w: Fa- ding is * the world- ling's pleas- * ure, All his boast- ed pomp and * show: 
+[V: S1V2]  E F E/C/ C | D/E/ F E/C/ C | C D/E/ F3/2 F/ |  F F/E/ E2 |
+[V: S2V1]  C C C/G,/ E, | F,/G,/ A,/=B,/ C/G,/ E, | A,  G,  F,       A, | D D/C/ C2  |
+[V: S2V2]  C, C, C, C,  | C,     C,      C,    C, | A,, _B,,/C,/ D,3/2 D,/ | G,, G, C,2 |
+% 13
+[V: S1V1]  f3/2 e/ d c |  d3/2 c/ c/B/ A | !sintro!G A/B/ c/d/ B/G/ | F A/G/ F2 !eintro!|]
+w: With sal- va- tion's walls sur- round- * ed, Thou mayst * smile * at * all thy * foes. 
+w: Grace, which, like the Lord the Giv- * er, Nev- er * fails * from * age to * age. 
+w: Safe they feed up- on the man- * na, Which He * gives * them * on their * way. 
+w: Sol- id joys and last- ing trea- * sure None but * Zi- * on's * child- ren * know. 
+[V: S1V2]  F3/2 F/ F F | F3/2 F/ F/C/ C | C C F/_E/ D | C =E F2 |]
+[V: S2V1]  C3/2 C/ B, A, | B,3/2 A,/ A,/G,/ F, | E, E, F, F,/G,/ | A, B, A,2 |]
+[V: S2V2]  A,3/2 A,/ B, F, | B,,3/2 C,/ D,/E,/ F, | B,, B,, A,, B,, | C, C, F,,2 |]

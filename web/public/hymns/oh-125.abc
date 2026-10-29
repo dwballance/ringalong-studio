@@ -1,0 +1,57 @@
+X: 125
+T: Isaiah, Mighty Seer, In Days of Old
+%%combinevoices 1
+T: (also known as These Things the Seer Isaiah did Befall or Isaiah 'twas the Prophet)
+C: Words: Martin Luther, 1526 as the Sanctus of the German Mass, after Is 6:1-4.  Translation composite. 
+C: Music: 'Jesaia Dem Propheten das Geschah' Martin Luther, 1526 in the German Mass.  Setting: Erythraeus, 1608.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2009 Revision.
+S: Translation is public domain per Project Wittenberg: http://www.iclnet.org/pub/resources/text/wittenberg/hymns/isaiah.txt
+M: 4/4 % time signature
+L: 1/4 % default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2) 
+V: S1V1 clef=treble 
+%%MIDI beat 127 125 110 1
+V: S1V2 
+%%MIDI beat 127 125 110 1
+V: S2V1 clef=bass 
+%%MIDI beat 127 125 110 1
+V: S2V2 
+%%MIDI beat 127 125 110 1
+K: Eb % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+[V: S1V1] [Q:1/4=140] B2 B G | E G B B | c c !fermata!B2 | B2 B A | B E A G | F F !fermata!E2 |
+w: 1.~Is- ai- ah, might- y seer, in days of old The Lord of all in Spir- it did be- hold 
+[V: S1V2]  E2 D B, | C B, F E | E E E2 | G2 G F | D C F E | E D E2 |
+[V: S2V1]  G,2 F, E, | G, E, F, G, | A, A, !invertedfermata!G,2 | D2 E C | B, G, F, B, | C B, !invertedfermata!G,2 |
+[V: S2V2]  E,2 B,, E, | C, E, D, E, | A,, A,, E,2 | G,2 E, F, | B,, C, D, E, | A,, B,, E,2 |
+% 5
+[V: S1V1]  B2 B B | e e e B | c B !fermata!G2 | G2 A B | G A G E | F F !fermata!E2 |
+w: High on a loft- y throne, in splen- dor bright, With flow- ing train that filled the Tem- ple quite. 
+[V: S1V2]  G2 G F | A A G G | A F E2 | E2 C F | E C E B, | C B, B,2 |
+[V: S2V1]  E2 D D | C C C B, | E D !invertedfermata!C2 | B,2 A, F, | B, A, C G, | E, D, !invertedfermata!G,2 |
+[V: S2V2]  E,2 G, B, | A, A,, C, E, | A,, B,, C,2 | E,2 F, D, | E, F, C, E, | A,, B,, E,2 |
+% 13
+[V: S1V1]  E2 G F | G =A B B | G =A !fermata!B2 | e2 e d | c B B A | B A !fermata!G2 |
+w: A- bove the throne were state- ly ser- a- phim, Six wings had they, these mess- en- gers of Him. 
+[V: S1V2]  C2 D F | E E F F | E E D2 | G2 A F | E F G F | E E E2 |
+[V: S2V1]  C2 B, B, | B, C D B, | B, C !invertedfermata!F,2 | C2 C B, | G, B, E C | B, C !invertedfermata!B,2 |
+[V: S2V2]  C,2 G, D, | E, C, B,, D, | E, C, B,,2 | B,,2 A,, B,, | C, D, E, F, | G, A, E,2 |
+% 17
+[V: S1V1]  F2 G A | B B c B | c d !fermata!e2 | B2 B A | G A B E | G F !fermata!E2 |
+w: With twain they veiled their fa- ces, as was meet, With twain in rev- erent awe they hid their feet, 
+[V: S1V2]  D2 E C | G F A E | C F G2 | G2 G E | B, F F C | B, D C2 |
+[V: S2V1]  B,2 B, F | E D E B, | E B, !invertedfermata!B,2 | E2 E C | E C D G, | E, B, !invertedfermata!G,2 |
+[V: S2V2]  B,,2 E, F, | G, B, A, G, | A, B, E,2 | E,2 E, A,, | E, F, B,, C, | E, B,, C,2 |
+% 25
+[V: S1V1]  G2 A B | c B B c | d c !fermata!B2 | e2 d c | f f d B | c d !fermata!e2 |
+w: And with the o- ther twain a- loft they soared, One to the o- ther called and praised the Lord: 
+[V: S1V2]  E2 F G | A G F G | B =A B2 | G2 B A | A B B B | A F G2 |
+[V: S2V1]  C2 C E | E E B, E | F3/2 E/ !invertedfermata!D2 | C2 B, E | F D F E | E B, !invertedfermata!B,2 |
+[V: S2V2]  C,2 F, E, | A,, E, D, C, | B,, F, B,,2 | C,2 G, A, | F, B,, B, G, | A, B, E,2 |
+% 29

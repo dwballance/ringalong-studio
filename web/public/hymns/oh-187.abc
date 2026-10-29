@@ -1,0 +1,71 @@
+X: 187
+T: O Love, How Deep, How Broad, How High
+%%combinevoices 1
+C: Words: Unknown, 15th Century; Translated by Benjamin Webb, 1852, alt.
+C: Music: 'Deo Gracias' or 'Agincourt' traditional English, circa 1415.  Setting: Charles Winfred Douglas, 1918, alt.
+C: copyright: public domain.  This score is a part of the Open Hymnal Project, 2011 Revision.
+S: Music source: "A Hymnal" (Episcopal), 1918 Hymn 439, alt by BJD 21 Mar 2011.
+S: Translation from "The Hymnal, Noted", 1854 (UK), hymn 73.  Verse 5 altered.
+M:3/4	% time signature
+L:1/4	% default length
+%%staves (S1V1 S1V2) | (S2V1 S2V2)
+V:S1V1 clef=treble
+%%MIDI beat 127 125 110 1
+V:S1V2
+%%MIDI beat 127 125 110 1
+V:S2V1 clef=bass
+%%MIDI beat 127 125 110 1
+V:S2V2
+%%MIDI beat 127 125 110 1
+K: E % key signature
+%
+%%MIDI program 1 0 % Piano 1
+%%MIDI program 2 0 % Piano 1
+%%MIDI program 3 0 % Piano 1
+%%MIDI program 4 0 % Piano 1
+%
+% 1
+% 1
+[V: S1V1] [Q:1/4=140] c | c2 B   | c2   B  | B    A2          | G2 c | (c B) G |
+w: 1.~O love, how deep, how broad, how high, How pass- * ing
+w: 2.~He sent no an- gel to our race Of high- * er 
+w: 3.~Nor willed He on- ly to ap- pear; His plea- * sure 
+w: 4.~For us bap- tized, for us He bore His ho- * ly 
+w: 5.~For us He prayed; for us He taught; For us * His 
+[V: S1V2] E  | E2 E   | E2   D  | E    E2          | E2  E  | E2 E |
+[V: S2V1] G, | G,2 G, | A,2  G, | G,   C2          | C2  C    | (A, B,) B, |
+[V: S2V2] C, | C,2 E, | A,,2 G,, | (G,, A,,3/2) B,,/ | E,2  A,, | (A, G,) E, |
+% 7
+[V: S1V1] (F G) F/C/ | E D2 | C2 G | B2 B | (c B) A |
+w: thought * and * fan- ta- sy, That God, the Son * of 
+w: or * of * low- er place, But wore the robe * of 
+w: was * to * tar- ry here; And God and Man * with 
+w: fast * and * hun- gered sore, For us temp- ta- * tions 
+w: dai- * ly * works He wrought; By words and signs * and 
+[V: S1V2] C2 C       | C2 ^B,           | C2 E   | D E2   | E2 F |
+[V: S2V1] (A, G,) A, | G,2 G,/F,/      | E,2 C  | B,2 G,  | (A, B,) C |
+[V: S2V2] (F, E,) A, | (E,/F,/ G,) G,, | C,2 C, | G,2 E, | (A, G,) F, |
+% 12
+[V: S1V1] G F2 | E2 !sintro!E | G2 G | F2 E | E D2 | C2 !eintro!|]
+w: God, should take Our mor- tal form for mor- tals' sake! 
+w: hu- man frame And He Him- self, to this world came. 
+w: man would be The space of thir- ty years and three.
+w: sharp He knew; For us the temp- ter o- ver- threw. 
+w: ac- tions thus Still seek- ing not Him- self, but us. 
+[V: S1V2] E2 D | B,2 C | B, C2 | (C ^B,) C | C2 ^B, | C2 |]
+[V: S2V1] B,2 B, | G,2 A, | (B, G,) E, | (A, G,) G, | (A,/G,/ A,) G, | E,2 |]
+[V: S2V2] (G,/A,/ B,) B,, | E,2 E, | E,2 C, D,2 E, (F,/G,/ F,) G, C,2 |]
+W: 6.For us to wicked men betrayed,
+W: Scourged, mocked, in crown of thorns arrayed,
+W: For us He bore the cross's death,
+W: For us at length gave up His breath. 
+W:
+W: 7.For us He rose from death again;
+W: For us He went on high to reign;
+W: For us He sent His Spirit here,
+W: To guide, to strengthen, and to cheer.
+W: 
+W: 8.All honor, laud, and glory be,
+W: O Jesus, virgin-born to Thee!
+W: All glory, as is ever meet
+W: To Father and to Paraclete.
